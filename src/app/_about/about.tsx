@@ -1,9 +1,9 @@
+import { content } from "../content"
 import styles from "./about.module.css"
-import { content } from "./content"
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <h2>// ABOUT ME</h2>
       <div className={styles.content}>
         <p>{content.about}</p>

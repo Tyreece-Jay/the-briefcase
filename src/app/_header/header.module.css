@@ -1,7 +1,3 @@
-.container {
-  height: 100vh;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -9,13 +5,20 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(40deg, #be57a3, #fbe996, #fd8574, #d74e4e);
+  background: linear-gradient(40deg,  #be57a3, #fd8574, #d74e4e, #DF6387 );
   background-size: 800% 800%;
 
   -webkit-animation: gradiant 50s ease infinite;
   -moz-animation: gradiant 50s ease infinite;
   -o-animation: gradiant 50s ease infinite;
   animation: gradiant 50s ease infinite;
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @-webkit-keyframes gradiant {
@@ -40,40 +43,29 @@
 }
 
 .icons {
-  grid-area: icons;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 300px;
-  background-color: transparent;
+  gap: 6em;
 }
 
-.button {
+.icon {
+  position: absolute;
   color: var(--white);
-  background-color: transparent;
+  width: 3em;
+  height: 3em;
+  transition: 0.3s;
 }
 
-.button:hover {
+.icon:hover {
   color: var(--black);
   background-color: transparent;
   cursor: pointer;
 }
 
-.cursor {
-  white-space: nowrap;
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  overflow: hidden;
-  border-right: 0.15em solid var(--black);
-  animation: blink 0.5s step-end infinite alternate;
-}
-
-.transparent-background {
-  background-color: transparent;
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  height: 100%;
 }

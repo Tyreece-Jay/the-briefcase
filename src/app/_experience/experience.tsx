@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './experience.module.css'
-import { content } from './content'
+import { content } from '../content'
 
 export default function Experience() {
   return <section className={styles.experience}>
