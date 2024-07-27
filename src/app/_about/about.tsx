@@ -1,5 +1,6 @@
 import { content } from "../content"
 import styles from "./about.module.css"
+import { Slider } from "./slider"
 
 export default function About() {
   return (
@@ -9,6 +10,7 @@ export default function About() {
         <p>{content.about}</p>
       </div>
       <button className={styles.button}>Request my CV</button>
+      <Slider items={content.skills}/>
     </section>
   )
 }

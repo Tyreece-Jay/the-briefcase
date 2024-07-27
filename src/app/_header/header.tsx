@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import styles from './header.module.css'
 import { content } from '../content'
@@ -22,8 +20,8 @@ export default function Header() {
 
 function Icons() {
   return <div className={styles.icons}>
-    <a target="_blank" href="https://linkedin.com/in/tyreece-simpson-287912160"><FontAwesomeIcon icon={faGithubSquare} className={styles.icon} /></a>
+    <a target="_blank" href="https://linkedin.com/in/tyreece-simpson-287912160"><FontAwesomeIcon icon={faLinkedin} className={styles.icon} /></a>
     <a target="_blank" href="https://www.figma.com/@tyreece"><FontAwesomeIcon icon={faFigma} className={styles.icon} /></a>
-    <a target="_blank" href="https://github.com/Tyreece-Jay"><FontAwesomeIcon icon={faLinkedin} className={styles.icon} /></a>
+    <a target="_blank" href="https://github.com/Tyreece-Jay"><FontAwesomeIcon icon={faGithubSquare} className={styles.icon} /></a>
   </div>
 }

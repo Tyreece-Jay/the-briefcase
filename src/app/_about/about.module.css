@@ -14,13 +14,13 @@
   background-color: transparent;
   color: white;
   border: 2px solid #d74e4e;
-  border-radius: 6px;
   text-decoration: none;
   padding: 15px 32px;
   text-align: center;
   margin: 4px 4px;
   cursor: pointer;
   width: 16em;
+  transition: 0.3s;
 }
 
 .button:hover {
@@ -40,4 +40,15 @@
     max-width: 50%;
     height: 50%;
   }
+}
+
+.skillsContainer {
+  overflow: hidden;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-wrap:nowrap;
 }

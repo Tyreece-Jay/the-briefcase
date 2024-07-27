@@ -8,10 +8,10 @@
   background: linear-gradient(40deg,  #be57a3, #fd8574, #d74e4e, #DF6387 );
   background-size: 800% 800%;
 
-  -webkit-animation: gradiant 50s ease infinite;
-  -moz-animation: gradiant 50s ease infinite;
-  -o-animation: gradiant 50s ease infinite;
-  animation: gradiant 50s ease infinite;
+  -webkit-animation: gradiant 40s ease infinite;
+  -moz-animation: gradiant 40s ease infinite;
+  -o-animation: gradiant 40s ease infinite;
+  animation: gradiant 40s ease infinite;
 }
 
 .content {

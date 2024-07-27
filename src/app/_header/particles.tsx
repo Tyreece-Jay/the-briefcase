@@ -43,11 +43,11 @@ export default function Particles() {
         },
         number: {
           density: { enable: true },
-          value: 80
+          value: 120
         },
         opacity: { value: 0.5 },
         shape: { type: "circle" },
-        size: { value: { min: 1, max: 5 } }
+        size: { value: { min: 1, max: 8 } }
       },
       detectRetina: true
     }), []
