@@ -1,11 +1,15 @@
-import styles from "./page.module.css"
+import About from "./about"
+import Experience from "./experience"
+import Header from "./header"
+import "./globals.css"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-
-      </div>
+    <main>
+      <Header/>
+      <About/>
+      <Experience/>
+      <footer>© Tyreece Simpson, {new Date().getFullYear()}</footer>
     </main>
   )
 }
