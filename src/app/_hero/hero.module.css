@@ -1,0 +1,79 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../../public/luke-chesser-zFaSM1hz02c-unsplash.jpg");
+  background-size: 125% 125%;
+
+  -webkit-animation: gradiant 45s ease infinite;
+  -moz-animation: gradiant 45s ease infinite;
+  -o-animation: gradiant 45s ease infinite;
+  animation: gradiant 45s ease infinite;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 6em;
+  top: 20%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
+
+.icon {
+  position: absolute;
+  color: var(--black);
+  width: 3em;
+  height: 3em;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes gradiant {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
+}
+@-moz-keyframes gradiant {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
+}
+@-o-keyframes gradiant {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
+}
+@keyframes gradiant {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
+}

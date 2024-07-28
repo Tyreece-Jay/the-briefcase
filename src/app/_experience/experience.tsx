@@ -4,7 +4,7 @@ import { content } from '../content'
 
 export default function Experience() {
   return <section className={styles.experience}>
-    <h2>// MY WORK</h2>
+    <h2>{'// MY WORK'}</h2>
       <div className={styles.fdbContent}>
         <div className={styles.contentText}>
           <span>

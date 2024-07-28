@@ -2,9 +2,9 @@
 
 import React, { useEffect, useMemo, useState } from 'react'
 import { Particles as TsParticles, initParticlesEngine } from "@tsparticles/react"
-import { type ISourceOptions, MoveDirection, OutMode } from "@tsparticles/engine"
+import { type ISourceOptions, MoveDirection } from "@tsparticles/engine"
 import { loadSlim } from "@tsparticles/slim"
-import styles from './header.module.css'
+import styles from './hero.module.css'
 
 export default function Particles() {
   const [init, setInit] = useState(false)
@@ -27,18 +27,11 @@ export default function Particles() {
       },
       particles: {
         color: { value: "#ffffff" },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          width: 1
-        },
         move: {
           direction: MoveDirection.none,
           enable: true,
-          outModes: { default: OutMode.out },
           random: false,
-          speed: 1,
+          speed: 0.5,
           straight: false
         },
         number: {
@@ -47,7 +40,7 @@ export default function Particles() {
         },
         opacity: { value: 0.5 },
         shape: { type: "circle" },
-        size: { value: { min: 1, max: 8 } }
+        size: { value: { min: 1, max: 4 } }
       },
       detectRetina: true
     }), []

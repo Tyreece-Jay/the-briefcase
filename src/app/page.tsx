@@ -1,5 +1,5 @@
 import About from "./_about/about"
-import Header from "./_header/header"
+import Hero from "./_hero/hero"
 import Experience from "./_experience/experience"
 import { Slider } from "./_about/slider"
 import { content } from "./content"
@@ -7,7 +7,7 @@ import { content } from "./content"
 export default function Home() {
   return (
     <main>
-      <Header/>
+      <Hero/>
       <About/>
       <Slider items={content.skills}/>
       <Experience/>
