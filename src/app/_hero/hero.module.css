@@ -1,7 +1,7 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url("../../../public/luke-chesser-zFaSM1hz02c-unsplash.jpg");
+  background-image: url("../../../public/hero.jpg");
   background-size: 125% 125%;
 
   -webkit-animation: gradiant 45s ease infinite;
@@ -58,22 +58,57 @@
 }
 
 @-webkit-keyframes gradiant {
-  0%{background-position:0% 53%}
-  50%{background-position:100% 48%}
-  100%{background-position:0% 53%}
+  0% {
+    background-position: 0% 53%
+  }
+
+  50% {
+    background-position: 100% 48%
+  }
+
+  100% {
+    background-position: 0% 53%
+  }
 }
+
 @-moz-keyframes gradiant {
-  0%{background-position:0% 53%}
-  50%{background-position:100% 48%}
-  100%{background-position:0% 53%}
+  0% {
+    background-position: 0% 53%
+  }
+
+  50% {
+    background-position: 100% 48%
+  }
+
+  100% {
+    background-position: 0% 53%
+  }
 }
+
 @-o-keyframes gradiant {
-  0%{background-position:0% 53%}
-  50%{background-position:100% 48%}
-  100%{background-position:0% 53%}
+  0% {
+    background-position: 0% 53%
+  }
+
+  50% {
+    background-position: 100% 48%
+  }
+
+  100% {
+    background-position: 0% 53%
+  }
 }
+
 @keyframes gradiant {
-  0%{background-position:0% 53%}
-  50%{background-position:100% 48%}
-  100%{background-position:0% 53%}
+  0% {
+    background-position: 0% 53%
+  }
+
+  50% {
+    background-position: 100% 48%
+  }
+
+  100% {
+    background-position: 0% 53%
+  }
 }

@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className={styles.section}>
       <div className={styles.background}>
       </div>
-      <div className={styles.about}>
+      <div className={styles.container}>
         <div>
           <h2 className={styles.heading}>{'// ABOUT ME'}</h2>
           <button className={styles.button}>REQUEST MY CV</button>
