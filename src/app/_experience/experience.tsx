@@ -20,7 +20,6 @@ export default function Experience() {
       <div><img src={firstDatabank.src} alt="First Databank" /></div>
     </div>
     <div className={styles.education}>
-      <div><img src={exeterUniversity.src} alt="University of Exeter" /></div>
       <div>
         <h2>{'// EDUCATION'}</h2>
         <h4>{content.education.university}</h4>
@@ -29,6 +28,7 @@ export default function Experience() {
           <li>{content.education.information}</li>
         </ul>
       </div>
+      <div><img src={exeterUniversity.src} alt="University of Exeter" /></div>
     </div>
   </section>
 }

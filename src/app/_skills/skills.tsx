@@ -9,10 +9,10 @@ export default function Skills() {
 
   return (
     <div className={styles.container}>
-      <Marquee autoFill gradient gradientColor='#F5F5F5'>
+      <Marquee autoFill>
         {content.skills.map((x, i) => <span className={styles.skills} key={i}><h2>{x}</h2><h2>{'//'}</h2></span>)}
       </Marquee>
-      <Marquee autoFill gradient gradientColor='#F5F5F5' direction='right'>
+      <Marquee autoFill direction='right'>
         {content.skills.reverse().map((x, i) => <span className={styles.skills} key={`${i}-r`}><h2>{x}</h2><h2>{'//'}</h2></span>)}
       </Marquee>
     </div>

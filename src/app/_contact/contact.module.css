@@ -1,13 +1,13 @@
 .container {
   overflow: hidden;
   background-color: var(--grey);
-  padding: 10em;
+  padding: 5em 15vw 5em 15vw;
   display: flex;
   flex-direction: row;
   gap: 8em;
 }
 
-.container>div:first-child {
+.container > div:first-child {
   display: flex;
   flex-direction: column;
   gap: 4em;

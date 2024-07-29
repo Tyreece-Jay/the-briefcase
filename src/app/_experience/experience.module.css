@@ -1,5 +1,5 @@
 .section {
-  margin: 7em;
+  margin: 5em 10vw 5em 10vw;
   display: flex;
   gap: 2em;
   flex-direction: column;
@@ -15,14 +15,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 3em;
+  padding: 5vw;
   gap: 1em;
   background-color: var(--grey);
   border-radius: 8px 0 0 0;
 }
 
 .experience > div:nth-child(2) {
-  padding: 3em;
+  padding: 5vw;
   background-color: var(--white);
   border-radius: 0 8px 0 0;
   display: flex;
@@ -36,20 +36,17 @@
 }
 
 .education > div:first-child {
-  padding: 3em;
-  background-color: var(--white);
+  padding: 5vw;
+  background-color: var(--grey);
   border-radius: 0 0 0 8px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .education > div:nth-child(2) {
-  padding: 3em;
-  background-color: var(--grey);
+  padding: 5vw;
+  background-color: var(--white);
   border-radius: 0 0 8px 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1em;
-  width: 100%;
+  align-items: center;
 }
