@@ -3,16 +3,17 @@
 import React from 'react'
 import styles from "./skills.module.css"
 import Marquee from "react-fast-marquee"
+import { content } from '../content'
 
-export function Skills({ items }: { items: string[] }) {
+export default function Skills() {
 
   return (
     <div className={styles.container}>
       <Marquee autoFill gradient gradientColor='#F5F5F5'>
-        {items.map(x => <span className={styles.skills}><h2>{x}</h2><h2>{'//'}</h2></span>)}
+        {content.skills.map((x, i) => <span className={styles.skills} key={i}><h2>{x}</h2><h2>{'//'}</h2></span>)}
       </Marquee>
       <Marquee autoFill gradient gradientColor='#F5F5F5' direction='right'>
-        {items.reverse().map(x => <span className={styles.skills}><h2>{x}</h2><h2>{'//'}</h2></span>)}
+        {content.skills.reverse().map((x, i) => <span className={styles.skills} key={`${i}-r`}><h2>{x}</h2><h2>{'//'}</h2></span>)}
       </Marquee>
     </div>
   )
