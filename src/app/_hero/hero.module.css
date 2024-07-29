@@ -35,20 +35,6 @@
   transform: translate(0%, -50%);
 }
 
-.icon {
-  position: absolute;
-  color: var(--black);
-  width: 3em;
-  height: 3em;
-  transition: 0.3s;
-}
-
-.icon:hover {
-  color: var(--white);
-  background-color: transparent;
-  cursor: pointer;
-}
-
 .particles {
   position: absolute;
   top: 0;

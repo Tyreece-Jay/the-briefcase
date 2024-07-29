@@ -3,12 +3,11 @@
 import React from 'react'
 import styles from './hero.module.css'
 import { content } from '../content'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFigma, faGithubSquare, faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons'
+import { faFigma, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
 import Particles from './particles'
-import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
+import { IconButton } from '../_components/buttons'
 
 export default function Hero() {
   return <div className={styles.hero}>
@@ -32,8 +31,3 @@ function Icons() {
   </div>
 }
 
-function IconButton({ icon, href, newTab }: { icon: IconDefinition, href: string, newTab?: boolean }) {
-  return <motion.a whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} whileTap={{ scale: 0.9 }} href={href} target={newTab ? "_blank" : undefined}>
-    <FontAwesomeIcon icon={icon} className={styles.icon} />
-  </motion.a>
-}
