@@ -18,7 +18,7 @@
   gap: 10em;
   flex-direction: row;
   background-color: var(--yellow);
-  border-radius: 4px;
+  border-radius: 2em 0 2em 0;
   position: absolute;
   color: var(--black);
   align-items: center;

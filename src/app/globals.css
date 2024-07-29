@@ -55,7 +55,7 @@ input {
 }
 
 footer {
-  padding: 2em;
+  padding: 1em;
   color: var(--black);
   background-image: url("../../public/hero.jpg");
   background-size: 100%;

@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100%;
   background-image: url("../../../public/hero.jpg");
-  background-size: 125%;
+  background-size: 125% 125%;
 
   -webkit-animation: gradiant 45s ease infinite;
   -moz-animation: gradiant 45s ease infinite;

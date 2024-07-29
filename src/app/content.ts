@@ -2,7 +2,7 @@ export const content = {
   name: 'Tyreece Simpson',
   occupation: ['Full-Stack Software Engineer', 'Front-End Specialist'],
   about: 'Constantly sharpening my knowledge as a full-stack developer whilst having a real passion for UI/UX design and innovation. My curios and inquisitive mindset translates extremely well to software engineering and has allowed me to become the proficient software developer I am today. Well versed in TypeScript, React, C#, .NetCore, whilst also having limited knowledge in many more.',
-  skills: ['TypeScript', 'JavaScript', 'React', 'HTML', 'CSS', 'C#', 'SQL', 'UX & UI', 'Next.js'],
+  skills: ['TypeScript', 'JavaScript', 'React', 'HTML', 'CSS', 'C#', 'SQL', 'UX & UI', 'Next.js', 'BDD', 'TDD', 'DevOps', 'Pair Programming', 'DDD', 'Jest'],
   experience: {
     company: 'First Databank',
     role: 'Software Developer',

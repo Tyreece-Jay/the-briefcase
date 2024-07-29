@@ -18,13 +18,13 @@
   padding: 5vw;
   gap: 1em;
   background-color: var(--grey);
-  border-radius: 8px 0 0 0;
+  border-radius: 2em 0 0 0;
 }
 
 .experience > div:nth-child(2) {
   padding: 5vw;
   background-color: var(--white);
-  border-radius: 0 8px 0 0;
+  border-radius: 0 2em 0 0;
   display: flex;
   align-items: center;
 }
@@ -38,7 +38,7 @@
 .education > div:first-child {
   padding: 5vw;
   background-color: var(--grey);
-  border-radius: 0 0 0 8px;
+  border-radius: 0 0 0 2em;
   display: flex;
   flex-direction: column;
 }
@@ -46,7 +46,7 @@
 .education > div:nth-child(2) {
   padding: 5vw;
   background-color: var(--white);
-  border-radius: 0 0 8px 0;
+  border-radius: 0 0 2em 0;
   display: flex;
   align-items: center;
 }

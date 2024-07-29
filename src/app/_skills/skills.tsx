@@ -9,10 +9,10 @@ export default function Skills() {
 
   return (
     <div className={styles.container}>
-      <Marquee autoFill>
+      <Marquee autoFill pauseOnHover>
         {content.skills.map((x, i) => <span className={styles.skills} key={i}><h2>{x}</h2><h2>{'//'}</h2></span>)}
       </Marquee>
-      <Marquee autoFill direction='right'>
+      <Marquee autoFill pauseOnHover direction='right'>
         {content.skills.reverse().map((x, i) => <span className={styles.skills} key={`${i}-r`}><h2>{x}</h2><h2>{'//'}</h2></span>)}
       </Marquee>
     </div>
