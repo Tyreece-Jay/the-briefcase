@@ -1,10 +1,10 @@
 'use client'
 
 import { motion, useInView } from "framer-motion"
-import { content } from "../content"
+import { content } from "../../content"
 import styles from "./about.module.css"
 import { useRef } from "react"
-import { Button } from "../_components/buttons"
+import { Button } from "../../_design/buttons"
 
 export default function About() {
   const ref = useRef(null)

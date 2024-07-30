@@ -9,7 +9,6 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   cursor: crosshair;
 }
 
@@ -23,13 +22,6 @@ body {
 body {
   background-color: var(--black);
   color: var(--white);
-}
-
-h1 {
-  font-size: 4em;
-  font-weight: 600;
-  color: var(--black);
-  text-transform: uppercase;
 }
 
 h2 {

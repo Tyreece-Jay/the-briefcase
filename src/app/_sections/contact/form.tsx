@@ -6,7 +6,7 @@ import { FieldErrors, SubmitHandler, useForm } from 'react-hook-form'
 import { match } from 'ts-pattern'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
-import { Button } from '../_components/buttons'
+import { Button } from '../../_design/buttons'
 
 type Inputs = {
   name: string

@@ -3,7 +3,7 @@
 import React from 'react'
 import styles from "./skills.module.css"
 import Marquee from "react-fast-marquee"
-import { content } from '../content'
+import { content } from '../../content'
 
 export default function Skills() {
 

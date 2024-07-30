@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './experience.module.css'
-import { content } from '../content'
-import firstDatabank from '../../../public/firstDatabank.png'
-import exeterUniversity from '../../../public/exeterUniversity.png'
+import { content } from '../../content'
+import firstDatabank from '../../../../public/exeterUniversity.png'
+import exeterUniversity from '../../../../public/exeterUniversity.png'
 
 export default function Experience() {
   return <section className={styles.section}>
