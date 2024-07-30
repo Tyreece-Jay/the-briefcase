@@ -24,20 +24,6 @@ body {
   color: var(--white);
 }
 
-h2 {
-  font-size: 2em;
-  font-weight: 600;
-  color: var(--yellow);
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 2em;
-  font-weight: 500;
-  color: var(--black);
-  margin-bottom: 0px;
-}
-
 input {
   border: 2px solid var(--white);
   background-color: transparent;

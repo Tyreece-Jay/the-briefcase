@@ -1,6 +1,6 @@
 import About from "./_sections/about/about"
 import Hero from "./_sections/hero/hero"
-import Experience from "./_sections/experience/experience"
+import Work from "./_sections/work/work"
 import Contact from "./_sections/contact/contact"
 import Skills from "./_sections/skills/skills"
 
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Skills/>
-      <Experience/>
+      <Work/>
       <Contact/>
       <footer>© Tyreece Simpson, {new Date().getFullYear()}</footer>
     </main>
