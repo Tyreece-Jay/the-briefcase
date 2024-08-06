@@ -9,7 +9,7 @@ export default function Work() {
   return <section className={section}>
     <div className={experience}>
       <div className={experienceContent}>
-        <Heading importance={2}>{'// EXPERIENCE'}</Heading>
+        <Heading importance={3}>EXPERIENCE</Heading>
         <h4>{content.experience.company}</h4>
         <p>{content.experience.role}, {content.experience.duration}</p>
         <ul>
@@ -22,7 +22,7 @@ export default function Work() {
     </div>
     <div className={education}>
       <div className={educationContent}>
-        <Heading importance={2}>{'// EDUCATION'}</Heading>
+        <Heading importance={3}>EDUCATION</Heading>
         <h4>{content.education.university}</h4>
         <p>{content.education.course}, {content.experience.duration}</p>
         <ul>

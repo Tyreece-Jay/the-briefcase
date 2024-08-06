@@ -16,10 +16,13 @@ export default function About() {
     </div>
     <motion.div className={container} drag dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} >
       <div>
-        <Heading importance={2}>{'// ABOUT ME'}</Heading>
-        <Button onClick={() => { }}>REQUEST MY CV</Button>
+        <Heading importance={3}>ABOUT ME</Heading>
+        <Button onClick={() => { }}>Send me an email</Button>
       </div>
-      <p>{content.about}</p>
+      <div>
+        <p>{content.about}</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
     </motion.div>
   </section>
 }

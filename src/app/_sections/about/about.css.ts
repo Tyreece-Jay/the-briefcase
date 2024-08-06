@@ -20,8 +20,8 @@ export const container = style({
   display: 'flex',
   gap: '10em',
   flexDirection: 'row',
-  backgroundColor: theme.color.yellow,
-  borderRadius: '2em 0 2em 0',
+  backgroundColor: theme.color.secondary,
+  borderRadius: '1em',
   position: 'absolute',
   color: theme.color.black,
   alignItems: 'center'

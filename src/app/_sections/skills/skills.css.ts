@@ -18,6 +18,5 @@ export const skills = style({
 })
 
 globalStyle(`${skills} > h2`, {
-  color: theme.color.purple,
-  textTransform: 'none'
+  color: theme.color.tertiary
 })

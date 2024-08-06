@@ -3,15 +3,22 @@ import { theme } from '../theme.css'
 
 export const button = style({
   backgroundColor: 'transparent',
-  border: `2px solid ${theme.color.red}`,
-  padding: '15px',
+  border: `2px solid ${theme.color.black}`,
+  color: theme.color.black,
+  padding: '12px',
   textAlign: 'center',
   minWidth: '16em',
-  borderRadius: '4px',
-  fontWeight: 600,
+  borderRadius: '12px',
+  fontWeight: 500,
+  fontSize: '1em',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   ':hover': {
     cursor: 'pointer',
-    backgroundColor: theme.color.red
+    backgroundColor: theme.color.black,
+    color: theme.color.primary,
+    borderColor: theme.color.black
   }
 })
 
@@ -26,4 +33,9 @@ export const icon = style({
     color: theme.color.white,
     backgroundColor: 'transparent',
   }
+})
+
+export const buttonIcon = style({
+  width: '2em',
+  height: '2em',
 })

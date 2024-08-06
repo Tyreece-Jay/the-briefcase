@@ -32,5 +32,5 @@ export const error = style({
   display: 'flex',
   width: 'auto',
   gap: '0.5em',
-  color: theme.color.red
+  color: theme.color.primary
 })

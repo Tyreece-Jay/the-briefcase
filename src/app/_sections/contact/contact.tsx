@@ -6,8 +6,15 @@ import { section, content } from './contact.css'
 export default function Contact() {
   return <section className={section}>
     <div className={content}>
-      <Heading importance={2}>{'// EXPERIENCE'}</Heading>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div>
+        <Heading importance={3} variant='secondary'>DROP ME A MESSAGE</Heading>
+        <p>Want to know more or just want to have a chat?</p>
+      </div>
+      <ul>
+        <li>Request my CV</li>
+        <li>tyreece.jay@gmail.com</li>
+        <li>tyreece-simpson</li>
+      </ul>
     </div>
     <Form />
   </section>

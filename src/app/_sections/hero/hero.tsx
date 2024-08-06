@@ -17,7 +17,7 @@ export default function Hero() {
       <Icons />
       <div className={styles.heading}>
         <Heading importance={1}>{content.name}</Heading>
-        <Heading importance={3}><Typewriter options={{ strings: content.occupation, autoStart: true, loop: true, skipAddStyles: false }} /></Heading>
+        <Heading importance={2}><Typewriter options={{ strings: content.occupation, autoStart: true, loop: true, skipAddStyles: false }} /></Heading>
       </div>
       <ScrollButton icon={faAngleDoubleDown} href="#about" />
     </div>

@@ -5,8 +5,8 @@ export const [themeClass, theme] = createTheme({
     black: "#353131",
     grey: "#4D4847",
     white: "#F5F5F5",
-    red: "#FD7B6E",
-    yellow: "#FECA91",
-    purple: "#BE57A3"
+    primary: "#FD7B6E",
+    secondary: "#FECA91",
+    tertiary: "#BE57A3"
   }
 })

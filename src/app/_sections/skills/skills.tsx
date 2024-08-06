@@ -10,14 +10,14 @@ export default function Skills() {
   return <section className={container}>
     <Marquee autoFill pauseOnHover>
       {content.skills.map((x, i) => <span className={skills} key={i}>
-        <Heading importance={2}>{x}</Heading>
-        <Heading importance={2}>{'//'}</Heading>
+        <Heading importance={4}>{x}</Heading>
+        <Heading importance={4} variant='tertiary'>{'//'}</Heading>
       </span>)}
     </Marquee>
     <Marquee autoFill pauseOnHover direction='right'>
       {content.skills.reverse().map((x, i) => <span className={skills} key={`${i}-r`}>
-        <Heading importance={2}>{x}</Heading>
-        <Heading importance={2}>{'//'}</Heading>
+        <Heading importance={4}>{x}</Heading>
+        <Heading importance={4} variant='tertiary'>{'//'}</Heading>
       </span>)}
     </Marquee>
   </section>
