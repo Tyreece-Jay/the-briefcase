@@ -8,7 +8,7 @@ export const section = style({
 
 export const background = style({
   position: 'absolute',
-  backgroundColor: theme.color.white,
+  backgroundColor: theme.colour.white,
   marginTop: '15em',
   height: '15em',
   width: '100%'
@@ -20,9 +20,9 @@ export const container = style({
   display: 'flex',
   gap: '10em',
   flexDirection: 'row',
-  backgroundColor: theme.color.secondary,
+  backgroundColor: theme.colour.secondary,
   borderRadius: '1em',
   position: 'absolute',
-  color: theme.color.black,
+  color: theme.colour.black,
   alignItems: 'center'
 })

@@ -11,35 +11,35 @@ export const message = style({
   gridArea: 'message',
   height: '10em',
   borderRadius: '1em 1em 0 0',
-  border: `2px solid ${theme.color.white}`,
+  border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
   padding: '1em',
-  color: theme.color.white,
+  color: theme.colour.white,
   ':focus': {
-    outline: `1px solid ${theme.color.white}`
+    outline: `1px solid ${theme.colour.white}`
   }
 })
 
 export const name = style({
   gridArea: 'name',
   borderRadius: '0 0 0 1em',
-  border: `2px solid ${theme.color.white}`,
+  border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
   padding: '1em',
-  color: theme.color.white,
+  color: theme.colour.white,
   ':focus': {
-    outline: `1px solid ${theme.color.white}`
+    outline: `1px solid ${theme.colour.white}`
   }
 })
 
 export const email = style({
   gridArea: 'email',
-  border: `2px solid ${theme.color.white}`,
+  border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
   padding: '1em',
-  color: theme.color.white,
+  color: theme.colour.white,
   ':focus': {
-    outline: `1px solid ${theme.color.white}`
+    outline: `1px solid ${theme.colour.white}`
   }
 })
 
@@ -53,5 +53,5 @@ export const error = style({
   display: 'flex',
   width: 'auto',
   gap: '0.5em',
-  color: theme.color.primary
+  color: theme.colour.primary
 })

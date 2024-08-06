@@ -1,9 +1,9 @@
+import { ToastContainer } from "react-toastify"
 import About from "./_sections/about/about"
 import Hero from "./_sections/hero/hero"
-import Work from "./_sections/work/work"
-import Contact from "./_sections/contact/contact"
 import Skills from "./_sections/skills/skills"
-import { ToastContainer } from "react-toastify"
+import Journey from "./_sections/journey/journey"
+import Contact from "./_sections/contact/contact"
 
 export default function Home() {
   return <main>
@@ -11,7 +11,7 @@ export default function Home() {
     <Hero />
     <About />
     <Skills />
-    <Work />
+    <Journey />
     <Contact />
     <footer>© Tyreece Simpson, {new Date().getFullYear()}</footer>
   </main>

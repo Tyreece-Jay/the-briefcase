@@ -3,7 +3,7 @@ import { globalStyle, style } from '@vanilla-extract/css'
 
 export const container = style({
   overflow: 'hidden',
-  backgroundColor: theme.color.white,
+  backgroundColor: theme.colour.white,
   paddingBottom: '5em',
   display: 'flex',
   flexDirection: 'column',
@@ -13,10 +13,6 @@ export const container = style({
 export const skills = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '2em',
+  gap: '4em',
   paddingRight: '2em'
-})
-
-globalStyle(`${skills} > h2`, {
-  color: theme.color.tertiary
 })

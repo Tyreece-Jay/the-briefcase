@@ -1,7 +1,7 @@
 import { createTheme } from '@vanilla-extract/css'
 
 export const [themeClass, theme] = createTheme({
-  color: {
+  colour: {
     black: "#353131",
     grey: "#4D4847",
     white: "#F5F5F5",

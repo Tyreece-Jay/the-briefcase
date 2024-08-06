@@ -5,24 +5,32 @@ export const h1 = style({
   fontSize: '4em',
   fontWeight: 700,
   textTransform: 'uppercase',
-  color: theme.color.black
+  color: theme.colour.black
 })
 
 export const h2 = style({
   fontSize: '3em',
   fontWeight: 500,
-  color: theme.color.black
+  color: theme.colour.black
 })
 
 const baseH3 = style({
-  fontSize: '2em',
+  fontSize: '2.2em',
   fontWeight: 700,
   textTransform: 'uppercase'
 })
-export const h3 = styleVariants(theme.color, (variant) => [baseH3, { color: variant}])
+export const h3 = styleVariants(theme.colour, (colour) => [baseH3, { color: colour}])
 
 const baseH4 = style({
   fontSize: '2em',
-  fontWeight: 500,
+  fontWeight: 500
 })
-export const h4 = styleVariants(theme.color, (variant) => [baseH4, { color: variant}])
+export const h4 = styleVariants(theme.colour, (colour) => [baseH4, { color: colour}])
+
+const baseH5 = style({
+  fontSize: '1.2em',
+  fontWeight: 700,
+  textTransform: 'uppercase'
+})
+export const h5 = styleVariants(theme.colour, (colour) => [baseH5, { color: colour}])
+
