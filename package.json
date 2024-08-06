@@ -24,6 +24,7 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.52.1",
+    "react-toastify": "^10.0.5",
     "ts-pattern": "^5.2.0",
     "typewriter-effect": "^2.21.0"
   },

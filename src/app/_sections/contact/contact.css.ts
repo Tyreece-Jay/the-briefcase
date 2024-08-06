@@ -25,6 +25,7 @@ export const links = style({
 
 export const link = style({
   color: theme.color.white,
+  textDecoration: 'underline',
   display: 'flex',
   gap: '0.25em',
   alignItems: 'center',
