@@ -8,7 +8,7 @@ export const button = style({
   padding: '12px',
   textAlign: 'center',
   minWidth: '16em',
-  borderRadius: '12px',
+  borderRadius: '1em',
   fontWeight: 500,
   fontSize: '1em',
   display: 'flex',
@@ -21,6 +21,24 @@ export const button = style({
     borderColor: theme.color.black
   }
 })
+
+export const submitButton = style({
+  backgroundColor: 'transparent',
+  border: `2px solid ${theme.color.secondary}`,
+  color: theme.color.secondary,
+  padding: '12px',
+  minWidth: '6em',
+  borderRadius: '0 0 1em 0',
+  fontWeight: 500,
+  fontSize: '1em',
+  ':hover': {
+    cursor: 'pointer',
+    backgroundColor: theme.color.secondary,
+    color: theme.color.black,
+    borderColor: theme.color.secondary
+  }
+})
+
 
 export const icon = style({
   position: 'absolute',

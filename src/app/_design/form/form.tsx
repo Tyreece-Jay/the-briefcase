@@ -5,7 +5,7 @@ import { FieldErrors, SubmitHandler, useForm } from 'react-hook-form'
 import { match } from 'ts-pattern'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
-import { Button } from '../button/button'
+import { SubmitButton } from '../button/button'
 import { email, error, form, message, name } from './form.css'
 
 type Inputs = {
@@ -22,7 +22,7 @@ export default function Form() {
     <input type='text' placeholder="Your mesasge" {...register("message", { required: true })} className={message} />
     <input type='text' placeholder="Full name" {...register("name", { required: true })} className={name} />
     <input type='email' placeholder="Email Address" {...register("email", { required: true })} className={email} />
-    <Button onClick={() => onSubmit} noMotion>SEND</Button>
+    <SubmitButton onClick={() => onSubmit}>Send</SubmitButton>
     <ErrorMessage errors={errors} />
   </form>
 }

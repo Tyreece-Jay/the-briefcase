@@ -5,26 +5,47 @@ export const form = style({
   display: 'grid',
   gridTemplateAreas: `"message message message" "name email submit" "error errror errror"`,
   gap: '0.5em',
-  width: '60%'
 })
 
 export const message = style({
-  width: 'auto',
   gridArea: 'message',
-  height: '10em'
+  height: '10em',
+  borderRadius: '1em 1em 0 0',
+  border: `2px solid ${theme.color.white}`,
+  backgroundColor: 'transparent',
+  padding: '1em',
+  color: theme.color.white,
+  ':focus': {
+    outline: `1px solid ${theme.color.white}`
+  }
 })
 
 export const name = style({
-  gridArea: 'name'
+  gridArea: 'name',
+  borderRadius: '0 0 0 1em',
+  border: `2px solid ${theme.color.white}`,
+  backgroundColor: 'transparent',
+  padding: '1em',
+  color: theme.color.white,
+  ':focus': {
+    outline: `1px solid ${theme.color.white}`
+  }
 })
 
 export const email = style({
-  gridArea: 'email'
+  gridArea: 'email',
+  border: `2px solid ${theme.color.white}`,
+  backgroundColor: 'transparent',
+  padding: '1em',
+  color: theme.color.white,
+  ':focus': {
+    outline: `1px solid ${theme.color.white}`
+  }
 })
 
 export const submit = style({
   gridArea: 'submit',
-  margin: 0
+  borderRadius: '0 0 1em 0'
 })
 
 export const error = style({

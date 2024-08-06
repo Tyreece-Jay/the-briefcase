@@ -7,12 +7,29 @@ export const section = style({
   padding: '5em 15vw 5em 15vw',
   display: 'flex',
   flexDirection: 'row',
-  gap: '8em'
+  justifyContent: 'space-between'
 })
 
 export const content = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '4em',
-  width: '40%'
+})
+
+export const links = style({
+  listStyle: 'none',
+  display: 'flex',
+  gap: '1em',
+  flexDirection: 'column'
+})
+
+export const link = style({
+  color: theme.color.white,
+  display: 'flex',
+  gap: '0.25em',
+  alignItems: 'center',
+  ':hover': {
+    cursor: 'pointer',
+    color: theme.color.secondary
+  }
 })

@@ -24,14 +24,6 @@ body {
   color: var(--white);
 }
 
-input {
-  border: 2px solid var(--white);
-  background-color: transparent;
-  padding: 15px;
-  border-radius: 4px;
-  color: var(--white);
-}
-
 footer {
   padding: 1em;
   color: var(--black);
