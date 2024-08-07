@@ -1,41 +1,50 @@
-export const content = {
+import { StaticImageData } from 'next/image'
+import firstDatabank from '../../public/firstDatabank.png'
+import exeterUniversity from '../../public/exeterUniversity.png'
+
+export const content: Content = {
   name: 'Tyreece Simpson',
   occupation: ['Full-Stack Software Engineer', 'Front-End Specialist'],
   about: 'Constantly sharpening my knowledge as a full-stack developer whilst having a real passion for UI/UX design and innovation. My curios and inquisitive mindset translates extremely well to software engineering and has allowed me to become the proficient software developer I am today. Well versed in TypeScript, React, C#, .NetCore, whilst also having limited knowledge in many more.',
   skills: ['TypeScript', 'JavaScript', 'React', 'HTML', 'CSS', 'C#', 'SQL', 'UX & UI', 'Next.js', 'BDD', 'TDD', 'DevOps', 'Pair Programming', 'DDD', 'Jest', 'XState', 'StyleX', 'vanilla-extract'],
   experience: {
-    company: 'First Databank',
-    role: 'Software Developer',
-    duration: 'September 2018 - Present',
-    information: ['Improved the AnalyseRx solution as part of a team during its early stages, which helped produce a ~300% increase in its customer base.',
-      'Solely designed and developed a dashboard to monitor certain metrics to indicate the health of the AnalyseRx solution; this provided ~5% increase in development efficiencies.',
-      'Currently part of a project to recreate an in-house system used to author medical content. This is projected to improve content authoring efficiencies by ~50%.']
+    type: 'Experience',
+    image: firstDatabank,
+    alt: 'First Databank',
+    information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   education: {
-    university: 'The University of Exeter',
-    course: 'BSC, Digital & Technology Solutions with proficiency in Software Engineering',
-    duration: 'September 2018 - May 2022',
-    information: ['Grade: Class I']
+    type: 'Education',
+    image: exeterUniversity,
+    alt: 'The University of Exeter',
+    information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  },
+  extra: {
+    type: 'Extra',
+    image: firstDatabank,
+    alt: 'First Databank',
+    information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }
 }
 
-export type JourneyType = 'Experience' | 'Education' | 'Extra'
-// type Journey = Experience 
+export type Experience = 'Experience'
+export type Education = 'Education'
+export type Extra = 'Extra'
+export type JourneyType = Experience | Education | Extra
 
-// const journey: Experience = {
-//   type: 'Experience',
-//   content: {
-//     image: 'd',
-//     information: 'ddw'
-//   }
-// }
+type Content = {
+  name: string
+  occupation: string[]
+  about: string
+  skills: string[]
+  experience: Journey
+  education: Journey
+  extra: Journey
+}
 
-// interface BaseJourney {
-//   image: string
-//   information: string
-// }
-
-// interface Experience {
-//   type: JourneyType
-//   content: BaseJourney
-// }
+type Journey = {
+  type: JourneyType
+  image: StaticImageData
+  alt: string
+  information: string
+}
