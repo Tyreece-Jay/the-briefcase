@@ -5,6 +5,7 @@ import Skills from "./_sections/skills/skills"
 import Journey from "./_sections/journey/journey"
 import Contact from "./_sections/contact/contact"
 import How from "./_sections/how/how"
+import { Text } from "@/app/_design/text/text"
 
 export default function Home() {
   return <main>
@@ -15,6 +16,6 @@ export default function Home() {
     <Journey />
     <Contact />
     <How />
-    <footer>© Tyreece Simpson, {new Date().getFullYear()}</footer>
+    <footer><Text>© Tyreece Simpson, {new Date().getFullYear()}</Text></footer>
   </main>
 }

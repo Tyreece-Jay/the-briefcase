@@ -14,6 +14,7 @@ export const message = style({
   border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
   padding: '1rem',
+  fontSize: '1rem',
   color: theme.colour.white,
   ':focus': {
     outline: `1px solid ${theme.colour.white}`
@@ -26,6 +27,7 @@ export const name = style({
   border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
   padding: '1rem',
+  fontSize: '1rem',
   color: theme.colour.white,
   ':focus': {
     outline: `1px solid ${theme.colour.white}`
@@ -37,6 +39,7 @@ export const email = style({
   border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
   padding: '1rem',
+  fontSize: '1rem',
   color: theme.colour.white,
   ':focus': {
     outline: `1px solid ${theme.colour.white}`

@@ -32,7 +32,7 @@ function JourneyCard({ type, selected, setSelected }: CardType) {
     .with('Extra', () => content.extra)
     .exhaustive()
 
-  return <div className={selected == type ? cardBack : cardFront} onClick={() => {selected == type ? setSelected(undefined) : setSelected(type)}}>
+  return <div className={selected == type ? cardBack : cardFront} onClick={() => { selected == type ? setSelected(undefined) : setSelected(type) }}>
     <Heading importance={5} colour={selected == type ? 'secondary' : 'black'}>{`// ${card.type}`}</Heading>
     {selected == type ? <Text>{card.information}</Text> : <img src={card.image.src} alt={card.alt} />}
     <div className={footer}>

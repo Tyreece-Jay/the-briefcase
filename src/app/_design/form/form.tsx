@@ -7,12 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { SubmitButton } from '../button/button'
 import { email, error, form, message, name } from './form.css'
+import { Text } from "@/app/_design/text/text"
 
-type Inputs = {
-  name: string
-  email: string
-  message: string
-}
+type Inputs = { name: string, email: string, message: string }
 
 export default function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
@@ -22,7 +19,7 @@ export default function Form() {
     <input type='text' placeholder="Your mesasge" {...register("message", { required: true })} className={message} />
     <input type='text' placeholder="Full name" {...register("name", { required: true })} className={name} />
     <input type='email' placeholder="Email Address" {...register("email", { required: true })} className={email} />
-    <SubmitButton onClick={() => onSubmit}>Send</SubmitButton>
+    <SubmitButton onClick={() => onSubmit}><Text>Send</Text></SubmitButton>
     <ErrorMessage errors={errors} />
   </form>
 }

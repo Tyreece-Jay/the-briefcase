@@ -29,9 +29,9 @@ export default function Contact() {
         <Text>Want to know more or just want to have a chat?</Text>
       </div>
       <ul className={links}>
-        <li><a className={link} onClick={notify}><FontAwesomeIcon icon={faCircleUser} fixedWidth />Request my CV</a></li>
-        <li><a className={link} href="mailto: tyreece.jay@gmail.com"><FontAwesomeIcon icon={faEnvelope} fixedWidth />tyreece.jay@gmail.com</a></li>
-        <li><a className={link} href="https://linkedin.com/in/tyreece-simpson"><FontAwesomeIcon icon={faLinkedinIn} fixedWidth />tyreece-simpson</a></li>
+        <li><a className={link} onClick={notify}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></a></li>
+        <li><a className={link} href="mailto: tyreece.jay@gmail.com"><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></a></li>
+        <li><a className={link} href="https://linkedin.com/in/tyreece-simpson"><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></a></li>
       </ul>
     </div>
     <Form />
