@@ -27,10 +27,7 @@ export const content: Content = {
   }
 }
 
-export type Experience = 'Experience'
-export type Education = 'Education'
-export type Extra = 'Extra'
-export type JourneyType = Experience | Education | Extra
+export type JourneyType = 'Experience' | 'Education' | 'Extra'
 
 type Content = {
   name: string

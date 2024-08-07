@@ -7,7 +7,7 @@ import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
 
 export default function Journey() {
-  const [selectedJourney, setSelectedJourney] = useState<JourneyType>()
+  const [selectedJourney, setSelectedJourney] = useState<JourneyType | undefined>()
   console.log(selectedJourney)
   return <section className={section}>
     <div className={intro}>
@@ -22,36 +22,23 @@ export default function Journey() {
   </section>
 }
 
-function JourneyCard({ type, selected, setSelected }: { type: JourneyType, selected: JourneyType | undefined, setSelected: (selected: JourneyType) => void }) {
+type CardType = { type: JourneyType, selected: JourneyType | undefined, setSelected: (selected: JourneyType | undefined) => void }
+function JourneyCard({ type, selected, setSelected }: CardType) {
+  const dotCount = 18
   const card = match(type)
     .with('Education', () => content.education)
     .with('Experience', () => content.experience)
     .with('Extra', () => content.extra)
     .exhaustive()
-  return <div className={selected == type ? cardBack : cardFront} onClick={() => setSelected(type)}>
-    <Heading importance={5}>{`// ${card.type}`}</Heading>
+
+  return <div className={selected == type ? cardBack : cardFront} onClick={() => {selected == type ? setSelected(undefined) : setSelected(type)}}>
+    <Heading importance={5} colour={selected == type ? 'secondary' : 'black'}>{`// ${card.type}`}</Heading>
     {selected == type ? <p>{card.information}</p> : <img src={card.image.src} alt={card.alt} />}
     <div className={footer}>
       <p>Click Me</p>
       <span className={dots}>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
-        <span className={dot}></span>
+        {[...Array(dotCount)].map((_, i) =>
+          <span key={i} className={dot[selected == type ? 'white' : 'black']}></span>)}
       </span>
     </div>
   </div>

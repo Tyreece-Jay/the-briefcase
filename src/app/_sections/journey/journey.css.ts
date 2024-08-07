@@ -1,5 +1,5 @@
 import { theme } from '@/app/_design/theme.css'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 
 export const section = style({
   margin: '5em 10vw 5em 10vw',
@@ -55,10 +55,13 @@ export const dots = style({
   width: '5em'
 })
 
-export const dot = style({
+export const baseDot = style({
   height: '4px',
   width: '4px',
-  backgroundColor: theme.colour.black,
   borderRadius: '50%',
-  display: 'block'
+  display: 'block',
+  ':hover': {
+    backgroundColor: theme.colour.primary
+  }
 })
+export const dot = styleVariants(theme.colour, (colour) => [baseDot, { backgroundColor: colour}])
