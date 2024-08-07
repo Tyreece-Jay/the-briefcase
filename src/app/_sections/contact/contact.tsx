@@ -10,6 +10,7 @@ import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Text } from "@/app/_design/text/text"
+import Link from 'next/link'
 
 export default function Contact() {
   const [requestSent, setRequestSent] = useState(false)
@@ -29,9 +30,9 @@ export default function Contact() {
         <Text>Want to know more or just want to have a chat?</Text>
       </div>
       <ul className={links}>
-        <li><a className={link} onClick={notify}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></a></li>
-        <li><a className={link} href="mailto: tyreece.jay@gmail.com"><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></a></li>
-        <li><a className={link} href="https://linkedin.com/in/tyreece-simpson"><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></a></li>
+        <li><span className={link} onClick={notify}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></span></li>
+        <li><Link className={link} target="_blank" href="mailto:tyreece.jay@gmail.com"><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></Link></li>
+        <li><Link className={link} target="_blank" href="https://linkedin.com/in/tyreece-simpson"><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></Link></li>
       </ul>
     </div>
     <Form />

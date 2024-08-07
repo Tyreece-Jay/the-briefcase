@@ -17,6 +17,10 @@ globalStyle(`${baseButton} *`, {
   cursor: 'pointer'
 })
 
+export const link = style({
+  textDecoration:'none'
+})
+
 export const button = style([baseButton, {
   backgroundColor: 'transparent',
   borderColor: theme.colour.black,
