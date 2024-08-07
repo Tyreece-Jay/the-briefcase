@@ -1,5 +1,5 @@
 import { theme } from '@/app/_design/theme.css'
-import { style } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const section = style({
   margin: '5em 10vw 5em 10vw',
@@ -24,7 +24,12 @@ const baseCard = style({
   justifyContent: 'space-between',
   padding: '2em',
   borderRadius: '1em',
+  cursor: 'pointer'
 })
+
+globalStyle(`${baseCard} *`, {
+  cursor: 'pointer'
+});
 
 export const cardFront = style([baseCard, {
   background: theme.colour.white,
@@ -40,7 +45,7 @@ export const footer = style({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-  alignItems: 'end'
+  alignItems: 'flex-end'
 })
 
 export const dots = style({
