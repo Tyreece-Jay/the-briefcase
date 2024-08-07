@@ -24,7 +24,8 @@ const baseCard = style({
   justifyContent: 'space-between',
   padding: '2em',
   borderRadius: '1em',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  width: '25%'
 })
 
 globalStyle(`${baseCard} *`, {

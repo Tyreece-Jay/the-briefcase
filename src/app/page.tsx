@@ -4,6 +4,7 @@ import Hero from "./_sections/hero/hero"
 import Skills from "./_sections/skills/skills"
 import Journey from "./_sections/journey/journey"
 import Contact from "./_sections/contact/contact"
+import How from "./_sections/how/how"
 
 export default function Home() {
   return <main>
@@ -13,6 +14,7 @@ export default function Home() {
     <Skills />
     <Journey />
     <Contact />
+    <How />
     <footer>© Tyreece Simpson, {new Date().getFullYear()}</footer>
   </main>
 }

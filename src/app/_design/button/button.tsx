@@ -4,8 +4,9 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { motion } from "framer-motion"
 import { ReactNode } from "react"
-import { button, buttonIcon, icon, submitButton } from "./button.css"
+import { button, buttonIcon, icon, largeButton, submitButton } from "./button.css"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { faFigma } from "@fortawesome/free-brands-svg-icons"
 
 const hover = { scale: 1.1 }
 const transition = { type: "spring", damping: 10, stiffness: 100 }
@@ -18,7 +19,21 @@ export function Button({ children, onClick }: { children: ReactNode, onClick: ()
   </motion.button>
 }
 
-export function SubmitButton({ children, onClick }: { children: ReactNode, onClick: () => any}) {
+export function LargeButton({ children, onClick }: { children: ReactNode, onClick: () => any }) {
+  return <motion.button className={largeButton} onClick={onClick} whileHover={hover} transition={transition} whileTap={tap}>
+    <div>
+      <FontAwesomeIcon icon={faFigma} className={buttonIcon} />
+      {children}
+    </div>
+    <div>
+      <p>View</p>
+      <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
+    </div>
+  </motion.button>
+}
+
+
+export function SubmitButton({ children, onClick }: { children: ReactNode, onClick: () => any }) {
   return <motion.button className={submitButton} onClick={onClick} transition={transition} whileTap={tap}>
     {children}
   </motion.button>

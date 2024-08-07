@@ -22,6 +22,27 @@ export const button = style({
   }
 })
 
+export const largeButton = style({
+  backgroundColor: theme.colour.grey,
+  border: `2px solid ${theme.colour.grey}`,
+  color: theme.colour.white,
+  padding: '12px',
+  textAlign: 'center',
+  width: '100%',
+  borderRadius: '1em',
+  fontWeight: 500,
+  fontSize: '1em',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  ':hover': {
+    cursor: 'pointer',
+    backgroundColor: 'transparent',
+    color: theme.colour.secondary,
+    borderColor: theme.colour.white
+  }
+})
+
 export const submitButton = style({
   backgroundColor: 'transparent',
   border: `2px solid ${theme.colour.secondary}`,

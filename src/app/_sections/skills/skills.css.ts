@@ -1,5 +1,5 @@
 import { theme } from '@/app/_design/theme.css'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 
 export const container = style({
   overflow: 'hidden',
