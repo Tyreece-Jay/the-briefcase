@@ -5,6 +5,7 @@ import { cardBack, cardFront, cards, dot, dots, footer, intro, section } from '.
 import { Heading } from '@/app/_design/text/text'
 import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
+import { Text } from "@/app/_design/text/text"
 
 export default function Journey() {
   const [selectedJourney, setSelectedJourney] = useState<JourneyType | undefined>()
@@ -12,7 +13,7 @@ export default function Journey() {
   return <section className={section}>
     <div className={intro}>
       <Heading importance={3} colour='primary'>My Journey</Heading>
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <Text>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
     </div>
     <div className={cards}>
       <JourneyCard type='Experience' selected={selectedJourney} setSelected={setSelectedJourney}></JourneyCard>
@@ -33,9 +34,9 @@ function JourneyCard({ type, selected, setSelected }: CardType) {
 
   return <div className={selected == type ? cardBack : cardFront} onClick={() => {selected == type ? setSelected(undefined) : setSelected(type)}}>
     <Heading importance={5} colour={selected == type ? 'secondary' : 'black'}>{`// ${card.type}`}</Heading>
-    {selected == type ? <p>{card.information}</p> : <img src={card.image.src} alt={card.alt} />}
+    {selected == type ? <Text>{card.information}</Text> : <img src={card.image.src} alt={card.alt} />}
     <div className={footer}>
-      <p>Click Me</p>
+      <Text>Click Me</Text>
       <span className={dots}>
         {[...Array(dotCount)].map((_, i) =>
           <span key={i} className={dot[selected == type ? 'white' : 'black']}></span>)}

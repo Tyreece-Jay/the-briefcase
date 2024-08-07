@@ -1,71 +1,72 @@
-import { style } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 import { theme } from '../theme.css'
 
-export const button = style({
-  backgroundColor: 'transparent',
-  border: `2px solid ${theme.colour.black}`,
-  color: theme.colour.black,
-  padding: '12px',
-  textAlign: 'center',
-  minWidth: '16em',
-  borderRadius: '1em',
-  fontWeight: 500,
-  fontSize: '1em',
+const baseButton = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  borderRadius: '1rem',
+  border: '2px solid',
+  padding: '12px',
   ':hover': {
     cursor: 'pointer',
+  }
+})
+
+globalStyle(`${baseButton} *`, {
+  cursor: 'pointer'
+})
+
+export const button = style([baseButton, {
+  backgroundColor: 'transparent',
+  borderColor: theme.colour.black,
+  color: theme.colour.black,
+  minWidth: '16rem',
+  ':hover': {
     backgroundColor: theme.colour.black,
     color: theme.colour.primary,
     borderColor: theme.colour.black
   }
-})
+}])
 
-export const largeButton = style({
+export const largeButton = style([baseButton, {
   backgroundColor: theme.colour.grey,
-  border: `2px solid ${theme.colour.grey}`,
+  borderColor: theme.colour.grey,
   color: theme.colour.white,
-  padding: '12px',
-  textAlign: 'center',
+  padding: '1.5rem 2rem',
   width: '100%',
-  borderRadius: '1em',
-  fontWeight: 500,
-  fontSize: '1em',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
   ':hover': {
-    cursor: 'pointer',
     backgroundColor: 'transparent',
     color: theme.colour.secondary,
     borderColor: theme.colour.white
   }
+}])
+
+export const content = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '1rem'
 })
 
-export const submitButton = style({
+export const submitButton = style([baseButton, {
   backgroundColor: 'transparent',
-  border: `2px solid ${theme.colour.secondary}`,
+  borderColor: theme.colour.secondary,
   color: theme.colour.secondary,
-  padding: '12px',
-  minWidth: '6em',
-  borderRadius: '0 0 1em 0',
-  fontWeight: 500,
-  fontSize: '1em',
+  minWidth: '6rem',
+  borderRadius: '0 0 1rem 0',
+  justifyContent: 'center',
   ':hover': {
-    cursor: 'pointer',
     backgroundColor: theme.colour.secondary,
     color: theme.colour.black,
     borderColor: theme.colour.secondary
   }
-})
-
+}])
 
 export const icon = style({
   position: 'absolute',
   color: theme.colour.black,
-  width: '3em',
-  height: '3em',
+  width: '3rem',
+  height: '3rem',
   transition: '0.3s',
   ':hover': {
     cursor: 'pointer',
@@ -75,6 +76,6 @@ export const icon = style({
 })
 
 export const buttonIcon = style({
-  width: '2em',
-  height: '2em',
+  width: '2rem',
+  height: '2rem',
 })

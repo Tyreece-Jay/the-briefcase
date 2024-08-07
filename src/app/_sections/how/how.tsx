@@ -3,14 +3,16 @@
 import React from 'react'
 import { Heading } from '@/app/_design/text/text'
 import { buttons, container } from './how.css'
-import { Button, LargeButton } from '@/app/_design/button/button'
+import { LargeButton } from '@/app/_design/button/button'
+import { faFigma, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { Text } from "@/app/_design/text/text"
 
 export default function How() {
   return <section className={container}>
     <Heading importance={3} colour='primary'>Want to know how I built this website?</Heading>
     <div className={buttons}>
-      <LargeButton onClick={() => { }}>The Figma design</LargeButton>
-      <LargeButton onClick={() => { }}>The GitHub repository</LargeButton>
+      <LargeButton icon={faFigma} onClick={() => { }}><Text>The Figma design</Text></LargeButton>
+      <LargeButton icon={faGithub} onClick={() => { }}><Text>The GitHub repository</Text></LargeButton>
     </div>
   </section>
 }

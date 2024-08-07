@@ -2,9 +2,9 @@ import { theme } from '@/app/_design/theme.css'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 
 export const section = style({
-  margin: '5em 10vw 5em 10vw',
+  margin: '5rem 10vw 5rem 10vw',
   display: 'flex',
-  gap: '2em',
+  gap: '2rem',
   flexDirection: 'column',
 })
 
@@ -22,15 +22,15 @@ const baseCard = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  padding: '2em',
-  borderRadius: '1em',
+  padding: '2rem',
+  borderRadius: '1rem',
   cursor: 'pointer',
   width: '25%'
 })
 
 globalStyle(`${baseCard} *`, {
   cursor: 'pointer'
-});
+})
 
 export const cardFront = style([baseCard, {
   background: theme.colour.white,
@@ -52,8 +52,8 @@ export const footer = style({
 export const dots = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
-  gap: '0.5em',
-  width: '5em'
+  gap: '0.5rem',
+  width: '5rem'
 })
 
 export const baseDot = style({

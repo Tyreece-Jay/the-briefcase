@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { Text } from "@/app/_design/text/text"
 
 export default function Contact() {
   const [requestSent, setRequestSent] = useState(false)
@@ -25,7 +26,7 @@ export default function Contact() {
     <div className={content}>
       <div>
         <Heading importance={3} colour='primary'>Drop me a message</Heading>
-        <p>Want to know more or just want to have a chat?</p>
+        <Text>Want to know more or just want to have a chat?</Text>
       </div>
       <ul className={links}>
         <li><a className={link} onClick={notify}><FontAwesomeIcon icon={faCircleUser} fixedWidth />Request my CV</a></li>

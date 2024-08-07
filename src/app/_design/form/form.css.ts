@@ -4,16 +4,16 @@ import { style } from '@vanilla-extract/css'
 export const form = style({
   display: 'grid',
   gridTemplateAreas: `"message message message" "name email submit" "error errror errror"`,
-  gap: '0.5em',
+  gap: '0.5rem',
 })
 
 export const message = style({
   gridArea: 'message',
-  height: '10em',
-  borderRadius: '1em 1em 0 0',
+  height: '10rem',
+  borderRadius: '1rem 1rem 0 0',
   border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
-  padding: '1em',
+  padding: '1rem',
   color: theme.colour.white,
   ':focus': {
     outline: `1px solid ${theme.colour.white}`
@@ -22,10 +22,10 @@ export const message = style({
 
 export const name = style({
   gridArea: 'name',
-  borderRadius: '0 0 0 1em',
+  borderRadius: '0 0 0 1rem',
   border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
-  padding: '1em',
+  padding: '1rem',
   color: theme.colour.white,
   ':focus': {
     outline: `1px solid ${theme.colour.white}`
@@ -36,7 +36,7 @@ export const email = style({
   gridArea: 'email',
   border: `2px solid ${theme.colour.white}`,
   backgroundColor: 'transparent',
-  padding: '1em',
+  padding: '1rem',
   color: theme.colour.white,
   ':focus': {
     outline: `1px solid ${theme.colour.white}`
@@ -45,13 +45,13 @@ export const email = style({
 
 export const submit = style({
   gridArea: 'submit',
-  borderRadius: '0 0 1em 0'
+  borderRadius: '0 0 1rem 0'
 })
 
 export const error = style({
   gridArea: 'error',
   display: 'flex',
   width: 'auto',
-  gap: '0.5em',
+  gap: '0.5rem',
   color: theme.colour.primary
 })

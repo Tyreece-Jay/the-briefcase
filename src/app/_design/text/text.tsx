@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { h1, h2, h3, h4, h5 } from './text.css'
+import { h1, h2, h3, h4, h5, text } from './text.css'
 import { match } from "ts-pattern"
 import { theme } from "../theme.css"
 
@@ -12,4 +12,8 @@ export function Heading({ importance, colour = 'black', children }: { importance
   .with(4, () => <h4 className={h4[colour]}>{children}</h4>)
   .with(5, () => <h5 className={h5[colour]}>{children}</h5>)
   .exhaustive()
+}
+
+export function Text({children} : {children: ReactNode}) {
+  return <text className={text}>{children}</text>
 }

@@ -3,25 +3,25 @@ import { style } from '@vanilla-extract/css'
 
 export const section = style({
   width: '100%',
-  height: '30em'
+  height: '30rem'
 })
 
 export const background = style({
   position: 'absolute',
   backgroundColor: theme.colour.white,
-  marginTop: '15em',
-  height: '15em',
+  marginTop: '15rem',
+  height: '15rem',
   width: '100%'
 })
 
 export const container = style({
-  margin: '5em 5vw 0 5vw',
+  margin: '5rem 5vw 0 5vw',
   padding: '5% 10vw 5% 10vw',
   display: 'flex',
-  gap: '10em',
+  gap: '10rem',
   flexDirection: 'row',
   backgroundColor: theme.colour.secondary,
-  borderRadius: '1em',
+  borderRadius: '1rem',
   position: 'absolute',
   color: theme.colour.black,
   alignItems: 'center'

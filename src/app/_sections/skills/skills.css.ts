@@ -4,15 +4,15 @@ import { style } from '@vanilla-extract/css'
 export const container = style({
   overflow: 'hidden',
   backgroundColor: theme.colour.white,
-  paddingBottom: '5em',
+  paddingBottom: '5rem',
   display: 'flex',
   flexDirection: 'column',
-  gap: '2em'
+  gap: '2rem'
 })
 
 export const skills = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '4em',
-  paddingRight: '2em'
+  gap: '4rem',
+  paddingRight: '2rem'
 })
