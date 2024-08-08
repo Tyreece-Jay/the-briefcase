@@ -13,6 +13,6 @@ export const container = style({
 export const skills = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '4rem',
+  gap: '2rem',
   paddingRight: '2rem'
 })

@@ -20,9 +20,20 @@ export const container = style({
   display: 'flex',
   gap: '10rem',
   flexDirection: 'row',
-  backgroundColor: theme.colour.secondary,
+  background: 'linear-gradient(45deg, rgba(254,174,145,1) 0%, rgba(253,120,110,1) 69%)',
   borderRadius: '1rem',
   position: 'absolute',
   color: theme.colour.black,
-  alignItems: 'center'
+})
+
+export const left = style({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+})
+
+export const right = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem'
 })
