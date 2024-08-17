@@ -78,13 +78,20 @@ export const modalContainer = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: 1
+  zIndex: 1,
+  backgroundColor: 'rgba(0, 0, 0, 0.4)'
 })
 
 export const modal = style({
   borderRadius: '20px',
-  width: '500px',
   height: '300px',
+  padding: '2rem',
   background: theme.colour.white,
   color: theme.colour.black
+})
+
+export const modalContent = style({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '2rem'
 })

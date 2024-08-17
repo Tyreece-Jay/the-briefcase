@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { card, cards, dot, dots, footer, intro, modal, modalContainer, overlay, section } from './journey.css'
+import { card, cards, dot, dots, footer, intro, modal, modalContainer, modalContent, overlay, section } from './journey.css'
 import { Heading } from '@/app/_design/text/text'
 import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
@@ -47,8 +47,9 @@ function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType,
     <div key={`${selectedJourney}-modal`} className={modalContainer} onClick={() => setSelected(undefined)}>
       <motion.div layoutId={selectedJourney} className={modal}>
         <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-        <img src={journeyContent.image.src} alt={journeyContent.alt} />
-        <div className={footer}>
+        <div className={modalContent}>
+          <img src={journeyContent.image.src} alt={journeyContent.alt} />
+          <span>{journeyContent.information}</span>
         </div>
       </motion.div>
     </div>
@@ -75,8 +76,8 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
 
 function JourneyContent(type: JourneyType) {
   return match(type)
-  .with('Education', () => content.education)
-  .with('Experience', () => content.experience)
-  .with('Extra', () => content.extra)
-  .exhaustive()
+    .with('Education', () => content.education)
+    .with('Experience', () => content.experience)
+    .with('Extra', () => content.extra)
+    .exhaustive()
 }
