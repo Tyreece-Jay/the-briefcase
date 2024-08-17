@@ -18,29 +18,21 @@ export const cards = style({
   justifyContent: 'space-between'
 })
 
-const baseCard = style({
+export const card = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
   padding: '2rem',
   borderRadius: '1rem',
   cursor: 'pointer',
-  width: '25%'
-})
-
-globalStyle(`${baseCard} *`, {
-  cursor: 'pointer'
-})
-
-export const cardFront = style([baseCard, {
+  width: '25%',
   background: theme.colour.white,
   color: theme.colour.black
-}])
+})
 
-export const cardBack = style([baseCard, {
-  background: theme.colour.grey,
-  color: theme.colour.white
-}])
+globalStyle(`${card} *`, {
+  cursor: 'pointer'
+})
 
 export const footer = style({
   display: 'flex',
@@ -56,7 +48,7 @@ export const dots = style({
   width: '5rem'
 })
 
-export const baseDot = style({
+const baseDot = style({
   height: '4px',
   width: '4px',
   borderRadius: '50%',
@@ -65,4 +57,34 @@ export const baseDot = style({
     backgroundColor: theme.colour.primary
   }
 })
-export const dot = styleVariants(theme.colour, (colour) => [baseDot, { backgroundColor: colour}])
+export const dot = styleVariants(theme.colour, (colour) => [baseDot, { backgroundColor: colour }])
+
+export const overlay = style({
+  background: theme.colour.white,
+  opacity: 0.2,
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  bottom: 0,
+  right: 0
+})
+
+export const modalContainer = style({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  bottom: 0,
+  right: 0,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  zIndex: 1
+})
+
+export const modal = style({
+  borderRadius: '20px',
+  width: '500px',
+  height: '300px',
+  background: theme.colour.white,
+  color: theme.colour.black
+})
