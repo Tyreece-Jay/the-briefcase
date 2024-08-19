@@ -6,6 +6,7 @@ import Journey from "./_sections/journey/journey"
 import Contact from "./_sections/contact/contact"
 import How from "./_sections/how/how"
 import { Text } from "@/app/_design/text/text"
+import { footer } from "./app.css"
 
 export default function Home() {
   return <main>
@@ -16,6 +17,12 @@ export default function Home() {
     <Journey />
     <Contact />
     <How />
-    <footer><Text>© Tyreece Simpson, {new Date().getFullYear()}</Text></footer>
+    <footer className={footer}><Text>© Tyreece Simpson, {new Date().getFullYear()}</Text></footer>
   </main>
 }
+
+// TODO: remove css modules
+
+// TODO: have dev and prod builds
+// TODO: get gh pages working
+// TODO: add resend

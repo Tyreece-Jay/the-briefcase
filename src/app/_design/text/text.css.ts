@@ -1,4 +1,4 @@
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '../theme.css'
 
 export const h1 = style({
@@ -33,7 +33,6 @@ const baseH5 = style({
   textTransform: 'uppercase'
 })
 export const h5 = styleVariants(theme.colour, (colour) => [baseH5, { color: colour}])
-
 
 export const text = style({
   fontSize: '1rem',
