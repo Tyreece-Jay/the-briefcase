@@ -21,7 +21,6 @@ export default function Home() {
   </main>
 }
 
-// TODO: remove css modules
 // TODO: make particles consistent in all backgrounds
 
 // TODO: have dev and prod builds
