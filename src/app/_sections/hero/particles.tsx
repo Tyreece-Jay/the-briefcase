@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Particles as TsParticles, initParticlesEngine } from "@tsparticles/react"
 import { type ISourceOptions, MoveDirection } from "@tsparticles/engine"
 import { loadSlim } from "@tsparticles/slim"
-import styles from './hero.module.css'
+import { particles } from './hero.css'
 
 export default function Particles() {
   const [init, setInit] = useState(false)
@@ -46,5 +46,5 @@ export default function Particles() {
     }), []
   )
 
-  if (init) { return <TsParticles id="tsparticles" options={options} className={styles.particles} /> }
+  if (init) { return <TsParticles id="tsparticles" options={options} className={particles} /> }
 }

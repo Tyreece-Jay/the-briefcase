@@ -22,6 +22,7 @@ export default function Home() {
 }
 
 // TODO: remove css modules
+// TODO: make particles consistent in all backgrounds
 
 // TODO: have dev and prod builds
 // TODO: get gh pages working

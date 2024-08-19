@@ -15,12 +15,6 @@ globalStyle('*', {
   margin: 0
 })
 
-// TODO: remove css modules
-
-// TODO: have dev and prod builds
-// TODO: get gh pages working
-// TODO: add resend
-
 export const footer = style({
   padding: '1rem',
   color: theme.colour.black,
