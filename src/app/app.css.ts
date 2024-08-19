@@ -7,7 +7,8 @@ globalStyle('body', {
   cursor: 'crosshair',
   maxWidth: '100vw',
   backgroundColor: theme.colour.black,
-  color: theme.colour.white
+  color: theme.colour.white,
+  overflowX: 'hidden'
 })
 
 globalStyle('*', {
