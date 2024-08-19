@@ -48,7 +48,7 @@ function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType,
       <motion.div layoutId={selectedJourney} className={modal}>
         <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
         <div className={modalContent}>
-          <img src={journeyContent.image.src} alt={journeyContent.alt} />
+          {/* <img src={journeyContent.image.src} alt={journeyContent.alt} /> */}
           <span>{journeyContent.information}</span>
         </div>
       </motion.div>
@@ -63,7 +63,7 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
 
   return <motion.div layoutId={type} className={card} onClick={() => { selected == type ? setSelected(undefined) : setSelected(type) }}>
     <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-    <img src={journeyContent.image.src} alt={journeyContent.alt} />
+    {/* <img src={journeyContent.image.src} alt={journeyContent.alt} /> */}
     <div className={footer}>
       <Text>Click Me</Text>
       <span className={dots}>
