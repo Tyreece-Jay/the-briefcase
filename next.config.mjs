@@ -9,8 +9,8 @@ if(process.env.NODE_ENV == "production"){
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: path,
-  // output: "export",
-  // reactStrictMode: true
+  output: "export",
+  reactStrictMode: true
 }
 
 export default withVanillaExtract(nextConfig)
