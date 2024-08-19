@@ -1,3 +1,5 @@
+'use client'
+
 import { ToastContainer } from "react-toastify"
 import About from "./_sections/about/about"
 import Hero from "./_sections/hero/hero"
