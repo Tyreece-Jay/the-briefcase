@@ -20,9 +20,3 @@ export default function Home() {
     <footer className={footer}><Text>© Tyreece Simpson, {new Date().getFullYear()}</Text></footer>
   </main>
 }
-
-// TODO: make particles consistent in all backgrounds
-
-// TODO: have dev and prod builds
-// TODO: get gh pages working
-// TODO: add resend
