@@ -7,6 +7,7 @@ import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
 import { Text } from "@/app/_design/text/text"
 import { AnimatePresence, motion, LayoutGroup } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Journey() {
   const [selectedJourney, setSelectedJourney] = useState<JourneyType | undefined>()
@@ -48,7 +49,7 @@ function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType,
       <motion.div layoutId={selectedJourney} className={modal}>
         <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
         <div className={modalContent}>
-          <img src={journeyContent.image.src} alt={journeyContent.alt} />
+          <Image src={`${process.env.NODE_ENV == "production" ? "/the-briefcase" : undefined}${journeyContent.image.src}`} alt={journeyContent.alt} />
           <span>{journeyContent.information}</span>
         </div>
       </motion.div>
@@ -63,7 +64,7 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
 
   return <motion.div layoutId={type} className={card} onClick={() => { selected == type ? setSelected(undefined) : setSelected(type) }}>
     <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-    <img src={journeyContent.image.src} alt={journeyContent.alt} />
+    <img src={`${process.env.NODE_ENV == "production" ? "/the-briefcase" : undefined}${journeyContent.image.src}`} alt={journeyContent.alt} />
     <div className={footer}>
       <Text>Click Me</Text>
       <span className={dots}>
