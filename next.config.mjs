@@ -5,7 +5,7 @@ const withVanillaExtract = createVanillaExtractPlugin()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // basePath: "/the-briefcase",
-  output: "export",
+  // output: "export",
   // reactStrictMode: true
 }
 
