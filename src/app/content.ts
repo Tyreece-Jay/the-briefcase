@@ -1,8 +1,3 @@
-import { StaticImageData } from 'next/image'
-import firstDatabank from '../../public/firstDatabank.png'
-import exeterUniversity from '../../public/exeterUniversity.png'
-import comingSoon from '../../public/comingSoon.png'
-
 export const content: Content = {
   name: 'Tyreece Simpson',
   occupation: ['Full-Stack Software Engineer', 'Front-End Specialist'],
@@ -10,19 +5,19 @@ export const content: Content = {
   skills: ['TypeScript', 'JavaScript', 'React', 'HTML', 'CSS', 'C#', 'SQL', 'UX', 'UI', 'Next.js', 'BDD', 'TDD', 'DevOps', 'Pair Programming', 'DDD', 'Jest', 'XState', 'StyleX', 'vanilla-extract'],
   experience: {
     type: 'Experience',
-    image: firstDatabank,
+    image: '/firstDatabank.png',
     alt: 'First Databank',
     information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   education: {
     type: 'Education',
-    image: exeterUniversity,
+    image: '/exeterUniversity.png',
     alt: 'The University of Exeter',
     information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   extra: {
     type: 'Extra',
-    image: comingSoon,
+    image: '/comingSoon.png',
     alt: 'Coming Soon',
     information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }
@@ -42,7 +37,7 @@ type Content = {
 
 type Journey = {
   type: JourneyType
-  image: StaticImageData
+  image: string
   alt: string
   information: string
 }
