@@ -42,22 +42,6 @@ export default function Journey() {
   </section>
 }
 
-function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType, setSelected: (selected: JourneyType | undefined) => void }) {
-  const journeyContent = JourneyContent(selectedJourney)
-
-  return (
-    <div key={`${selectedJourney}-modal`} className={modalContainer} onClick={() => setSelected(undefined)}>
-      <motion.div layoutId={selectedJourney} className={modal}>
-        <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-        <div className={modalContent}>
-          <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={200} height={200} />
-          <span>{journeyContent.information}</span>
-        </div>
-      </motion.div>
-    </div>
-  )
-}
-
 type JourneyCardType = { type: JourneyType, selected: JourneyType | undefined, setSelected: (selected: JourneyType | undefined) => void }
 function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
   const dotCount = 18
@@ -65,7 +49,7 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
 
   return <motion.div layoutId={type} className={card} onClick={() => { selected == type ? setSelected(undefined) : setSelected(type) }}>
     <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-    <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={300} height={200} />
+    <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
     <div className={footer}>
       <Text>Click Me</Text>
       <span className={dots}>
@@ -74,6 +58,22 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
       </span>
     </div>
   </motion.div>
+}
+
+function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType, setSelected: (selected: JourneyType | undefined) => void }) {
+  const journeyContent = JourneyContent(selectedJourney)
+
+  return (
+    <div key={`${selectedJourney}-modal`} className={modalContainer} onClick={() => setSelected(undefined)}>
+      <motion.div layoutId={selectedJourney} className={modal}>
+        <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
+        <div className={modalContent}>
+          <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+          <span>{journeyContent.information}</span>
+        </div>
+      </motion.div>
+    </div>
+  )
 }
 
 function JourneyContent(type: JourneyType) {
