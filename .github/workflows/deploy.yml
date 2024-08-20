@@ -20,8 +20,9 @@ jobs:
         run: npm ci
 
       - name: Extract repository name
-        run: echo "BASE_PATH=/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)" >> $GITHUB_ENV
-        run: echo "ASSET_PREFIX=https://https://tyreecesimpson.co.uk/the-briefcase/" >> $GITHUB_ENV
+        run: |
+        echo "BASE_PATH=/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)" >> $GITHUB_ENV
+        echo "ASSET_PREFIX=https://https://tyreecesimpson.co.uk/the-briefcase/" >> $GITHUB_ENV
 
       - name: Build my App
         run: npm run build && touch ./out/.nojekyll
