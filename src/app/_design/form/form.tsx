@@ -8,12 +8,13 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { SubmitButton } from '../button/button'
 import { email, error, form, message, name } from './form.css'
 import { Text } from "@/app/_design/text/text"
+import { POST } from '@/app/api/send/route'
 
 type Inputs = { name: string, email: string, message: string }
 
 export default function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<Inputs> = (data) => POST(data.name, data.email, data.message)
 
   return <form onSubmit={handleSubmit(onSubmit)} className={form}>
     <input type='text' placeholder="Your mesasge" {...register("message", { required: true })} className={message} />
