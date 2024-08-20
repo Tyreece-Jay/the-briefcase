@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { FieldErrors, SubmitHandler, useForm } from 'react-hook-form'
 import { match } from 'ts-pattern'
