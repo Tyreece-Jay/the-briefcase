@@ -99,9 +99,3 @@ export const modalContent = style({
   alignItems: 'center',
   height: '100%'
 })
-
-// export const modalContent = style({
-//   display: 'flex',
-//   flexDirection: 'row',
-//   gap: '2rem'
-// })
