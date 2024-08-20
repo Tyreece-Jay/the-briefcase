@@ -84,7 +84,8 @@ export const modalContainer = style({
 
 export const modal = style({
   borderRadius: '20px',
-  height: '300px',
+  height: '30%',
+  width: '50%',
   padding: '2rem',
   background: theme.colour.white,
   color: theme.colour.black
@@ -93,5 +94,14 @@ export const modal = style({
 export const modalContent = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '2rem'
+  gap: '4rem',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%'
 })
+
+// export const modalContent = style({
+//   display: 'flex',
+//   flexDirection: 'row',
+//   gap: '2rem'
+// })

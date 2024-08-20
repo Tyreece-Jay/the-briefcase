@@ -68,7 +68,7 @@ function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType,
       <motion.div layoutId={selectedJourney} className={modal}>
         <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
         <div className={modalContent}>
-          <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+          <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '40%', height: 'auto' }} />
           <span>{journeyContent.information}</span>
         </div>
       </motion.div>
