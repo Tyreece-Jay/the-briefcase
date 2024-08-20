@@ -44,7 +44,6 @@ export default function Journey() {
 
 type JourneyCardType = { type: JourneyType, selected: JourneyType | undefined, setSelected: (selected: JourneyType | undefined) => void }
 function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
-  const dotCount = 18
   const journeyContent = JourneyContent(type)
 
   return <motion.div layoutId={type} className={card} onClick={() => { selected == type ? setSelected(undefined) : setSelected(type) }}>
@@ -52,10 +51,7 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
     <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
     <div className={footer}>
       <Text>Click Me</Text>
-      <span className={dots}>
-        {[...Array(dotCount)].map((_, i) =>
-          <span key={i} className={dot[selected == type ? 'white' : 'black']}></span>)}
-      </span>
+      <Dots count={18} />
     </div>
   </motion.div>
 }
@@ -63,17 +59,21 @@ function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
 function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType, setSelected: (selected: JourneyType | undefined) => void }) {
   const journeyContent = JourneyContent(selectedJourney)
 
-  return (
-    <div key={`${selectedJourney}-modal`} className={modalContainer} onClick={() => setSelected(undefined)}>
-      <motion.div layoutId={selectedJourney} className={modal}>
-        <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-        <div className={modalContent}>
-          <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '40%', height: 'auto' }} />
-          <span>{journeyContent.information}</span>
-        </div>
-      </motion.div>
-    </div>
-  )
+  return <div key={`${selectedJourney}-modal`} className={modalContainer} onClick={() => setSelected(undefined)}>
+    <motion.div layoutId={selectedJourney} className={modal}>
+      <Heading importance={3} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
+      <div className={modalContent}>
+        <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '40%', height: 'auto' }} />
+        <span>{journeyContent.information}</span>
+      </div>
+    </motion.div>
+  </div>
+}
+
+function Dots({ count }: { count: number }) {
+  return <span className={dots}>
+    {[...Array(count)].map((_, i) => <span key={i} className={dot['black']}></span>)}
+  </span>
 }
 
 function JourneyContent(type: JourneyType) {

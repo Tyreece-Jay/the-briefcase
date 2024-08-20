@@ -84,11 +84,13 @@ export const modalContainer = style({
 
 export const modal = style({
   borderRadius: '20px',
-  height: '30%',
   width: '50%',
   padding: '2rem',
   background: theme.colour.white,
-  color: theme.colour.black
+  color: theme.colour.black,
+  display: 'flex',
+  gap: '4rem',
+  flexDirection: 'column'
 })
 
 export const modalContent = style({
