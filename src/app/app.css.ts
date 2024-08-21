@@ -8,13 +8,13 @@ globalStyle('body', {
   maxWidth: '100vw',
   backgroundColor: theme.colour.black,
   color: theme.colour.white,
-  overflowX: 'hidden',
-  scrollBehavior: 'smooth'
+  overflowX: 'hidden'
 })
 
 globalStyle('*', {
   padding: 0,
-  margin: 0
+  margin: 0,
+  scrollBehavior: 'smooth'
 })
 
 export const footer = style({
