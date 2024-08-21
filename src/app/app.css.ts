@@ -8,7 +8,8 @@ globalStyle('body', {
   maxWidth: '100vw',
   backgroundColor: theme.colour.black,
   color: theme.colour.white,
-  overflowX: 'hidden'
+  overflowX: 'hidden',
+  scrollBehavior: 'smooth'
 })
 
 globalStyle('*', {
