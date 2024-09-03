@@ -7,12 +7,14 @@ export const content: Content = {
     type: 'Experience',
     title: 'First Databank',
     image: '/firstDatabank.png',
+    headline: 'Senior Software Developer, July 2022 - Present',
     information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   education: {
     type: 'Education',
     title: 'The University of Exeter',
     image: '/exeterUniversity.png',
+    headline: 'BSC Digital & Technology Solutions with proficiency in Software Engineering, September 2018 - May 2022',
     information: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }
 }
@@ -32,5 +34,6 @@ type Journey = {
   type: JourneyType
   title: string
   image: string
+  headline: string
   information: string
 }

@@ -15,25 +15,30 @@ export const h2 = style({
 })
 
 const baseH3 = style({
-  fontSize: '2.5rem',
+  fontSize: '2.25rem',
   fontWeight: 700,
-  textTransform: 'uppercase'
 })
-export const h3 = styleVariants(theme.colour, (colour) => [baseH3, { color: colour}])
+export const h3 = styleVariants(theme.colour, (colour) => [baseH3, { color: colour }])
 
 const baseH4 = style({
   fontSize: '2rem',
   fontWeight: 400
 })
-export const h4 = styleVariants(theme.colour, (colour) => [baseH4, { color: colour}])
+export const h4 = styleVariants(theme.colour, (colour) => [baseH4, { color: colour }])
 
 const baseH5 = style({
   fontSize: '2rem',
   fontWeight: 700,
 })
-export const h5 = styleVariants(theme.colour, (colour) => [baseH5, { color: colour}])
+export const h5 = styleVariants(theme.colour, (colour) => [baseH5, { color: colour }])
 
-export const text = style({
-  fontSize: '1rem',
-  fontWeight: 500
+export const text = styleVariants({
+  regular: {
+    fontSize: '1.2rem',
+    fontWeight: 400
+  },
+  semiBold: {
+    fontSize: '1.2rem',
+    fontWeight: 600
+  }
 })

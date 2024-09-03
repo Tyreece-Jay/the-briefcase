@@ -5,11 +5,12 @@ export const form = style({
   display: 'grid',
   gridTemplateAreas: `"message message message" "name email submit" "error errror errror"`,
   gap: '0.5rem',
+  width: '100%'
 })
 
 export const message = style({
   gridArea: 'message',
-  height: '10rem',
+  height: '6rem',
   borderRadius: '1rem 1rem 0 0',
   border: `2px solid ${theme.colour.black}`,
   backgroundColor: 'transparent',
@@ -56,5 +57,5 @@ export const error = style({
   display: 'flex',
   width: 'auto',
   gap: '0.5rem',
-  color: theme.colour.primary
+  color: theme.colour.secondary
 })

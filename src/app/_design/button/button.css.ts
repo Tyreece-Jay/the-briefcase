@@ -61,7 +61,7 @@ export const submitButton = style([baseButton, {
   justifyContent: 'center',
   ':hover': {
     backgroundColor: theme.colour.secondary,
-    color: theme.colour.primary,
+    color: theme.colour.primaryLight,
     borderColor: theme.colour.secondary
   }
 }])

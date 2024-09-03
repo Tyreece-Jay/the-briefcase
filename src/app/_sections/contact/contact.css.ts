@@ -2,18 +2,18 @@ import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const section = style({
-  overflow: 'hidden',
   backgroundColor: theme.colour.primaryLight,
-  padding: '5rem 15vw 5rem 15vw',
+  padding: '5rem 12vw 5rem 12vw',
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between'
+  gap: '8rem'
 })
 
 export const content = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: '4rem',
+  justifyContent: 'space-between',
+  width: '100%'
 })
 
 export const links = style({

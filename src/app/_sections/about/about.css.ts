@@ -15,10 +15,10 @@ export const background = style({
 })
 
 export const container = style({
-  margin: '5rem 5vw 0 5vw',
-  padding: '5% 10vw 5% 10vw',
+  margin: '5rem 2vw 0 2vw',
+  padding: '5rem 10vw 5rem 10vw',
   display: 'flex',
-  gap: '10rem',
+  gap: '15vw',
   flexDirection: 'row',
   backgroundColor: theme.colour.primaryLight,
   borderRadius: '2rem 0',

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { card, cards, info, intro, section, divider } from './journey.css'
+import { card, cards, info, intro, section, divider, text } from './journey.css'
 import { Heading } from '@/app/_design/text/text'
 import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
@@ -13,12 +13,12 @@ export default function Journey() {
 
   return <section className={section}>
     <div className={intro}>
-      <Heading importance={3} colour='primary'>My Journey</Heading>
+      <Heading importance={3} colour='primary'>MY JOURNEY</Heading>
       <Text>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
     </div>
     <div className={cards}>
-      <JourneyCard type='Experience' key='Experience' />
-      <JourneyCard type='Education' key='Education' />
+      <JourneyCard type='Experience' />
+      <JourneyCard type='Education' />
     </div>
   </section>
 }
@@ -29,9 +29,12 @@ function JourneyCard({ type }: { type: JourneyType }) {
   return <div className={card}>
     <Heading importance={5} colour='secondary'>{journeyContent.title}</Heading>
     <div className={info}>
-    <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
-    <span className={divider}/>
-    <Text>{journeyContent.information}</Text>
+      <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      <span className={divider} />
+      <div className={text}>
+        <Text bold>{journeyContent.headline}</Text>
+        <Text>{journeyContent.information}</Text>
+      </div>
     </div>
   </div>
 }

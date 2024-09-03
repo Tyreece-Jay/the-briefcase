@@ -2,7 +2,7 @@ import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const section = style({
-  padding: '5rem 10vw 5rem 10vw',
+  padding: '5rem 12vw 5rem 12vw',
   display: 'flex',
   gap: '2rem',
   flexDirection: 'column',
@@ -24,7 +24,7 @@ export const card = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  padding: '2rem',
+  padding: '4rem',
   borderRadius: '0 1rem',
   gap: '2rem',
   background: theme.colour.white,
@@ -42,4 +42,10 @@ export const divider = style({
   height: '100px',
   borderLeft: `1px solid ${theme.colour.primary}`,
   borderRight: `1px solid ${theme.colour.primary}`
+})
+
+export const text = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem'
 })
