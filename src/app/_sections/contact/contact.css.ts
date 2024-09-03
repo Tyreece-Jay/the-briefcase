@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 
 export const section = style({
   overflow: 'hidden',
-  backgroundColor: theme.colour.grey,
+  backgroundColor: theme.colour.primaryLight,
   padding: '5rem 15vw 5rem 15vw',
   display: 'flex',
   flexDirection: 'row',
@@ -24,7 +24,7 @@ export const links = style({
 })
 
 export const link = style({
-  color: theme.colour.white,
+  color: theme.colour.black,
   textDecoration: 'underline',
   display: 'flex',
   gap: '0.25rem',

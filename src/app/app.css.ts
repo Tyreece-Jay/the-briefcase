@@ -6,8 +6,8 @@ globalStyle('body', {
   margin: 0,
   cursor: 'crosshair',
   maxWidth: '100vw',
-  backgroundColor: theme.colour.black,
-  color: theme.colour.white,
+  backgroundColor: theme.colour.white,
+  color: theme.colour.black,
   overflowX: 'hidden'
 })
 
@@ -19,7 +19,7 @@ globalStyle('*', {
 
 export const footer = style({
   padding: '1rem',
-  color: theme.colour.black,
-  background: theme.colour.secondary,
+  color: theme.colour.white,
+  background: theme.colour.black,
   textAlign: 'center'
 })

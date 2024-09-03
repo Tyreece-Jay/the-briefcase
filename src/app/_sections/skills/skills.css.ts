@@ -3,8 +3,9 @@ import { style } from '@vanilla-extract/css'
 
 export const container = style({
   overflow: 'hidden',
-  backgroundColor: theme.colour.white,
-  paddingBottom: '5rem',
+  backgroundColor: theme.colour.grey,
+  paddingTop: '3rem',
+  paddingBottom: '4rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem'

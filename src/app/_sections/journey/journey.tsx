@@ -1,85 +1,44 @@
 'use client'
 
-import React, { useState } from 'react'
-import { card, cards, dot, dots, footer, intro, modal, modalContainer, modalContent, overlay, section } from './journey.css'
+import React from 'react'
+import { card, cards, info, intro, section, divider } from './journey.css'
 import { Heading } from '@/app/_design/text/text'
 import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
 import { Text } from "@/app/_design/text/text"
-import { AnimatePresence, motion, LayoutGroup } from 'framer-motion'
 import Image from 'next/image'
 import { prefix } from '../../../../utils/prefix'
 
 export default function Journey() {
-  const [selectedJourney, setSelectedJourney] = useState<JourneyType | undefined>()
 
   return <section className={section}>
     <div className={intro}>
       <Heading importance={3} colour='primary'>My Journey</Heading>
       <Text>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
     </div>
-    <LayoutGroup>
-      <div className={cards}>
-        <JourneyCard type='Experience' key='Experience' selected={selectedJourney} setSelected={setSelectedJourney}></JourneyCard>
-        <JourneyCard type='Education' key='Education' selected={selectedJourney} setSelected={setSelectedJourney}></JourneyCard>
-        <JourneyCard type='Extra' key='Extra' selected={selectedJourney} setSelected={setSelectedJourney}></JourneyCard>
-      </div>
-      <AnimatePresence>
-        {selectedJourney !== undefined && (<>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            exit={{ opacity: 0 }}
-            key='overlay'
-            className={overlay}
-            onClick={() => setSelectedJourney(undefined)}
-          />
-        </>)}
-
-        {selectedJourney !== undefined && <Modal key='modal' selectedJourney={selectedJourney} setSelected={setSelectedJourney} />}
-      </AnimatePresence>
-    </LayoutGroup>
+    <div className={cards}>
+      <JourneyCard type='Experience' key='Experience' />
+      <JourneyCard type='Education' key='Education' />
+    </div>
   </section>
 }
 
-type JourneyCardType = { type: JourneyType, selected: JourneyType | undefined, setSelected: (selected: JourneyType | undefined) => void }
-function JourneyCard({ type, selected, setSelected }: JourneyCardType) {
+function JourneyCard({ type }: { type: JourneyType }) {
   const journeyContent = JourneyContent(type)
 
-  return <motion.div layoutId={type} className={card} onClick={() => { selected == type ? setSelected(undefined) : setSelected(type) }}>
-    <Heading importance={5} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-    <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
-    <div className={footer}>
-      <Text>Click Me</Text>
-      <Dots count={18} />
+  return <div className={card}>
+    <Heading importance={5} colour='secondary'>{journeyContent.title}</Heading>
+    <div className={info}>
+    <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+    <span className={divider}/>
+    <Text>{journeyContent.information}</Text>
     </div>
-  </motion.div>
-}
-
-function Modal({ selectedJourney, setSelected }: { selectedJourney: JourneyType, setSelected: (selected: JourneyType | undefined) => void }) {
-  const journeyContent = JourneyContent(selectedJourney)
-
-  return <div key={`${selectedJourney}-modal`} className={modalContainer} onClick={() => setSelected(undefined)}>
-    <motion.div layoutId={selectedJourney} className={modal}>
-      <Heading importance={3} colour={'black'}>{`// ${journeyContent.type}`}</Heading>
-      <div className={modalContent}>
-        <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.alt} width={0} height={0} style={{ width: '40%', height: 'auto' }} />
-        <span>{journeyContent.information}</span>
-      </div>
-    </motion.div>
   </div>
-}
-
-function Dots({ count }: { count: number }) {
-  return <span className={dots}>
-    {[...Array(count)].map((_, i) => <span key={i} className={dot['black']}></span>)}
-  </span>
 }
 
 function JourneyContent(type: JourneyType) {
   return match(type)
     .with('Education', () => content.education)
     .with('Experience', () => content.experience)
-    .with('Extra', () => content.extra)
     .exhaustive()
 }

@@ -26,7 +26,7 @@ export default function Contact() {
   return <section className={section}>
     <div className={content}>
       <div>
-        <Heading importance={3} colour='primary'>Drop me a message</Heading>
+        <Heading importance={3} colour='black'>Drop me a message</Heading>
         <Text>Want to know more or just want to have a chat?</Text>
       </div>
       <ul className={links}>

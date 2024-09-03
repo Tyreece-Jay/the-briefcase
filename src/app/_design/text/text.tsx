@@ -17,8 +17,8 @@ export function Heading({ importance, colour = 'black', children }: { importance
     .exhaustive()
 }
 
-export function Text({ children }: { children: ReactNode }) {
-  return <text className={text}>{children}</text>
+export function Text({ colour = 'black', children }: { colour?: keyof typeof theme.colour, children: ReactNode }) {
+  return <text className={text[colour]}>{children}</text>
 }
 
 function AnimatedH3({ colour = 'black', children }: { colour?: keyof typeof theme.colour, children: ReactNode }) {
