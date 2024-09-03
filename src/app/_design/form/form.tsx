@@ -18,7 +18,7 @@ export default function Form() {
     <input type='text' placeholder="Your mesasge" {...register("message", { required: true })} className={message} />
     <input type='text' placeholder="Full name" {...register("name", { required: true })} className={name} />
     <input type='email' placeholder="Email Address" {...register("email", { required: true })} className={email} />
-    <SubmitButton onClick={() => onSubmit}><Text>Send</Text></SubmitButton>
+    <SubmitButton onClick={() => onSubmit}>Send</SubmitButton>
     <ErrorMessage errors={errors} />
   </form>
 }

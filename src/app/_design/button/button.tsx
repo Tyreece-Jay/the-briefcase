@@ -16,7 +16,7 @@ const tap = { scale: 0.9 }
 export function Button({ children, href }: { children: ReactNode, href: string }) {
   return <Link className={link} target="_blank" href={href}>
     <motion.button className={button} whileHover={hover} transition={transition} whileTap={tap}>
-      {children}
+      <Text>{children}</Text>
       <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
     </motion.button>
   </Link>
@@ -37,7 +37,7 @@ export function LargeButton({ icon, children, onClick }: { icon: IconDefinition,
 
 export function SubmitButton({ children, onClick }: { children: ReactNode, onClick: () => any }) {
   return <motion.button className={submitButton} onClick={onClick} transition={transition} whileTap={tap}>
-    {children}
+    <Text>{children}</Text>
   </motion.button>
 }
 

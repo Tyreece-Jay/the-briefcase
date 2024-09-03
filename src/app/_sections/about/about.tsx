@@ -13,7 +13,7 @@ export default function About() {
     <motion.div className={container} drag dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} >
       <div className={left}>
         <Heading importance={3}>ABOUT ME</Heading>
-        <Button href="mailto:tyreece.jay@gmail.com"><Text>Send me an email</Text></Button>
+        <Button href="mailto:tyreece.jay@gmail.com">Send me an email</Button>
       </div>
       <div className={right}>
         <Text>{content.about}</Text>

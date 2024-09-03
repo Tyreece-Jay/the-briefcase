@@ -31,6 +31,13 @@ export const card = style({
   color: theme.colour.black
 })
 
+export const heading = style({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-between'
+})
+
 export const info = style({
   display: 'flex',
   flexDirection: 'row',

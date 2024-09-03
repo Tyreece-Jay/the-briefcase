@@ -1,13 +1,14 @@
 'use client'
 
 import React from 'react'
-import { card, cards, info, intro, section, divider, text } from './journey.css'
+import { card, cards, info, intro, section, divider, text, heading } from './journey.css'
 import { Heading } from '@/app/_design/text/text'
 import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
 import { Text } from "@/app/_design/text/text"
 import Image from 'next/image'
 import { prefix } from '../../../../utils/prefix'
+import { Button } from '@/app/_design/button/button'
 
 export default function Journey() {
 
@@ -24,16 +25,19 @@ export default function Journey() {
 }
 
 function JourneyCard({ type }: { type: JourneyType }) {
-  const journeyContent = JourneyContent(type)
+  const journey = JourneyContent(type)
 
   return <div className={card}>
-    <Heading importance={5} colour='secondary'>{journeyContent.title}</Heading>
+    <div className={heading}>
+      <Heading importance={5} colour='secondary'>{journey.title}</Heading>
+      <Button href={journey.link}>View</Button>
+    </div>
     <div className={info}>
-      <Image src={`${prefix}${journeyContent.image}`} alt={journeyContent.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      <Image src={`${prefix}${journey.image}`} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
       <span className={divider} />
       <div className={text}>
-        <Text bold>{journeyContent.headline}</Text>
-        <Text>{journeyContent.information}</Text>
+        <Text bold>{journey.headline}</Text>
+        <Text>{journey.information}</Text>
       </div>
     </div>
   </div>
