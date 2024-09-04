@@ -27,7 +27,7 @@ export default function Contact() {
     <div className={content}>
       <div>
         <Heading importance={3} colour='black'>DROP ME A MESSAGE</Heading>
-        <Text>Want to know more or just want to have a chat?</Text>
+        <Text>Want to know more or just have a chat?</Text>
       </div>
       <ul className={links}>
         <li><span className={link} onClick={notify}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></span></li>

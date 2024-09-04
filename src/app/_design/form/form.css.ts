@@ -17,6 +17,7 @@ export const message = style({
   padding: '1rem',
   fontSize: '1rem',
   color: theme.colour.black,
+  resize: 'none',
   ':focus': {
     outline: `1px solid ${theme.colour.black}`
   }
