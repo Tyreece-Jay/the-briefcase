@@ -43,8 +43,7 @@ export const largeButton = style([baseButton, {
   width: '100%',
   borderRadius: 0,
   ':hover': {
-    color: theme.colour.primary,
-    borderRadius: '3rem'
+    color: theme.colour.primary
   }
 }])
 

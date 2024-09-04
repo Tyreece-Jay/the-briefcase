@@ -23,7 +23,7 @@ export function Button({ children, href }: { children: ReactNode, href: string }
 }
 
 export function LargeButton({ icon, children, onClick }: { icon: IconDefinition, children: ReactNode, onClick: () => any }) {
-  return <motion.button className={largeButton} onClick={onClick} whileHover={{ scale: 1.02 }} transition={transition} whileTap={tap}>
+  return <motion.button className={largeButton} onClick={onClick} whileHover={{ scale: 1.02, borderRadius: '3rem' }} transition={transition} whileTap={tap}>
     <div className={content}>
       <FontAwesomeIcon icon={icon} className={buttonIcon} />
       {children}
