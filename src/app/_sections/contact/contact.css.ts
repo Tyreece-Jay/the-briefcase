@@ -45,6 +45,8 @@ export const toast = style({
   backgroundColor: theme.colour.white,
   borderRadius: '1rem',
   display: 'flex',
+  alignItems: 'center',
+  gap: '1rem',
   padding: '2rem',
   zIndex: 1,
   boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'

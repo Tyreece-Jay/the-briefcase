@@ -9,12 +9,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from "@/app/_design/text/text"
 import Link from 'next/link'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false)
   const [requestSent, setRequestSent] = useState(false)
 
-  const toast = () => { setIsOpen(true); setRequestSent(true), setTimeout(() => setIsOpen(false), 3000) }
+  const toast = () => {
+    setIsOpen(true)
+    setRequestSent(true)
+    setTimeout(() => setIsOpen(false), 3000)
+  }
 
   return <section className={section}>
     <div className={content}>
@@ -35,6 +40,7 @@ export default function Contact() {
 
 function Toast({ isOpen }: { isOpen: boolean }) {
   return isOpen ? <div className={toast}>
+    <FontAwesomeIcon icon={faPaperPlane} />
     <Text>Your request has been sent!</Text>
   </div> : null
 }
