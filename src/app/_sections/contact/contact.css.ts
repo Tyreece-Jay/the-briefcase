@@ -30,8 +30,22 @@ export const link = style({
   display: 'flex',
   gap: '0.25rem',
   alignItems: 'center',
+  width: 'fit-content',
   ':hover': {
     cursor: 'pointer',
     color: theme.colour.secondary
   }
+})
+
+export const toast = style({
+  position: 'fixed',
+  left: '50%',
+  top: '10%',
+  transform: 'translate(-50%, -50%)',
+  backgroundColor: theme.colour.white,
+  borderRadius: '1rem',
+  display: 'flex',
+  padding: '2rem',
+  zIndex: 1,
+  boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
 })

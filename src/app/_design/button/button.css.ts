@@ -75,7 +75,7 @@ export const icon = style({
   transition: '0.3s',
   ':hover': {
     cursor: 'pointer',
-    color: theme.colour.secondary
+    color: theme.colour.white
   }
 })
 
