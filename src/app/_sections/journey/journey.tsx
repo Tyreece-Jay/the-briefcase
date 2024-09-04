@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { card, cards, info, intro, section, divider, text, heading } from './journey.css'
+import { card, cards, info, intro, section, divider, text, heading, image } from './journey.css'
 import { Heading } from '@/app/_design/text/text'
 import { content, JourneyType } from '@/app/content'
 import { match } from 'ts-pattern'
@@ -11,7 +11,6 @@ import { prefix } from '../../../../utils/prefix'
 import { Button } from '@/app/_design/button/button'
 
 export default function Journey() {
-
   return <section className={section}>
     <div className={intro}>
       <Heading importance={3} colour='primary'>MY JOURNEY</Heading>
@@ -33,7 +32,9 @@ function JourneyCard({ type }: { type: JourneyType }) {
       <Button href={journey.link}>View</Button>
     </div>
     <div className={info}>
-      <Image src={`${prefix}${journey.image}`} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      <div className={image}>
+        <Image src={`${prefix}${journey.image}`} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      </div>
       <span className={divider} />
       <div className={text}>
         <Text bold>{journey.headline}</Text>

@@ -4,7 +4,6 @@ import React from 'react'
 import { content } from '../../content'
 import { faFigma, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
-import Particles from './particles'
 import Typewriter from 'typewriter-effect'
 import { IconButton, ScrollButton } from '../../_design/button/button'
 import { Heading } from '../../_design/text/text'
@@ -12,7 +11,6 @@ import { heading, hero, icons, overlay } from './hero.css'
 
 export default function Hero() {
   return <div className={hero}>
-    <Particles />
     <div className={overlay}>
       <Icons />
       <div className={heading}>

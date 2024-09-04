@@ -26,7 +26,7 @@ export const card = style({
   justifyContent: 'space-between',
   padding: '4rem',
   borderRadius: '0 1rem',
-  gap: '2rem',
+  gap: '4rem',
   background: theme.colour.white,
   color: theme.colour.black
 })
@@ -34,7 +34,7 @@ export const card = style({
 export const heading = style({
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'center',
+  alignItems: 'end',
   justifyContent: 'space-between'
 })
 
@@ -42,7 +42,12 @@ export const info = style({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  gap: '3rem'
+  gap: '4rem'
+})
+
+export const image = style({
+  width: '70vw',
+  maxWidth: '280px'
 })
 
 export const divider = style({

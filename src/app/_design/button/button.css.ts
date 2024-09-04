@@ -9,7 +9,7 @@ const baseButton = style({
   border: '2px solid',
   padding: '8px 24px',
   ':hover': {
-    cursor: 'pointer',
+    cursor: 'pointer'
   }
 })
 
@@ -75,12 +75,11 @@ export const icon = style({
   transition: '0.3s',
   ':hover': {
     cursor: 'pointer',
-    color: theme.colour.white,
-    backgroundColor: 'transparent',
+    color: theme.colour.secondary
   }
 })
 
 export const buttonIcon = style({
   width: '2rem',
-  height: '2rem',
+  height: '2rem'
 })
