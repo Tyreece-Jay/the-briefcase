@@ -25,7 +25,9 @@ export const button = style([baseButton, {
   backgroundColor: 'transparent',
   borderColor: theme.colour.black,
   color: theme.colour.black,
-  minWidth: '16rem',
+  display: 'flex',
+  textWrap: 'nowrap',
+  gap: '1rem',
   ':hover': {
     backgroundColor: theme.colour.black,
     color: theme.colour.primary,
