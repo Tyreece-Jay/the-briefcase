@@ -8,8 +8,8 @@ export const section = style({
 
 export const background = style({
   position: 'absolute',
-  backgroundColor: theme.colour.grey,
-  marginTop: '15rem',
+  backgroundColor: theme.colour.white,
+  marginBottom: '15rem',
   height: '15rem',
   width: '100%'
 })
