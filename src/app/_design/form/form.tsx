@@ -15,7 +15,7 @@ export default function Form() {
   const onSubmit: SubmitHandler<Inputs> = (data) => POST(data.name, data.email, data.message)
 
   return <form onSubmit={handleSubmit(onSubmit)} className={form}>
-    <input type='text' placeholder="Your mesasge" {...register("message", { required: true })} className={message} />
+    <textarea placeholder="Your message" {...register("message", { required: true })} className={message} />
     <input type='text' placeholder="Full name" {...register("name", { required: true })} className={name} />
     <input type='email' placeholder="Email Address" {...register("email", { required: true })} className={email} />
     <SubmitButton onClick={() => onSubmit}>Send</SubmitButton>
