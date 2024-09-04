@@ -6,7 +6,7 @@ export const section = style({
   padding: '5rem 12vw 5rem 12vw',
   display: 'flex',
   flexDirection: 'row',
-  gap: '8rem'
+  gap: '2rem'
 })
 
 export const content = style({
