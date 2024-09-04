@@ -18,6 +18,8 @@ export const message = style({
   fontSize: '1rem',
   color: theme.colour.black,
   resize: 'none',
+  scrollbarWidth: 'none',
+  overflowY: 'scroll', 
   ':focus': {
     outline: `1px solid ${theme.colour.black}`
   }
