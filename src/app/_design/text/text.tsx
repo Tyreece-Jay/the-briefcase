@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode, useRef } from "react"
-import { h1, h2, h3, h4, h5, text } from './text.css'
+import { altH3, h1, h2, h3, h4, h5, text } from './text.css'
 import { match } from "ts-pattern"
 import { theme } from "../theme.css"
 import { motion, useInView } from "framer-motion"
@@ -26,7 +26,7 @@ function AnimatedH3({ colour = 'black', children }: { colour?: keyof typeof them
   const isInView = useInView(ref, { once: true })
 
   return <section ref={ref}>
-    <motion.h3 className={h3[colour]}
+    <motion.h3 className={colour == 'secondary' ? altH3.primary : h3[colour]}
       initial={{ x: -200 }}
       animate={isInView && { x: 0 }}
       transition={{ type: "spring", duration: 0.8, bounce: 0.3 }}>

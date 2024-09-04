@@ -19,6 +19,7 @@ const baseH3 = style({
   fontWeight: 700,
 })
 export const h3 = styleVariants(theme.colour, (colour) => [baseH3, { color: colour }])
+export const altH3 = styleVariants({ primary: [baseH3, { fontSize: '2rem', color: theme.colour.secondary }] })
 
 const baseH4 = style({
   fontSize: '2rem',
