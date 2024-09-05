@@ -19,7 +19,7 @@ export default function Form() {
   return <form onSubmit={handleSubmit(onSubmit)} className={form}>
     <textarea placeholder="Your message" {...register("message", { required: true })} className={`${message} ${montserrat.className}`} />
     <input type='text' placeholder="Full name" {...register("name", { required: true })} className={`${name} ${montserrat.className}`} />
-    <input type='email' placeholder="Email Address" {...register("email", { required: true })} className={`${email} ${montserrat.className}`} />
+    <input type='email' placeholder="Email address" {...register("email", { required: true })} className={`${email} ${montserrat.className}`} />
     <SubmitButton onClick={() => onSubmit}>Send</SubmitButton>
     <ErrorMessage errors={errors} />
   </form>
