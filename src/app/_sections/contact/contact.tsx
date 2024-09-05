@@ -10,6 +10,7 @@ import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from "@/app/_design/text/text"
 import Link from 'next/link'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +30,7 @@ export default function Contact() {
       </div>
       <ul className={links}>
         <li><span className={link} onClick={toast}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></span></li>
-        <Toast isOpen={isOpen} />
+        {isOpen ? <Toast /> : null}
         <li><Link className={link} target="_blank" href="mailto:tyreece.jay@gmail.com"><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></Link></li>
         <li><Link className={link} target="_blank" href="https://linkedin.com/in/tyreece-simpson"><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></Link></li>
       </ul>
@@ -38,12 +39,18 @@ export default function Contact() {
   </section>
 }
 
-function Toast({ isOpen }: { isOpen: boolean }) {
-  return isOpen ? <div className={toast}>
+function Toast() {
+  const dropIn = {
+    hidden: { y: "-100vh", opacity: 0 },
+    visible: { y: "0", opacity: 1, transition: { duration: 0.1, type: "spring", damping: 25, stiffness: 500 }, },
+    exit: { y: "100vh", opacity: 0 },
+  }
+
+  return <motion.div className={toast} variants={dropIn} initial="hidden" animate="visible" exit="exit">
     <div className={toastIcon}>
       <FontAwesomeIcon icon={faPaperPlane} className={icon} />
     </div>
     <span className={divider} />
     <Text bold>Your request has been sent!</Text>
-  </div> : null
+  </motion.div>
 }

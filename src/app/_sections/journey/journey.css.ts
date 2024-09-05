@@ -34,7 +34,7 @@ export const card = style({
 export const heading = style({
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'end',
+  alignItems: 'flex-end',
   justifyContent: 'space-between'
 })
 
