@@ -4,7 +4,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { motion } from "framer-motion"
 import { ReactNode } from "react"
-import { button, buttonIcon, icon, largeButton, submitButton, content, link } from "./button.css"
+import { button, buttonIcon, icon, largeButton, submitButton, content, link, largeLink } from "./button.css"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { Text } from "@/app/_design/text/text"
 import Link from "next/link"
@@ -22,17 +22,19 @@ export function Button({ children, href }: { children: ReactNode, href: string }
   </Link>
 }
 
-export function LargeButton({ icon, children, onClick }: { icon: IconDefinition, children: ReactNode, onClick: () => any }) {
-  return <motion.button className={largeButton} onClick={onClick} whileHover={{ scale: 1.02, borderRadius: '3rem' }} transition={transition} whileTap={tap}>
-    <div className={content}>
-      <FontAwesomeIcon icon={icon} className={buttonIcon} />
-      {children}
-    </div>
-    <div className={content}>
-      <Text>View</Text>
-      <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
-    </div>
-  </motion.button>
+export function LargeButton({ icon, children, href }: { icon: IconDefinition, children: ReactNode, href: string }) {
+  return <Link className={largeLink} target="_blank" href={href}>
+    <motion.button className={largeButton} whileHover={{ scale: 1.02, borderRadius: '3rem' }} transition={transition} whileTap={tap}>
+      <div className={content}>
+        <FontAwesomeIcon icon={icon} className={buttonIcon} />
+        {children}
+      </div>
+      <div className={content}>
+        <Text>View</Text>
+        <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
+      </div>
+    </motion.button>
+  </Link>
 }
 
 export function SubmitButton({ children, onClick }: { children: ReactNode, onClick: () => any }) {

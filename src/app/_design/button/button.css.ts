@@ -18,7 +18,12 @@ globalStyle(`${baseButton} *`, {
 })
 
 export const link = style({
-  textDecoration:'none'
+  textDecoration: 'none'
+})
+
+export const largeLink = style({
+  width: '100%',
+  textDecoration: 'none'
 })
 
 export const button = style([baseButton, {
