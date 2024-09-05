@@ -46,8 +46,27 @@ export const toast = style({
   borderRadius: '1rem',
   display: 'flex',
   alignItems: 'center',
-  gap: '1rem',
+  gap: '2rem',
   padding: '2rem',
   zIndex: 1,
   boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+})
+
+export const toastIcon = style({
+  padding: '1rem',
+  backgroundColor: theme.colour.grey,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderRadius: '2rem'
+})
+
+export const icon = style({
+  color: theme.colour.white
+})
+
+export const divider = style({
+  height: '50px',
+  borderLeft: `1px solid ${theme.colour.primary}`,
+  borderRight: `1px solid ${theme.colour.primary}`
 })

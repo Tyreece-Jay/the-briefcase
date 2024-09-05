@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Form from '../../_design/form/form'
 import { Heading } from '@/app/_design/text/text'
-import { section, content, links, link, toast } from './contact.css'
+import { section, content, links, link, toast, divider, toastIcon, icon } from './contact.css'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
@@ -40,7 +40,10 @@ export default function Contact() {
 
 function Toast({ isOpen }: { isOpen: boolean }) {
   return isOpen ? <div className={toast}>
-    <FontAwesomeIcon icon={faPaperPlane} />
-    <Text>Your request has been sent!</Text>
+    <div className={toastIcon}>
+      <FontAwesomeIcon icon={faPaperPlane} className={icon} />
+    </div>
+    <span className={divider} />
+    <Text bold>Your request has been sent!</Text>
   </div> : null
 }
