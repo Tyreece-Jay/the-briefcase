@@ -33,7 +33,6 @@ function JourneyCard({ type }: { type: JourneyType }) {
     <div className={info}>
       <div className={image}>
         <Image src={journey.image} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
-        <Image unoptimized src={journey.image} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
       </div>
       <span className={divider} />
       <div className={text}>
