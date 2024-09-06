@@ -9,6 +9,7 @@ import { Text } from "@/app/_design/text/text"
 import Image from 'next/image'
 import { prefix } from '../../../../utils/prefix'
 import { Button } from '@/app/_design/button/button'
+import uni from '../../../../public/exeterUniversity.png'
 
 export default function Journey() {
   return <section className={section}>
@@ -33,7 +34,9 @@ function JourneyCard({ type }: { type: JourneyType }) {
     </div>
     <div className={info}>
       <div className={image}>
-        <Image src={`${prefix}${journey.image}`} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      <Image unoptimized src={`${prefix}${journey.image}`} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      <Image unoptimized src={journey.image} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+      <Image unoptimized src={uni} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
       </div>
       <span className={divider} />
       <div className={text}>
