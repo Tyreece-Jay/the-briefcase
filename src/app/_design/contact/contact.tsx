@@ -1,15 +1,16 @@
 'use client'
 
 import React, { useState } from 'react'
-import Form from '../../_design/form/form'
+import Form from '../form/form'
 import { Heading } from '@/app/_design/text/text'
-import { section, content, links, link } from './contact.css'
+import { section, content, links, link, toast, toastIcon } from './contact.css'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from "@/app/_design/text/text"
 import Link from 'next/link'
-import Toast from '@/app/_design/toast/toast'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false)
@@ -38,4 +39,17 @@ export default function Contact() {
     </section>
     {isOpen ? <Toast /> : null}
   </>
+}
+
+function Toast() {
+  const dropIn = {
+    hidden: { y: "-100vh", opacity: 0 },
+    visible: { y: "0", opacity: 1, transition: { duration: 0.1, type: "spring", damping: 25, stiffness: 500 }, },
+    exit: { y: "100vh", opacity: 0 },
+  }
+
+  return <motion.div className={toast} variants={dropIn} initial="hidden" animate="visible" exit="exit">
+    <FontAwesomeIcon icon={faPaperPlane} className={toastIcon} />
+    <Text style='toast'>Your request has been sent!</Text>
+  </motion.div>
 }

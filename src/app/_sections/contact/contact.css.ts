@@ -46,23 +46,3 @@ export const link = style({
     color: theme.colour.secondary
   }
 })
-
-export const toast = style({
-  position: 'fixed',
-  left: '1vw',
-  top: '1dvh',
-  transform: 'translate(-50vw, -50vw)',
-  backgroundColor: theme.colour.grey,
-  display: 'flex',
-  alignItems: 'center',
-  gap: '2rem',
-  padding: '2rem',
-  zIndex: 1,
-  boxShadow: `5px 5px 10px`
-})
-
-export const toastIcon = style({
-  color: theme.colour.primary,
-  height: '2rem'
-})
-
