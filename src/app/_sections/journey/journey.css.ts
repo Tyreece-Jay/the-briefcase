@@ -38,7 +38,12 @@ export const card = style({
   borderRadius: '0 1rem',
   gap: '4rem',
   background: theme.colour.white,
-  color: theme.colour.black
+  color: theme.colour.black,
+  '@media': {
+    'screen and (max-width: 600px)': {
+      padding: '10vw'
+    }
+  }
 })
 
 export const heading = style({
@@ -62,7 +67,8 @@ export const info = style({
   gap: '4rem',
   '@media': {
     'screen and (max-width: 850px)': {
-      flexDirection: 'column'
+      flexDirection: 'column',
+      gap: '2rem'
     }
   }
 })
