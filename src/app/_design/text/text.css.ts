@@ -38,8 +38,13 @@ export const text = styleVariants({
     fontSize: '1.2rem',
     fontWeight: 400
   },
-  semiBold: {
+  bold: {
     fontSize: '1.2rem',
     fontWeight: 600
+  },
+  toast: {
+    fontSize: '1.2rem',
+    fontWeight: 600,
+    color: theme.colour.white
   }
 })

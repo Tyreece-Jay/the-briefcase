@@ -49,6 +49,11 @@ export const largeButton = style([baseButton, {
   borderRadius: 0,
   ':hover': {
     color: theme.colour.primary
+  },
+  '@media': {
+    'screen and (max-width: 600px)': {
+      justifyContent: 'center'
+    }
   }
 }])
 
@@ -64,7 +69,7 @@ export const contentButton = style({
   gap: '1rem',
   '@media': {
     'screen and (max-width: 600px)': {
-      visibility: 'hidden'
+      display: 'none'
     }
   }
 })

@@ -36,7 +36,7 @@ function JourneyCard({ type }: { type: JourneyType }) {
       </div>
       <span className={divider} />
       <div className={text}>
-        <Text bold>{journey.headline}</Text>
+        <Text style='bold'>{journey.headline}</Text>
         <Text>{journey.information}</Text>
       </div>
     </div>

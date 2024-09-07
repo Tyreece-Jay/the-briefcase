@@ -50,6 +50,6 @@ function Toast() {
 
   return <motion.div className={toast} variants={dropIn} initial="hidden" animate="visible" exit="exit">
     <FontAwesomeIcon icon={faPaperPlane} className={toastIcon} />
-    <Text bold>Your request has been sent!</Text>
+    <Text style='toast'>Your request has been sent!</Text>
   </motion.div>
 }

@@ -17,8 +17,9 @@ export function Heading({ importance, colour = 'black', children }: { importance
     .exhaustive()
 }
 
-export function Text({ bold, children }: { bold?: boolean, children: ReactNode }) {
-  return <text className={text[bold ? 'semiBold' : 'regular']}>{children}</text>
+type style = 'regular' | 'bold' | 'toast'
+export function Text({ style = 'regular', children }: { style?: style, children: ReactNode }) {
+  return <text className={text[style]}>{children}</text>
 }
 
 function AnimatedH3({ colour = 'black', children }: { colour?: keyof typeof theme.colour, children: ReactNode }) {

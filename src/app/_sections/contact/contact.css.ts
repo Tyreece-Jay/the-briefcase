@@ -52,7 +52,7 @@ export const toast = style({
   left: '1vw',
   top: '1%',
   transform: 'translate(-50vw, -50vw)',
-  backgroundColor: theme.colour.primaryLight,
+  backgroundColor: theme.colour.grey,
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
@@ -62,7 +62,7 @@ export const toast = style({
 })
 
 export const toastIcon = style({
-  color: theme.colour.grey,
+  color: theme.colour.primary,
   height: '2rem'
 })
 
