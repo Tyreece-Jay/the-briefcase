@@ -39,34 +39,20 @@ export const link = style({
 
 export const toast = style({
   position: 'fixed',
-  left: '50%',
-  top: '10%',
-  transform: 'translate(-50%, -50%)',
-  backgroundColor: theme.colour.white,
-  borderRadius: '1rem',
+  left: '1vw',
+  top: '1%',
+  transform: 'translate(-50vw, -50vw)',
+  backgroundColor: theme.colour.primaryLight,
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
   padding: '2rem',
   zIndex: 1,
-  boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+  boxShadow: `5px 5px 10px`
 })
 
 export const toastIcon = style({
-  padding: '1rem',
-  backgroundColor: theme.colour.grey,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: '2rem'
+  color: theme.colour.grey,
+  height: '2rem'
 })
 
-export const icon = style({
-  color: theme.colour.white
-})
-
-export const divider = style({
-  height: '50px',
-  borderLeft: `1px solid ${theme.colour.primary}`,
-  borderRight: `1px solid ${theme.colour.primary}`
-})
