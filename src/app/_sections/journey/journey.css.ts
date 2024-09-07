@@ -45,7 +45,14 @@ export const heading = style({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      alignItems: 'flex-start',
+      flexDirection: 'column',
+      gap: '1rem'
+    }
+  }
 })
 
 export const info = style({

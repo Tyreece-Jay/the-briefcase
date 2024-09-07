@@ -50,7 +50,7 @@ export const link = style({
 export const toast = style({
   position: 'fixed',
   left: '1vw',
-  top: '1%',
+  top: '1dvh',
   transform: 'translate(-50vw, -50vw)',
   backgroundColor: theme.colour.grey,
   display: 'flex',
