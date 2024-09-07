@@ -6,7 +6,12 @@ export const section = style({
   display: 'flex',
   gap: '2rem',
   flexDirection: 'column',
-  backgroundColor: theme.colour.grey
+  backgroundColor: theme.colour.grey,
+  '@media': {
+    'screen and (max-width: 1050px)': {
+      padding: '5rem 2vw 5rem 2vw'
+    }
+  }
 })
 
 export const intro = style({
@@ -34,7 +39,7 @@ export const card = style({
 export const heading = style({
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'flex-end',
+  alignItems: 'center',
   justifyContent: 'space-between'
 })
 
@@ -42,7 +47,12 @@ export const info = style({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  gap: '4rem'
+  gap: '4rem',
+  '@media': {
+    'screen and (max-width: 850px)': {
+      flexDirection: 'column'
+    }
+  }
 })
 
 export const image = style({
@@ -53,8 +63,17 @@ export const image = style({
 
 export const divider = style({
   height: '100px',
+  width: '0',
   borderLeft: `1px solid ${theme.colour.primary}`,
-  borderRight: `1px solid ${theme.colour.primary}`
+  borderRight: `1px solid ${theme.colour.primary}`,
+  '@media': {
+    'screen and (max-width: 850px)': {
+      height: '0',
+      width: '50%',
+      borderTop: `1px solid ${theme.colour.primary}`,
+      borderBottom: `1px solid ${theme.colour.primary}`
+    }
+  }
 })
 
 export const text = style({
