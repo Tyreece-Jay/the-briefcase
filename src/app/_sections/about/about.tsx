@@ -1,15 +1,13 @@
 'use client'
 
-import { motion } from "framer-motion"
 import { content } from "../../content"
 import { Button } from "../../_design/button/button"
 import { Heading, Text } from "@/app/_design/text/text"
-import { background, container, left, right, section } from "./about.css"
+import { container, left, right, section } from "./about.css"
 
 export default function About() {
 
   return <section id="about" className={section}>
-    <div className={background} />
     <div className={container}>
       <div className={left}>
         <Heading importance={3}>ABOUT ME</Heading>

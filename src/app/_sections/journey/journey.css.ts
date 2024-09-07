@@ -47,7 +47,8 @@ export const info = style({
 
 export const image = style({
   width: '70vw',
-  maxWidth: '280px'
+  maxWidth: '280px',
+  minWidth: '210px'
 })
 
 export const divider = style({
