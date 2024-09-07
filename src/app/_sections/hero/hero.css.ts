@@ -4,9 +4,6 @@ export const section = style({
   height: '100vh'
 })
 
-export const canvas = style({
-})
-
 export const overlay = style({
   display: 'flex',
   flexDirection: 'column',
@@ -23,8 +20,7 @@ export const heading = style({
   display: 'flex',
   alignItems: 'flex-start',
   flexDirection: 'column',
-  width: '100%',
-  marginLeft: '20%'
+  width: '80%'
 })
 
 export const icons = style({
