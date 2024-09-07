@@ -68,6 +68,12 @@ export const contentButton = style({
   alignItems: 'center',
   gap: '1rem',
   '@media': {
+    'screen and (min-width: 900px) and (max-width: 1200px)': {
+      display: 'none'
+    },
+    'screen and (min-width: 600px) and (max-width: 900px)': {
+      display: 'flex'
+    },
     'screen and (max-width: 600px)': {
       display: 'none'
     }

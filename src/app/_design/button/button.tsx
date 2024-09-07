@@ -8,6 +8,9 @@ import { button, buttonIcon, icon, largeButton, submitButton, content, link, lar
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { Text } from "@/app/_design/text/text"
 import Link from "next/link"
+import { Montserrat } from "next/font/google"
+
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
 const hover = { scale: 1.1 }
 const transition = { type: "spring", damping: 10, stiffness: 100 }
@@ -15,7 +18,7 @@ const tap = { scale: 0.9 }
 
 export function Button({ children, href }: { children: ReactNode, href: string }) {
   return <Link className={link} target="_blank" href={href}>
-    <motion.button className={button} whileHover={hover} transition={transition} whileTap={tap}>
+    <motion.button className={`${button} ${montserrat.className}`} whileHover={hover} transition={transition} whileTap={tap}>
       <Text>{children}</Text>
       <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
     </motion.button>
@@ -24,7 +27,7 @@ export function Button({ children, href }: { children: ReactNode, href: string }
 
 export function LargeButton({ icon, children, href }: { icon: IconDefinition, children: ReactNode, href: string }) {
   return <Link className={largeLink} target="_blank" href={href}>
-    <motion.button className={largeButton} whileHover={{ scale: 1.02, borderRadius: '3rem' }} transition={transition} whileTap={tap}>
+    <motion.button className={`${largeButton} ${montserrat.className}`} whileHover={{ scale: 1.02, borderRadius: '3rem' }} transition={transition} whileTap={tap}>
       <div className={content}>
         <FontAwesomeIcon icon={icon} className={buttonIcon} />
         {children}
@@ -38,7 +41,7 @@ export function LargeButton({ icon, children, href }: { icon: IconDefinition, ch
 }
 
 export function SubmitButton({ children, onClick }: { children: ReactNode, onClick: () => any }) {
-  return <motion.button className={submitButton} onClick={onClick} transition={transition} whileTap={tap}>
+  return <motion.button className={`${submitButton} ${montserrat.className}`} onClick={onClick} transition={transition} whileTap={tap}>
     <Text>{children}</Text>
   </motion.button>
 }

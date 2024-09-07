@@ -14,7 +14,7 @@ export const buttons = style({
   flexDirection: 'row',
   gap: '2rem',
   '@media': {
-    'screen and (max-width: 800px)': {
+    'screen and (max-width: 900px)': {
       flexDirection: 'column'
     }
   }
