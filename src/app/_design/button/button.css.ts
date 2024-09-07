@@ -58,6 +58,17 @@ export const content = style({
   gap: '1rem'
 })
 
+export const contentButton = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '1rem',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      visibility: 'hidden'
+    }
+  }
+})
+
 export const submitButton = style([baseButton, {
   backgroundColor: 'transparent',
   borderColor: theme.colour.secondary,
@@ -69,6 +80,11 @@ export const submitButton = style([baseButton, {
     backgroundColor: theme.colour.secondary,
     color: theme.colour.primaryLight,
     borderColor: theme.colour.secondary
+  },
+  '@media': {
+    'screen and (max-width: 800px)': {
+      borderRadius: '0 0 1rem 1rem'
+    }
   }
 }])
 

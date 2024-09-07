@@ -4,7 +4,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { motion } from "framer-motion"
 import { ReactNode } from "react"
-import { button, buttonIcon, icon, largeButton, submitButton, content, link, largeLink } from "./button.css"
+import { button, buttonIcon, icon, largeButton, submitButton, content, link, largeLink, contentButton } from "./button.css"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { Text } from "@/app/_design/text/text"
 import Link from "next/link"
@@ -29,7 +29,7 @@ export function LargeButton({ icon, children, href }: { icon: IconDefinition, ch
         <FontAwesomeIcon icon={icon} className={buttonIcon} />
         {children}
       </div>
-      <div className={content}>
+      <div className={contentButton}>
         <Text>View</Text>
         <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
       </div>

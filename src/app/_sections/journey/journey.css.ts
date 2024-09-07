@@ -16,7 +16,12 @@ export const section = style({
 
 export const intro = style({
   width: '50%',
-  color: theme.colour.white
+  color: theme.colour.white,
+  '@media': {
+    'screen and (max-width: 800px)': {
+      width: '100%'
+    }
+  }
 })
 
 export const cards = style({

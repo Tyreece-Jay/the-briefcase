@@ -7,14 +7,24 @@ export const section = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '2rem',
-  borderRadius: '2rem 2rem 0 0'
+  borderRadius: '2rem 2rem 0 0',
+  '@media': {
+    'screen and (max-width: 1400px)': {
+      flexDirection: 'column'
+    }
+  }
 })
 
 export const content = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  width: '100%'
+  width: '100%',
+  '@media': {
+    'screen and (max-width: 1400px)': {
+      gap: '2rem'
+    }
+  }
 })
 
 export const links = style({

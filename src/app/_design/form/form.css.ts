@@ -5,7 +5,13 @@ export const form = style({
   display: 'grid',
   gridTemplateAreas: `"message message message" "name email submit" "error errror errror"`,
   gap: '0.5rem',
-  width: '100%'
+  width: '100%',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  }
 })
 
 export const message = style({
@@ -19,7 +25,7 @@ export const message = style({
   color: theme.colour.black,
   resize: 'none',
   scrollbarWidth: 'none',
-  overflowY: 'scroll', 
+  overflowY: 'scroll',
   ':focus': {
     outline: `1px solid ${theme.colour.black}`
   }
@@ -35,6 +41,11 @@ export const name = style({
   color: theme.colour.black,
   ':focus': {
     outline: `1px solid ${theme.colour.black}`
+  },
+  '@media': {
+    'screen and (max-width: 800px)': {
+      borderRadius: 0
+    }
   }
 })
 
@@ -51,8 +62,7 @@ export const email = style({
 })
 
 export const submit = style({
-  gridArea: 'submit',
-  borderRadius: '0 0 1rem 0'
+  gridArea: 'submit'
 })
 
 export const error = style({

@@ -12,5 +12,10 @@ export const container = style({
 export const buttons = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '2rem'
+  gap: '2rem',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      flexDirection: 'column'
+    }
+  }
 })
