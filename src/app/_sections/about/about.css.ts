@@ -13,13 +13,27 @@ export const container = style({
   flexDirection: 'row',
   backgroundColor: theme.colour.primaryLight,
   borderRadius: '2rem 0',
-  color: theme.colour.black
+  color: theme.colour.black,
+  '@media': {
+    'screen and (max-width: 1500px)': {
+      gap: '5vw'
+    },
+    'screen and (max-width: 1000px)': {
+      flexDirection: 'column',
+      gap: '5vw'
+    }
+  }
 })
 
 export const left = style({
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  '@media': {
+    'screen and (max-width: 1000px)': {
+      gap: '1rem'
+    }
+  }
 })
 
 export const right = style({
