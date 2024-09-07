@@ -5,10 +5,15 @@ export const container = style({
   overflow: 'hidden',
   backgroundColor: theme.colour.grey,
   paddingTop: '3rem',
-  paddingBottom: '4rem',
+  paddingBottom: '3rem',
   display: 'flex',
   flexDirection: 'column',
-  gap: '2rem'
+  gap: '2rem',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      padding: 0
+    }
+  }
 })
 
 export const skills = style({
