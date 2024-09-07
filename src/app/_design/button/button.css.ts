@@ -100,7 +100,6 @@ export const submitButton = style([baseButton, {
 }])
 
 export const icon = style({
-  position: 'absolute',
   color: theme.colour.black,
   width: '3rem',
   height: '3rem',

@@ -29,5 +29,5 @@ export const icons = style({
   gap: '6em',
   top: '20%',
   left: '50%',
-  transform: 'translate(0%, -50%)'
+  transform: 'translate(0, -50%)'
 })
