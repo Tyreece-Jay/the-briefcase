@@ -40,8 +40,8 @@ export function LargeButton({ icon, children, href }: { icon: IconDefinition, ch
   </Link>
 }
 
-export function SubmitButton({ children, onClick }: { children: ReactNode, onClick: () => any }) {
-  return <motion.button className={`${submitButton} ${montserrat.className}`} onClick={onClick} transition={transition} whileTap={tap}>
+export function SubmitButton({ children }: { children: ReactNode }) {
+  return <motion.button className={`${submitButton} ${montserrat.className}`} type='submit' transition={transition} whileTap={tap}>
     <Text>{children}</Text>
   </motion.button>
 }
