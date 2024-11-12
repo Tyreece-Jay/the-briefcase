@@ -21,9 +21,9 @@ export default function Form({ setToast }: { setToast: (e: boolean) => void }) {
   }
 
   return <> <form onSubmit={handleSubmit(onSubmit)} className={form}>
-    <textarea {...register("message", { required: true })} placeholder="Your message" className={`${message} ${montserrat.className}`} />
-    <input {...register("name", { required: true })} type='text' placeholder="Full name" className={`${name} ${montserrat.className}`} />
-    <input {...register("email", { required: true })} type='email' placeholder="Email address" className={`${email} ${montserrat.className}`} />
+    <textarea {...register('message', { required: true })} placeholder='Your message' className={`${message} ${montserrat.className}`} />
+    <input {...register('name', { required: true })} type='text' placeholder='Full name' className={`${name} ${montserrat.className}`} />
+    <input {...register('email', { required: true })} type='email' placeholder='Email address' className={`${email} ${montserrat.className}`} />
     <SubmitButton>Send</SubmitButton>
     <ErrorMessage errors={errors} />
   </form>

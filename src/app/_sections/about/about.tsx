@@ -1,17 +1,17 @@
 'use client'
 
-import { content } from "../../content"
-import { Button } from "../../_design/button/button"
-import { Heading, Text } from "@/app/_design/text/text"
-import { container, left, right, section } from "./about.css"
+import { content } from '../../content'
+import { Button } from '../../_design/button/button'
+import { Heading, Text } from '@/app/_design/text/text'
+import { container, left, right, section } from './about.css'
 
 export default function About() {
 
-  return <section id="about" className={section}>
+  return <section id='about' className={section}>
     <div className={container}>
       <div className={left}>
         <Heading importance={3}>ABOUT ME</Heading>
-        <Button href="mailto:tyreece.jay@gmail.com">Send me an email</Button>
+        <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
       </div>
       <div className={right}>
         <Text>{content.about}</Text>

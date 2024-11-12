@@ -1,5 +1,5 @@
-import { style } from "@vanilla-extract/css"
-import { theme } from "../theme.css"
+import { style } from '@vanilla-extract/css'
+import { theme } from '../theme.css'
 
 export const toast = style({
   position: 'fixed',

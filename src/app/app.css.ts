@@ -1,5 +1,5 @@
-import { globalStyle, style } from "@vanilla-extract/css"
-import { theme } from "./_design/theme.css"
+import { globalStyle, style } from '@vanilla-extract/css'
+import { theme } from './_design/theme.css'
 
 globalStyle('body', {
   padding: 0,

@@ -1,8 +1,9 @@
-import "./app.css"
-import type { Metadata } from "next"
-import { content } from "./content"
-import { themeClass } from "./_design/theme.css"
-import { Montserrat } from "next/font/google"
+import './app.css'
+import type { Metadata } from 'next'
+import { content } from './content'
+import { themeClass } from './_design/theme.css'
+import { Montserrat } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
@@ -12,8 +13,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${themeClass} ${montserrat.className}`}>
-      <body>{children}</body>
+    <html lang='en' className={`${themeClass} ${montserrat.className}`}>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
