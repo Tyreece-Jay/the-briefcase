@@ -6,7 +6,7 @@ import { Heading } from '@/app/_design/text/text'
 import { section, content, links, link } from './contact.css'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from '@/app/_design/text/text'
 import Link from 'next/link'
 import Toast from '@/app/_design/toast/toast'
@@ -22,7 +22,7 @@ export default function Contact() {
           <Text>Want to know more or just have a chat?</Text>
         </div>
         <ul className={links}>
-          {/* <li><span className={link} onClick={toast}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></span></li> */}
+          <li><a className={link} href='mailto:tyreece.jay@gmail.com' target='_blank'><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></a></li>
           <li><Link className={link} target='_blank' href='mailto:tyreece.jay@gmail.com'><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></Link></li>
           <li><Link className={link} target='_blank' href='https://linkedin.com/in/tyreece-simpson'><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></Link></li>
         </ul>
