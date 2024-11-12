@@ -18,7 +18,7 @@
     "@vanilla-extract/css": "^1.15.3",
     "@vercel/speed-insights": "^1.1.0",
     "framer-motion": "^11.5.2",
-    "next": "14.2.5",
+    "next": "14.2.17",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.5",
