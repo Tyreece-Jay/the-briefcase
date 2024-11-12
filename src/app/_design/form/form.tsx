@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { SubmitButton } from '../button/button'
 import { email, error, form, message, name } from './form.css'
-import { SubmitForm } from '@/app/api/send/route'
 import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
@@ -18,7 +17,7 @@ export default function Form() {
   // const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
   // const onSubmit: SubmitHandler<Inputs> = (data) => POST(data.name, data.email, data.message)
 
-  return <form action={SubmitForm} className={form}>
+  return <form action={() => {}} className={form}>
     <textarea name="message" placeholder="Your message" className={`${message} ${montserrat.className}`} />
     <input name="name" type='text' placeholder="Full name" className={`${name} ${montserrat.className}`} />
     <input name="email" type='email' placeholder="Email address" className={`${email} ${montserrat.className}`} />
