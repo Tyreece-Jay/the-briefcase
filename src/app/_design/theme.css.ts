@@ -8,6 +8,6 @@ export const [themeClass, theme] = createTheme({
     primary: "#6FFFE9",
     primaryLight: "#D6FFF9",
     secondary: "#2B0AFF",
-    secondaryLight: "#79A3F6",
+    secondaryLight: "#79A3F6"
   }
 })

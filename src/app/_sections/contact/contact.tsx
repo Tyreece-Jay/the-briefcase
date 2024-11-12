@@ -10,6 +10,7 @@ import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from "@/app/_design/text/text"
 import Link from 'next/link'
 import Toast from '@/app/_design/toast/toast'
+import { POST } from '@/app/api/send/route'
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +19,7 @@ export default function Contact() {
   const toast = () => {
     setIsOpen(true)
     setRequestSent(true)
+    POST()
     setTimeout(() => setIsOpen(false), 3000)
   }
 

@@ -23,4 +23,3 @@ export const icon = style({
   color: theme.colour.primary,
   height: '2rem'
 })
-
