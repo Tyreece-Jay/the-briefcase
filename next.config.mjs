@@ -8,9 +8,6 @@ const nextConfig = {
     loader: "akamai",
     path: "",
     unoptimized: true 
-  },
-  env: {
-    RESEND_API_KEY: ''
   }
 }
 
