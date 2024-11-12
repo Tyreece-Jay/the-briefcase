@@ -6,22 +6,13 @@ import { Heading } from '@/app/_design/text/text'
 import { section, content, links, link } from './contact.css'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from "@/app/_design/text/text"
 import Link from 'next/link'
 import Toast from '@/app/_design/toast/toast'
-import { POST } from '@/app/api/send/route'
 
 export default function Contact() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [requestSent, setRequestSent] = useState(false)
-
-  const toast = () => {
-    setIsOpen(true)
-    setRequestSent(true)
-    POST()
-    setTimeout(() => setIsOpen(false), 3000)
-  }
+  const [toast, setToast] = useState(false)
 
   return <>
     <section className={section}>
@@ -31,13 +22,13 @@ export default function Contact() {
           <Text>Want to know more or just have a chat?</Text>
         </div>
         <ul className={links}>
-          <li><span className={link} onClick={toast}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></span></li>
+          {/* <li><span className={link} onClick={toast}><FontAwesomeIcon icon={faCircleUser} fixedWidth /><Text>Request my CV</Text></span></li> */}
           <li><Link className={link} target="_blank" href="mailto:tyreece.jay@gmail.com"><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></Link></li>
           <li><Link className={link} target="_blank" href="https://linkedin.com/in/tyreece-simpson"><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></Link></li>
         </ul>
       </div>
-      <Form />
+      <Form setToast={setToast}/>
     </section>
-    {isOpen ? <Toast /> : null}
+    {toast ? <Toast /> : null}
   </>
 }
