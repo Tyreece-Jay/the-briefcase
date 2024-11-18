@@ -19,7 +19,7 @@ export function ParallaxText({ direction, children }: ParallaxProps) {
   const directionFactor = useRef<number>(1)
   useAnimationFrame(() => {
     const velocity = direction === 'Forward' ? 1 : -1
-    const moveBy = directionFactor.current * velocity / 200
+    const moveBy = directionFactor.current * velocity / 300
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1
