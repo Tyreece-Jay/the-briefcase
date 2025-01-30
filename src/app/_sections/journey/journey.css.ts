@@ -6,7 +6,7 @@ export const section = style({
   display: 'flex',
   gap: '2rem',
   flexDirection: 'column',
-  backgroundColor: theme.colour.grey,
+  backgroundColor: theme.colour.navy,
   '@media': {
     'screen and (max-width: 1050px)': {
       padding: '5rem 2vw 5rem 2vw'
@@ -82,14 +82,14 @@ export const image = style({
 export const divider = style({
   height: '100px',
   width: '0',
-  borderLeft: `1px solid ${theme.colour.primary}`,
-  borderRight: `1px solid ${theme.colour.primary}`,
+  borderLeft: `1px solid ${theme.colour.blue}`,
+  borderRight: `1px solid ${theme.colour.blue}`,
   '@media': {
     'screen and (max-width: 850px)': {
       height: '0',
       width: '50%',
-      borderTop: `1px solid ${theme.colour.primary}`,
-      borderBottom: `1px solid ${theme.colour.primary}`
+      borderTop: `1px solid ${theme.colour.blue}`,
+      borderBottom: `1px solid ${theme.colour.blue}`
     }
   }
 })

@@ -1,7 +1,9 @@
+import { theme } from "@/app/_design/theme.css"
 import { style } from "@vanilla-extract/css"
 
 export const section = style({
-  height: '100vh'
+  height: '100vh',
+  backgroundColor: theme.colour.aqua
 })
 
 export const overlay = style({
@@ -18,16 +20,15 @@ export const overlay = style({
 
 export const heading = style({
   display: 'flex',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   flexDirection: 'column',
-  width: '80%'
+  width: '80%',
+  gap: '2rem'
 })
 
 export const icons = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '6em',
-  top: '20%',
-  left: '50%',
+  gap: '5rem',
   transform: 'translate(0, -50%)'
 })

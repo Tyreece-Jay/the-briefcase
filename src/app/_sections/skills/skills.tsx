@@ -10,11 +10,11 @@ export default function Skills() {
   return <section className={container}>
     <ParallaxText direction='Forward'>{content.skills.map((x, i) => <span className={skills} key={i}>
       <Heading importance={4} colour='white'>{x}</Heading>
-      <Heading importance={4} colour='secondaryLight'>{'//'}</Heading>
+      <Heading importance={4} colour='blue'>{'//'}</Heading>
     </span>)}</ParallaxText>
     <ParallaxText direction='backward'>{content.skills.map((x, i) => <span className={skills} key={i}>
       <Heading importance={4} colour='white'>{x}</Heading>
-      <Heading importance={4} colour='secondaryLight'>{'//'}</Heading>
+      <Heading importance={4} colour='blue'>{'//'}</Heading>
     </span>)}</ParallaxText>
   </section>
 }

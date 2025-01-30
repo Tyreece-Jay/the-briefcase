@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 
 export const container = style({
   overflow: 'hidden',
-  backgroundColor: theme.colour.grey,
+  backgroundColor: theme.colour.navy,
   paddingTop: '3rem',
   paddingBottom: '3rem',
   display: 'flex',

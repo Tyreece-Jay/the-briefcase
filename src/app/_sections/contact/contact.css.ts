@@ -2,7 +2,7 @@ import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const section = style({
-  backgroundColor: theme.colour.primaryLight,
+  backgroundColor: theme.colour.aqua,
   padding: '5rem 12vw 5rem 12vw',
   display: 'flex',
   flexDirection: 'row',

@@ -5,7 +5,7 @@ export const toast = style({
   position: 'fixed',
   left: '50%',
   top: '1dvh',
-  backgroundColor: theme.colour.grey,
+  backgroundColor: theme.colour.navy,
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
@@ -20,6 +20,6 @@ export const toast = style({
 })
 
 export const icon = style({
-  color: theme.colour.primary,
+  color: theme.colour.blue,
   height: '2rem'
 })

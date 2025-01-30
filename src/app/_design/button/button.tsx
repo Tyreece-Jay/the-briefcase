@@ -51,12 +51,3 @@ export function IconButton({ icon: iconDef, href }: { icon: IconDefinition, href
     <FontAwesomeIcon icon={iconDef} className={icon} />
   </motion.a>
 }
-
-export function ScrollButton({ icon: iconDef, href }: { icon: IconDefinition, href: string }) {
-  return <motion.a animate={{ y: [0, -20, 0] }} transition={{
-    duration: 2, ease: 'easeInOut',
-    times: [0, 0.2], repeat: Infinity
-  }} href={href}>
-    <FontAwesomeIcon icon={iconDef} className={icon} />
-  </motion.a>
-}

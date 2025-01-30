@@ -2,7 +2,7 @@ import './app.css'
 import type { Metadata } from 'next'
 import { content } from './content'
 import { themeClass } from './_design/theme.css'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Big_Shoulders_Display, Big_Shoulders_Text } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 

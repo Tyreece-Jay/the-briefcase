@@ -2,10 +2,12 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '../theme.css'
 
 export const h1 = style({
-  fontSize: '4rem',
-  fontWeight: 800,
+  fontSize: '15rem',
+  fontWeight: 900,
   textTransform: 'uppercase',
-  color: theme.colour.black,
+  color: theme.colour.blue,
+  textAlign: 'center',
+  lineHeight: '15rem',
   '@media': {
     'screen and (max-width: 600px)': {
       fontSize: '3rem'
@@ -14,7 +16,7 @@ export const h1 = style({
 })
 
 export const h2 = style({
-  fontSize: '3rem',
+  fontSize: '1.5rem',
   fontWeight: 500,
   color: theme.colour.black,
   '@media': {
@@ -34,7 +36,7 @@ const baseH3 = style({
   }
 })
 export const h3 = styleVariants(theme.colour, (colour) => [baseH3, { color: colour }])
-export const altH3 = styleVariants({ primary: [baseH3, { fontSize: '2rem', color: theme.colour.secondary }] })
+export const altH3 = styleVariants({ primary: [baseH3, { fontSize: '2rem', color: theme.colour.aqua }] })
 
 const baseH4 = style({
   fontSize: '2rem',

@@ -11,7 +11,7 @@ export const container = style({
   display: 'flex',
   gap: '15vw',
   flexDirection: 'row',
-  backgroundColor: theme.colour.primaryLight,
+  backgroundColor: theme.colour.aqua,
   borderRadius: '2rem 0',
   color: theme.colour.black,
   '@media': {

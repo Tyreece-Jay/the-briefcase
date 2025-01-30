@@ -35,20 +35,20 @@ export const button = style([baseButton, {
   gap: '1rem',
   ':hover': {
     backgroundColor: theme.colour.black,
-    color: theme.colour.primary,
+    color: theme.colour.blue,
     borderColor: theme.colour.black
   }
 }])
 
 export const largeButton = style([baseButton, {
-  backgroundColor: theme.colour.grey,
-  borderColor: theme.colour.grey,
+  backgroundColor: theme.colour.navy,
+  borderColor: theme.colour.navy,
   color: theme.colour.white,
   padding: '1.5rem 2rem',
   width: '100%',
   borderRadius: 0,
   ':hover': {
-    color: theme.colour.primary
+    color: theme.colour.blue
   },
   '@media': {
     'screen and (max-width: 600px)': {
@@ -82,15 +82,15 @@ export const contentButton = style({
 
 export const submitButton = style([baseButton, {
   backgroundColor: 'transparent',
-  borderColor: theme.colour.secondary,
-  color: theme.colour.secondary,
+  borderColor: theme.colour.blue,
+  color: theme.colour.blue,
   minWidth: '6rem',
   borderRadius: '0 0 1rem 0',
   justifyContent: 'center',
   ':hover': {
-    backgroundColor: theme.colour.secondary,
-    color: theme.colour.primaryLight,
-    borderColor: theme.colour.secondary
+    backgroundColor: theme.colour.blue,
+    color: theme.colour.aqua,
+    borderColor: theme.colour.blue
   },
   '@media': {
     'screen and (max-width: 800px)': {

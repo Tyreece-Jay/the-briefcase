@@ -5,11 +5,14 @@ import { altH3, h1, h2, h3, h4, h5, text } from './text.css'
 import { match } from "ts-pattern"
 import { theme } from "../theme.css"
 import { motion, useInView } from "framer-motion"
+import { Big_Shoulders_Display, Big_Shoulders_Text } from 'next/font/google'
+
+const display = Big_Shoulders_Display({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
 type importance = 1 | 2 | 3 | 4 | 5
 export function Heading({ importance, colour = 'black', children }: { importance: importance, colour?: keyof typeof theme.colour, children: ReactNode }) {
   return match(importance)
-    .with(1, () => <h1 className={h1}>{children}</h1>)
+    .with(1, () => <h1 className={`${h1} ${display.className}`}>{children}</h1>)
     .with(2, () => <h2 className={h2}>{children}</h2>)
     .with(3, () => <AnimatedH3 colour={colour}>{children}</AnimatedH3>)
     .with(4, () => <h4 className={h4[colour]}>{children}</h4>)
@@ -27,7 +30,7 @@ function AnimatedH3({ colour = 'black', children }: { colour?: keyof typeof them
   const isInView = useInView(ref, { once: true })
 
   return <section ref={ref}>
-    <motion.h3 className={colour == 'secondary' ? altH3.primary : h3[colour]}
+    <motion.h3 className={colour == 'aqua' ? altH3.primary : h3[colour]}
       initial={{ x: -200 }}
       animate={isInView && { x: 0 }}
       transition={{ type: "spring", duration: 0.8, bounce: 0.3 }}>

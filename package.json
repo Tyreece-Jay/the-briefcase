@@ -25,7 +25,6 @@
     "react-dom": "^18",
     "react-hook-form": "^7.52.1",
     "resend": "^4.0.0",
-    "shadergradient": "^1.2.14",
     "ts-pattern": "^5.2.0",
     "typewriter-effect": "^2.21.0"
   },
