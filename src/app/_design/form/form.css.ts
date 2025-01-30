@@ -70,5 +70,5 @@ export const error = style({
   display: 'flex',
   width: 'auto',
   gap: '0.5rem',
-  color: theme.colour.secondary
+  color: theme.colour.black
 })

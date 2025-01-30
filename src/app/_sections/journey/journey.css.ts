@@ -79,21 +79,6 @@ export const image = style({
   minWidth: '210px'
 })
 
-export const divider = style({
-  height: '100px',
-  width: '0',
-  borderLeft: `1px solid ${theme.colour.blue}`,
-  borderRight: `1px solid ${theme.colour.blue}`,
-  '@media': {
-    'screen and (max-width: 850px)': {
-      height: '0',
-      width: '50%',
-      borderTop: `1px solid ${theme.colour.blue}`,
-      borderBottom: `1px solid ${theme.colour.blue}`
-    }
-  }
-})
-
 export const text = style({
   display: 'flex',
   flexDirection: 'column',

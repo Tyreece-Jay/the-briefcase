@@ -28,7 +28,7 @@ export const h2 = style({
 
 const baseH3 = style({
   fontSize: '2.25rem',
-  fontWeight: 700,
+  fontWeight: 900,
   '@media': {
     'screen and (max-width: 600px)': {
       fontSize: '1.75rem'
@@ -36,11 +36,11 @@ const baseH3 = style({
   }
 })
 export const h3 = styleVariants(theme.colour, (colour) => [baseH3, { color: colour }])
-export const altH3 = styleVariants({ primary: [baseH3, { fontSize: '2rem', color: theme.colour.aqua }] })
 
 const baseH4 = style({
-  fontSize: '2rem',
-  fontWeight: 400,
+  fontSize: '8rem',
+  fontWeight: 900,
+  textTransform: 'uppercase',
   '@media': {
     'screen and (max-width: 600px)': {
       fontSize: '1.75rem'
@@ -50,8 +50,8 @@ const baseH4 = style({
 export const h4 = styleVariants(theme.colour, (colour) => [baseH4, { color: colour }])
 
 const baseH5 = style({
-  fontSize: '2rem',
-  fontWeight: 700,
+  fontSize: '1.2rem',
+  fontWeight: 600,
   '@media': {
     'screen and (max-width: 600px)': {
       fontSize: '1.5rem'

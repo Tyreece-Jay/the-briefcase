@@ -43,6 +43,6 @@ export const link = style({
   width: 'fit-content',
   ':hover': {
     cursor: 'pointer',
-    color: theme.colour.secondary
+    color: theme.colour.blue
   }
 })
