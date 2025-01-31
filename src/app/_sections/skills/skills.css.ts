@@ -3,9 +3,8 @@ import { style } from '@vanilla-extract/css'
 
 export const container = style({
   overflow: 'hidden',
-  backgroundColor: theme.colour.navy,
-  paddingTop: '3rem',
-  paddingBottom: '3rem',
+  backgroundColor: theme.colour.white,
+  padding: '6rem 0 6rem 0',
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
@@ -20,5 +19,14 @@ export const skills = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '2rem',
-  paddingRight: '2rem'
+  paddingRight: '2rem',
+  alignItems: 'center'
+})
+
+export const diamond = style({
+  width: '34px', 
+  height: '34px', 
+  backgroundColor: theme.colour.blue,
+  transform: 'rotate(45deg)',
+  borderRadius: '2px'
 })

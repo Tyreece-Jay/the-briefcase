@@ -1,7 +1,7 @@
 export const content: Content = {
   name: 'Tyreece Simpson',
   occupation: ['Full-Stack Software Engineer', 'Front-End Specialist'],
-  about: 'I would describe myself as a constantly curios T-Shaped developer looking for an opportunity to learn new skills and challenge my current knowledge. I have been a developer for over 6 years and have learnt many different facets of development, whilst being most skilled in front-end development.',
+  about: ['I am a constantly curious Senior T-Shaped Software Engineer always looking for an opportunity to learn new skills and challenge my current knowledge. I have been a full-stack developer for over 6 years and have learnt many different facets of development and leadership, whilst being most skilled in front-end development.', 'I have a real passion for front-end development, design and innovation because I love to solve user problems and bring the solution to life in innovative yet practical ways.'],
   skills: ['TypeScript', 'JavaScript', 'React', 'HTML', 'CSS', 'C#', 'SQL', 'UX', 'UI', 'Next.js', 'BDD', 'TDD', 'DevOps', 'Pair Programming', 'DDD', 'Jest', 'XState', 'StyleX', 'Vanilla Extract', 'GitHub Actions', 'Azure Devops', 'TeamCity', 'Octopus Deploy', 'Vercel'],
   experience: {
     type: 'Experience',
@@ -26,7 +26,7 @@ export type JourneyType = 'Experience' | 'Education'
 type Content = {
   name: string
   occupation: string[]
-  about: string
+  about: string[]
   skills: string[]
   experience: Journey
   education: Journey

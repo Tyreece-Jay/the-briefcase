@@ -35,7 +35,7 @@ export const card = style({
   flexDirection: 'column',
   justifyContent: 'space-between',
   padding: '4rem',
-  borderRadius: '0 1rem',
+  borderRadius: '4px',
   gap: '4rem',
   background: theme.colour.white,
   color: theme.colour.black,

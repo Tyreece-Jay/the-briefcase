@@ -5,7 +5,7 @@ const baseButton = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  borderRadius: '3rem',
+  borderRadius: '4px',
   border: '2px solid',
   padding: '8px 24px',
   ':hover': {
@@ -28,15 +28,15 @@ export const largeLink = style({
 
 export const button = style([baseButton, {
   backgroundColor: 'transparent',
-  borderColor: theme.colour.black,
-  color: theme.colour.black,
+  borderColor: theme.colour.white,
+  color: theme.colour.white,
   display: 'flex',
   textWrap: 'nowrap',
   gap: '1rem',
   ':hover': {
-    backgroundColor: theme.colour.black,
-    color: theme.colour.blue,
-    borderColor: theme.colour.black
+    backgroundColor: theme.colour.white,
+    color: theme.colour.black,
+    borderColor: theme.colour.white
   }
 }])
 

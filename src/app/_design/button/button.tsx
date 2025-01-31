@@ -19,8 +19,8 @@ const tap = { scale: 0.9 }
 export function Button({ children, href }: { children: ReactNode, href: string }) {
   return <Link className={link} target='_blank' href={href}>
     <motion.button className={`${button} ${montserrat.className}`} whileHover={hover} transition={transition} whileTap={tap}>
-      <Text>{children}</Text>
       <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
+      <Text style='bold'>{children}</Text>
     </motion.button>
   </Link>
 }

@@ -3,19 +3,19 @@
 import { content } from '../../content'
 import { Button } from '../../_design/button/button'
 import { Heading, Text } from '@/app/_design/text/text'
-import { container, left, right, section } from './about.css'
+import { container, top, bottom, section } from './about.css'
 
 export default function About() {
 
   return <section id='about' className={section}>
     <div className={container}>
-      <div className={left}>
-        <Heading importance={3}>ABOUT ME</Heading>
+      <div className={top}>
+        <Heading importance={3} colour='white'>ABOUT ME</Heading>
         <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
       </div>
-      <div className={right}>
-        <Text>{content.about}</Text>
-        <Text>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+      <div className={bottom}>
+        <Text>{content.about[0]}</Text>
+        <Text>{content.about[1]}</Text>
       </div>
     </div>
   </section>
