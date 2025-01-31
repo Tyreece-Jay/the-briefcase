@@ -32,16 +32,3 @@ export const links = style({
   gap: '1rem',
   flexDirection: 'column'
 })
-
-export const link = style({
-  color: theme.colour.black,
-  textDecoration: 'underline',
-  display: 'flex',
-  gap: '0.25rem',
-  alignItems: 'center',
-  width: 'fit-content',
-  ':hover': {
-    cursor: 'pointer',
-    color: theme.colour.blue
-  }
-})

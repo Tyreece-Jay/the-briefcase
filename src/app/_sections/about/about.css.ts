@@ -2,13 +2,13 @@ import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const section = style({
-  padding: '0 0 5rem 0',
+  padding: '0 0 6rem 0',
   background: theme.colour.white
 })
 
 export const container = style({
   padding: '3rem',
-  margin: '0 25rem',
+  margin: '0 23rem',
   display: 'flex',
   gap: '3rem',
   flexDirection: 'column',

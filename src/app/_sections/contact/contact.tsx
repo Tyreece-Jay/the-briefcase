@@ -2,13 +2,11 @@
 
 import React, { useState } from 'react'
 import Form from '../../_design/form/form'
-import { Heading } from '@/app/_design/text/text'
-import { section, content, links, link } from './contact.css'
+import { Heading, TextLink } from '@/app/_design/text/text'
+import { section, content, links } from './contact.css'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from '@/app/_design/text/text'
-import Link from 'next/link'
 import Toast from '@/app/_design/toast/toast'
 
 export default function Contact() {
@@ -16,17 +14,17 @@ export default function Contact() {
 
   return <>
     <section className={section}>
+      <Form setToast={setToast} />
       <div className={content}>
         <div>
           <Heading importance={3} colour='blue'>DROP ME A MESSAGE</Heading>
           <Text>Want to know more or just have a chat?</Text>
         </div>
         <ul className={links}>
-          <li><Link className={link} target='_blank' href='mailto:tyreece.jay@gmail.com'><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text style='bold'>tyreece.jay@gmail.com</Text></Link></li>
-          <li><Link className={link} target='_blank' href='https://linkedin.com/in/tyreece-simpson'><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text style='bold'>tyreece-simpson</Text></Link></li>
+          <li><TextLink text='tyreece.jay@gmail.com' href='mailto:tyreece.jay@gmail.com' icon={faEnvelope} /></li>
+          <li><TextLink text='tyreece-simpson' href='https://linkedin.com/in/tyreece-simpson' icon={faLinkedinIn} /></li>
         </ul>
       </div>
-      <Form setToast={setToast}/>
     </section>
     {toast ? <Toast /> : null}
   </>

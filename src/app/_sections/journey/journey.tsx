@@ -2,10 +2,11 @@
 
 import React from 'react'
 import { card, cards, info, intro, section, text, heading, image } from './journey.css'
-import { Heading } from '@/app/_design/text/text'
+import { Heading, TextLink } from '@/app/_design/text/text'
 import { content, Journey as JourneyType } from '@/app/content'
 import { Text } from "@/app/_design/text/text"
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Journey() {
   return <section className={section}>
@@ -22,14 +23,12 @@ export default function Journey() {
 
 function JourneyCard({ journey }: { journey: JourneyType }) {
   return <div className={card}>
-    <div className={heading}>
-      <Heading importance={5} colour='blue'>{journey.title}</Heading>
-    </div>
     <div className={info}>
       <div className={image}>
         <Image src={journey.image} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
       </div>
       <div className={text}>
+        <TextLink text={journey.title} href={journey.link}/>
         <Text style='bold'>{journey.headline}</Text>
         <Text>{journey.info}</Text>
       </div>

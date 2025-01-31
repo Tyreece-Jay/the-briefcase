@@ -73,7 +73,6 @@ export const text = styleVariants({
   bold: {
     fontSize: '1.2rem',
     fontWeight: 600,
-    textDecoration: 'none',
     '@media': {
       'screen and (max-width: 600px)': {
         fontSize: '1rem'
@@ -89,5 +88,18 @@ export const text = styleVariants({
         fontSize: '1rem'
       }
     }
+  }
+})
+
+export const link = style({
+  color: theme.colour.blue,
+  textDecoration: 'none',
+  display: 'flex',
+  gap: '0.25rem',
+  alignItems: 'center',
+  width: 'fit-content',
+  ':hover': {
+    cursor: 'pointer',
+    textDecoration: 'underline',
   }
 })
