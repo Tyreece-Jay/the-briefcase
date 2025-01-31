@@ -20,15 +20,21 @@ export const overlay = style({
 
 export const heading = style({
   display: 'flex',
-  alignItems: 'center',
   flexDirection: 'column',
+  alignItems: 'center',
   width: '80%',
   gap: '2rem'
+})
+
+export const occupation = style ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '0.25rem'
 })
 
 export const icons = style({
   display: 'flex',
   flexDirection: 'row',
   gap: '5rem',
-  transform: 'translate(0, -50%)'
 })

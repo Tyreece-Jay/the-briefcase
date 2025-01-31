@@ -32,9 +32,9 @@ export default function Form({ setToast }: { setToast: (e: boolean) => void }) {
 
 function ErrorMessage({ errors }: { errors: FieldErrors<Inputs> }) {
   const errorMessage = match<FieldErrors<Inputs>>(errors)
-    .with({ 'message': {} }, () => 'A message is required.')
     .with({ 'name': {} }, () => 'A name is required.')
     .with({ 'email': {} }, () => 'An email is required.')
+    .with({ 'message': {} }, () => 'A message is required.')
     .otherwise(() => null)
 
   return errorMessage && <span className={error}><FontAwesomeIcon icon={faCircleExclamation} />{errorMessage}</span>

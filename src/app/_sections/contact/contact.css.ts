@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 
 export const section = style({
   backgroundColor: theme.colour.aqua,
-  padding: '5rem 12vw 5rem 12vw',
+  padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
   flexDirection: 'row',
   gap: '2rem',

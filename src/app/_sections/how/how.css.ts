@@ -1,9 +1,9 @@
 import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
-export const container = style({
+export const section = style({
   backgroundColor: theme.colour.white,
-  padding: '5rem 12vw 5rem 12vw',
+  padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
   gap: '2rem',
   '@media': {

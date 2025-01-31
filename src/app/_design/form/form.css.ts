@@ -60,10 +60,6 @@ export const email = style({
   }
 })
 
-export const submit = style({
-  gridArea: 'submit'
-})
-
 export const error = style({
   gridArea: 'error',
   display: 'flex',

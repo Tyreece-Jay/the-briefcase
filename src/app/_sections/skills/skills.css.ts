@@ -1,7 +1,7 @@
 import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
-export const container = style({
+export const section = style({
   overflow: 'hidden',
   backgroundColor: theme.colour.white,
   padding: '6rem 0 6rem 0',
