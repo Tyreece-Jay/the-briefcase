@@ -7,7 +7,7 @@ export const container = style({
   padding: '6rem 0 6rem 0',
   display: 'flex',
   flexDirection: 'column',
-  gap: '2rem',
+  gap: '3rem',
   '@media': {
     'screen and (max-width: 600px)': {
       padding: 0
@@ -18,14 +18,14 @@ export const container = style({
 export const skills = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '2rem',
-  paddingRight: '2rem',
+  gap: '3rem',
+  paddingRight: '3rem',
   alignItems: 'center'
 })
 
 export const diamond = style({
-  width: '34px', 
-  height: '34px', 
+  width: '2.5rem', 
+  height: '2.5rem', 
   backgroundColor: theme.colour.blue,
   transform: 'rotate(45deg)',
   borderRadius: '2px'

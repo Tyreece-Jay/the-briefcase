@@ -2,7 +2,6 @@ import { theme } from '@/app/_design/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const section = style({
-  padding: '0 0 6rem 0',
   background: theme.colour.white
 })
 
