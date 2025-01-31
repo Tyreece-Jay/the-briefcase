@@ -73,6 +73,7 @@ export const text = styleVariants({
   bold: {
     fontSize: '1.2rem',
     fontWeight: 600,
+    textDecoration: 'none',
     '@media': {
       'screen and (max-width: 600px)': {
         fontSize: '1rem'

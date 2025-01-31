@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 
 export const form = style({
   display: 'grid',
-  gridTemplateAreas: `"message message message" "name email submit" "error errror errror"`,
+  gridTemplateAreas: `"name email" "message message" "submit submit" "errror errror"`,
   gap: '0.5rem',
   width: '100%',
   '@media': {
@@ -17,9 +17,9 @@ export const form = style({
 export const message = style({
   gridArea: 'message',
   height: '6rem',
-  borderRadius: '1rem 1rem 0 0',
-  border: `2px solid ${theme.colour.black}`,
-  backgroundColor: 'transparent',
+  borderRadius: '4px',
+  border: 'none',
+  backgroundColor: theme.colour.navy10,
   padding: '1rem',
   fontSize: '1rem',
   color: theme.colour.black,
@@ -27,37 +27,36 @@ export const message = style({
   scrollbarWidth: 'none',
   overflowY: 'scroll',
   ':focus': {
-    outline: `1px solid ${theme.colour.black}`
+    outline: 'none',
+    backgroundColor: theme.colour.white
   }
 })
 
 export const name = style({
   gridArea: 'name',
-  borderRadius: '0 0 0 1rem',
-  border: `2px solid ${theme.colour.black}`,
-  backgroundColor: 'transparent',
+  borderRadius: '4px',
+  border: 'none',
+  backgroundColor: theme.colour.navy10,
   padding: '1rem',
   fontSize: '1rem',
   color: theme.colour.black,
   ':focus': {
-    outline: `1px solid ${theme.colour.black}`
-  },
-  '@media': {
-    'screen and (max-width: 800px)': {
-      borderRadius: 0
-    }
+    outline: 'none',
+    backgroundColor: theme.colour.white
   }
 })
 
 export const email = style({
   gridArea: 'email',
-  border: `2px solid ${theme.colour.black}`,
-  backgroundColor: 'transparent',
+  borderRadius: '4px',
+  border: 'none',
+  backgroundColor: theme.colour.navy10,
   padding: '1rem',
   fontSize: '1rem',
   color: theme.colour.black,
   ':focus': {
-    outline: `1px solid ${theme.colour.black}`
+    outline: 'none',
+    backgroundColor: theme.colour.white
   }
 })
 

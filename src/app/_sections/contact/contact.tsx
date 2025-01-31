@@ -6,7 +6,7 @@ import { Heading } from '@/app/_design/text/text'
 import { section, content, links, link } from './contact.css'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { Text } from '@/app/_design/text/text'
 import Link from 'next/link'
 import Toast from '@/app/_design/toast/toast'
@@ -18,12 +18,12 @@ export default function Contact() {
     <section className={section}>
       <div className={content}>
         <div>
-          <Heading importance={3}>DROP ME A MESSAGE</Heading>
+          <Heading importance={3} colour='blue'>DROP ME A MESSAGE</Heading>
           <Text>Want to know more or just have a chat?</Text>
         </div>
         <ul className={links}>
-          <li><Link className={link} target='_blank' href='mailto:tyreece.jay@gmail.com'><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text>tyreece.jay@gmail.com</Text></Link></li>
-          <li><Link className={link} target='_blank' href='https://linkedin.com/in/tyreece-simpson'><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text>tyreece-simpson</Text></Link></li>
+          <li><Link className={link} target='_blank' href='mailto:tyreece.jay@gmail.com'><FontAwesomeIcon icon={faEnvelope} fixedWidth /><Text style='bold'>tyreece.jay@gmail.com</Text></Link></li>
+          <li><Link className={link} target='_blank' href='https://linkedin.com/in/tyreece-simpson'><FontAwesomeIcon icon={faLinkedinIn} fixedWidth /><Text style='bold'>tyreece-simpson</Text></Link></li>
         </ul>
       </div>
       <Form setToast={setToast}/>

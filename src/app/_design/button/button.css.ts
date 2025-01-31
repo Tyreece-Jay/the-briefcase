@@ -84,18 +84,12 @@ export const submitButton = style([baseButton, {
   backgroundColor: 'transparent',
   borderColor: theme.colour.blue,
   color: theme.colour.blue,
-  minWidth: '6rem',
-  borderRadius: '0 0 1rem 0',
+  borderRadius: '4px',
   justifyContent: 'center',
   ':hover': {
     backgroundColor: theme.colour.blue,
-    color: theme.colour.aqua,
+    color: theme.colour.white,
     borderColor: theme.colour.blue
-  },
-  '@media': {
-    'screen and (max-width: 800px)': {
-      borderRadius: '0 0 1rem 1rem'
-    }
   }
 }])
 

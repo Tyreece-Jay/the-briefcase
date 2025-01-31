@@ -32,10 +32,6 @@ export function LargeButton({ icon, children, href }: { icon: IconDefinition, ch
         <FontAwesomeIcon icon={icon} className={buttonIcon} />
         {children}
       </div>
-      <div className={contentButton}>
-        <Text>View</Text>
-        <FontAwesomeIcon icon={faArrowRight} className={buttonIcon} />
-      </div>
     </motion.button>
   </Link>
 }

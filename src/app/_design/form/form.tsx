@@ -8,7 +8,7 @@ import { email, error, form, message, name } from './form.css'
 import { Montserrat } from 'next/font/google'
 import { POST } from '@/app/api/send/route'
 
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 type Inputs = { name: string, email: string, message: string }
 
@@ -21,9 +21,9 @@ export default function Form({ setToast }: { setToast: (e: boolean) => void }) {
   }
 
   return <> <form onSubmit={handleSubmit(onSubmit)} className={form}>
-    <textarea {...register('message', { required: true })} placeholder='Your message' className={`${message} ${montserrat.className}`} />
-    <input {...register('name', { required: true })} type='text' placeholder='Full name' className={`${name} ${montserrat.className}`} />
-    <input {...register('email', { required: true })} type='email' placeholder='Email address' className={`${email} ${montserrat.className}`} />
+    <input {...register('name', { required: true })} type='text' placeholder='Name' className={`${name} ${montserrat.className}`} />
+    <input {...register('email', { required: true })} type='email' placeholder='Email' className={`${email} ${montserrat.className}`} />
+    <textarea {...register('message', { required: true })} placeholder='Message' className={`${message} ${montserrat.className}`} />
     <SubmitButton>Send</SubmitButton>
     <ErrorMessage errors={errors} />
   </form>
