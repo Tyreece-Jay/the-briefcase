@@ -28,8 +28,11 @@ function JourneyCard({ journey }: { journey: JourneyType }) {
         <Image src={journey.image} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
       </div>
       <div className={text}>
-        <TextLink text={journey.title} href={journey.link}/>
-        <Text style='bold'>{journey.headline}</Text>
+        <div className={heading}>
+          <TextLink text={journey.title} href={journey.link} />
+          <Text style='italic'>{journey.dates}</Text>
+        </div>
+        <Text>{journey.headline}</Text>
         <Text>{journey.info}</Text>
       </div>
     </div>

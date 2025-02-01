@@ -62,32 +62,22 @@ export const h5 = styleVariants(theme.colour, (colour) => [baseH5, { color: colo
 
 export const text = styleVariants({
   regular: {
-    fontSize: '1.2rem',
-    fontWeight: 400,
-    '@media': {
-      'screen and (max-width: 600px)': {
-        fontSize: '1rem'
-      }
-    }
+    fontSize: '1rem',
+    fontWeight: 400
   },
   bold: {
-    fontSize: '1.2rem',
-    fontWeight: 600,
-    '@media': {
-      'screen and (max-width: 600px)': {
-        fontSize: '1rem'
-      }
-    }
+    fontSize: '1rem',
+    fontWeight: 600
+  },
+  italic: {
+    fontSize: '1rem',
+    fontWeight: 400,
+    fontStyle: 'italic'
   },
   toast: {
-    fontSize: '1.2rem',
+    fontSize: '1rem',
     fontWeight: 600,
-    color: theme.colour.white,
-    '@media': {
-      'screen and (max-width: 600px)': {
-        fontSize: '1rem'
-      }
-    }
+    color: theme.colour.white
   }
 })
 

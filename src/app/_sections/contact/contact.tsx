@@ -17,7 +17,7 @@ export default function Contact() {
       <Form setToast={setToast} />
       <div className={content}>
         <div>
-          <Heading importance={3} colour='blue'>DROP ME A MESSAGE</Heading>
+          <Heading importance={3} colour='black'>DROP ME A MESSAGE</Heading>
           <Text>Want to know more or just have a chat?</Text>
           <Text>Get in touch by using the form or the links below.</Text>
         </div>
