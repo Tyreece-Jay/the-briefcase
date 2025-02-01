@@ -6,7 +6,7 @@ export const section = style({
   padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
   flexDirection: 'row',
-  gap: '2rem',
+  gap: '3rem',
   '@media': {
     'screen and (max-width: 1400px)': {
       flexDirection: 'column'
@@ -17,13 +17,8 @@ export const section = style({
 export const content = style({
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between',
   width: '100%',
-  '@media': {
-    'screen and (max-width: 1400px)': {
-      gap: '2rem'
-    }
-  }
+  gap: '3rem'
 })
 
 export const links = style({

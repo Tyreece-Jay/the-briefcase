@@ -4,7 +4,7 @@ import { match } from 'ts-pattern'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { SubmitButton } from '../button/button'
-import { email, error, form, message, name } from './form.css'
+import { email, error, form, inputs, message, name } from './form.css'
 import { Montserrat } from 'next/font/google'
 import { POST } from '@/app/api/send/route'
 
@@ -21,8 +21,10 @@ export default function Form({ setToast }: { setToast: (e: boolean) => void }) {
   }
 
   return <> <form onSubmit={handleSubmit(onSubmit)} className={form}>
-    <input {...register('name', { required: true })} type='text' placeholder='Name' className={`${name} ${montserrat.className}`} />
-    <input {...register('email', { required: true })} type='email' placeholder='Email' className={`${email} ${montserrat.className}`} />
+    <div className={inputs}>
+      <input {...register('name', { required: true })} type='text' placeholder='Name' className={`${name} ${montserrat.className}`} />
+      <input {...register('email', { required: true })} type='email' placeholder='Email' className={`${email} ${montserrat.className}`} />
+    </div>
     <textarea {...register('message', { required: true })} placeholder='Message' className={`${message} ${montserrat.className}`} />
     <SubmitButton>Send</SubmitButton>
     <ErrorMessage errors={errors} />

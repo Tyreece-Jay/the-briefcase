@@ -19,6 +19,7 @@ export default function Contact() {
         <div>
           <Heading importance={3} colour='blue'>DROP ME A MESSAGE</Heading>
           <Text>Want to know more or just have a chat?</Text>
+          <Text>Get in touch by using the form or the links below.</Text>
         </div>
         <ul className={links}>
           <li><TextLink text='tyreece.jay@gmail.com' href='mailto:tyreece.jay@gmail.com' icon={faEnvelope} /></li>

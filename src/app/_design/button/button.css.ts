@@ -7,7 +7,8 @@ const baseButton = style({
   alignItems: 'center',
   borderRadius: '4px',
   border: '2px solid',
-  padding: '0.5rem 1.5rem',
+  padding: '0 1.5rem',
+  height: '3rem',
   ':hover': {
     cursor: 'pointer'
   }
@@ -32,7 +33,7 @@ export const button = style([baseButton, {
   color: theme.colour.white,
   display: 'flex',
   textWrap: 'nowrap',
-  gap: '1rem',
+  width: '25rem',
   ':hover': {
     backgroundColor: theme.colour.white,
     color: theme.colour.black,
@@ -47,40 +48,11 @@ export const largeButton = style([baseButton, {
   backgroundColor: theme.colour.navy,
   color: theme.colour.white,
   padding: '1.5rem 2rem',
+  height: '10rem',
   width: '100%',
-  borderRadius: 0,
-  ':hover': {
-    color: theme.colour.blue
-  },
-  '@media': {
-    'screen and (max-width: 600px)': {
-      justifyContent: 'center'
-    }
-  }
+  justifyContent: 'center',
+  gap: '1.5rem'
 }])
-
-export const content = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '1rem'
-})
-
-export const contentButton = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '1rem',
-  '@media': {
-    'screen and (min-width: 900px) and (max-width: 1200px)': {
-      display: 'none'
-    },
-    'screen and (min-width: 600px) and (max-width: 900px)': {
-      display: 'flex'
-    },
-    'screen and (max-width: 600px)': {
-      display: 'none'
-    }
-  }
-})
 
 export const submitButton = style([baseButton, {
   backgroundColor: 'transparent',
@@ -108,6 +80,11 @@ export const icon = style({
 })
 
 export const buttonIcon = style({
-  width: '2rem',
-  height: '2rem'
+  width: '1.25rem',
+  height: '1.25rem'
+})
+
+export const largeButtonIcon = style({
+  width: '2.5rem', 
+  height: '2.5rem', 
 })
