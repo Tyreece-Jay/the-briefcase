@@ -3,9 +3,10 @@
 import React from 'react'
 import { content } from '../../content'
 import { faFigma, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { IconButton } from '../../_design/button/button'
-import { Heading } from '../../_design/text/text'
+import { Button, IconButton } from '../../_design/button/button'
+import { Heading, Text } from '../../_design/text/text'
 import { heading, section, icons, overlay, occupation } from './hero.css'
+import { bottom, container, top } from '../about/about.css'
 
 export default function Hero() {
   return <section className={section}>
@@ -18,7 +19,18 @@ export default function Hero() {
         </div>
         <Icons />
       </div>
+     
     </div>
+    <div className={container}>
+        <div className={top}>
+          <Heading importance={3} colour='white'>ABOUT ME</Heading>
+          <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
+        </div>
+        <div className={bottom}>
+          <Text>{content.about[0]}</Text>
+          <Text>{content.about[1]}</Text>
+        </div>
+      </div>
   </section>
 }
 

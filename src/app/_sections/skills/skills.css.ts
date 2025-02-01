@@ -4,7 +4,7 @@ import { style } from '@vanilla-extract/css'
 export const section = style({
   overflow: 'hidden',
   backgroundColor: theme.colour.white,
-  padding: '6rem 0 6rem 0',
+  margin: '25rem 0 6rem 0',
   display: 'flex',
   flexDirection: 'column',
   gap: '3rem',
