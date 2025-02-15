@@ -45,7 +45,7 @@ export const largeButton = style([baseButton, {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  backgroundColor: theme.colour.navy,
+  backgroundColor: theme.colour.black,
   color: theme.colour.white,
   padding: '1.5rem 2rem',
   height: '10rem',
@@ -56,26 +56,25 @@ export const largeButton = style([baseButton, {
 
 export const submitButton = style([baseButton, {
   backgroundColor: 'transparent',
-  borderColor: theme.colour.blue,
-  color: theme.colour.blue,
+  borderColor: theme.colour.white,
+  color: theme.colour.white,
   borderRadius: '4px',
   justifyContent: 'space-between',
   gridArea: 'submit',
   ':hover': {
-    backgroundColor: theme.colour.blue,
-    color: theme.colour.white,
-    borderColor: theme.colour.blue
+    backgroundColor: theme.colour.white,
+    color: theme.colour.black
   }
 }])
 
 export const icon = style({
-  color: theme.colour.black,
+  color: theme.colour.white,
   width: '3rem',
   height: '3rem',
   transition: '0.3s',
   ':hover': {
     cursor: 'pointer',
-    color: theme.colour.blue
+    color: theme.colour.white
   }
 })
 
@@ -86,5 +85,5 @@ export const buttonIcon = style({
 
 export const largeButtonIcon = style({
   width: '2.5rem', 
-  height: '2.5rem', 
+  height: '2.5rem'
 })

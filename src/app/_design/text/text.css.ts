@@ -1,7 +1,7 @@
 import { style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '../theme.css'
 
-export const h1 = style({
+const baseH1 = style({
   fontSize: '15rem',
   fontWeight: 900,
   textTransform: 'uppercase',
@@ -14,8 +14,9 @@ export const h1 = style({
     }
   }
 })
+export const h1 = styleVariants(theme.colour, (colour) => [baseH1, { color: colour }])
 
-export const h2 = style({
+const baseH2 = style({
   fontSize: '1.5rem',
   fontWeight: 500,
   color: theme.colour.black,
@@ -25,6 +26,7 @@ export const h2 = style({
     }
   }
 })
+export const h2 = styleVariants(theme.colour, (colour) => [baseH2, { color: colour }])
 
 const baseH3 = style({
   fontSize: '2.25rem',
@@ -65,6 +67,11 @@ export const text = styleVariants({
     fontSize: '1rem',
     fontWeight: 400
   },
+  white: {
+    fontSize: '1rem',
+    fontWeight: 400,
+    color: theme.colour.white
+  },
   bold: {
     fontSize: '1rem',
     fontWeight: 600
@@ -81,8 +88,7 @@ export const text = styleVariants({
   }
 })
 
-export const link = style({
-  color: theme.colour.blue,
+export const baseLink = style({
   textDecoration: 'none',
   display: 'flex',
   gap: '0.25rem',
@@ -90,6 +96,7 @@ export const link = style({
   width: 'fit-content',
   ':hover': {
     cursor: 'pointer',
-    textDecoration: 'underline',
+    textDecoration: 'underline'
   }
 })
+export const link = styleVariants(theme.colour, (colour) => [baseLink, { color: colour }])

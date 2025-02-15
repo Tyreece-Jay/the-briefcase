@@ -16,20 +16,20 @@ const bgText = Big_Shoulders_Text({ subsets: ['latin'] })
 type importance = 1 | 2 | 3 | 4
 export function Heading({ importance, colour = 'black', children }: { importance: importance, colour?: keyof typeof theme.colour, children: ReactNode }) {
   return match(importance)
-    .with(1, () => <h1 className={`${h1} ${bgDisplay.className}`}>{children}</h1>)
-    .with(2, () => <h2 className={h2}>{children}</h2>)
+    .with(1, () => <h1 className={`${h1[colour]} ${bgDisplay.className}`}>{children}</h1>)
+    .with(2, () => <h2 className={h2[colour]}>{children}</h2>)
     .with(3, () => <AnimatedH3 colour={colour}>{children}</AnimatedH3>)
     .with(4, () => <h4 className={`${h4[colour]} ${bgDisplay.className}`}>{children}</h4>)
     .exhaustive()
 }
 
-type style = 'regular' | 'bold' | 'italic' | 'toast'
+type style = 'regular' | 'white' | 'bold' | 'italic' | 'toast'
 export function Text({ style = 'regular', children }: { style?: style, children: ReactNode }) {
   return <p className={text[style]}>{children}</p>
 }
 
-export function TextLink({ text, href, icon }: { text: string, href: string, icon?: IconDefinition }) {
-  return <Link className={link} target='_blank' href={href}>
+export function TextLink({ text, colour = 'blue', href, icon }: { text: string, colour?: keyof typeof theme.colour, href: string, icon?: IconDefinition }) {
+  return <Link className={link[colour]} target='_blank' href={href}>
     {icon ? <FontAwesomeIcon icon={icon} fixedWidth /> : null}
     <Text style='bold'>{text}</Text>
   </Link>

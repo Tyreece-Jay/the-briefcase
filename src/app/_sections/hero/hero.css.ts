@@ -3,7 +3,7 @@ import { style } from "@vanilla-extract/css"
 
 export const section = style({
   height: '100vh',
-  backgroundColor: theme.colour.aqua
+  backgroundColor: theme.colour.blue
 })
 
 export const overlay = style({

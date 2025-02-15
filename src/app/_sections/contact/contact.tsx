@@ -17,13 +17,13 @@ export default function Contact() {
       <Form setToast={setToast} />
       <div className={content}>
         <div>
-          <Heading importance={3} colour='black'>DROP ME A MESSAGE</Heading>
-          <Text>Want to know more or just have a chat?</Text>
-          <Text>Get in touch by using the form or the links below.</Text>
+          <Heading importance={3} colour='white'>DROP ME A MESSAGE</Heading>
+          <Text style='white'>Want to know more or just have a chat?</Text>
+          <Text style='white'>Get in touch by using the form or the links below.</Text>
         </div>
         <ul className={links}>
-          <li><TextLink text='tyreece.jay@gmail.com' href='mailto:tyreece.jay@gmail.com' icon={faEnvelope} /></li>
-          <li><TextLink text='tyreece-simpson' href='https://linkedin.com/in/tyreece-simpson' icon={faLinkedinIn} /></li>
+          <li><TextLink text='tyreece.jay@gmail.com' colour='white' href='mailto:tyreece.jay@gmail.com' icon={faEnvelope} /></li>
+          <li><TextLink text='tyreece-simpson' colour='white' href='https://linkedin.com/in/tyreece-simpson' icon={faLinkedinIn} /></li>
         </ul>
       </div>
     </section>

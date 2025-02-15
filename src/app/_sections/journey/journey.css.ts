@@ -6,7 +6,7 @@ export const section = style({
   display: 'flex',
   gap: '3rem',
   flexDirection: 'column',
-  backgroundColor: theme.colour.navy,
+  backgroundColor: theme.colour.black,
   '@media': {
     'screen and (max-width: 1050px)': {
       padding: '5rem 2vw 5rem 2vw'

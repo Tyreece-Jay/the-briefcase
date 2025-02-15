@@ -12,10 +12,10 @@ export default function Hero() {
   return <section className={section}>
     <div className={overlay}>
       <div className={heading}>
-        <Heading importance={1}>{content.name}</Heading>
+        <Heading importance={1} colour='white'>{content.name}</Heading>
         <div className={occupation}>
-          <Heading importance={2}>{content.occupation[0]}</Heading>
-          <Heading importance={2}>{content.occupation[1]}</Heading>
+          <Heading importance={2} colour='white'>{content.occupation[0]}</Heading>
+          <Heading importance={2} colour='white'>{content.occupation[1]}</Heading>
         </div>
         <Icons />
       </div>
