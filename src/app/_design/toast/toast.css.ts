@@ -5,7 +5,7 @@ export const toast = style({
   position: 'fixed',
   left: '50%',
   top: '1dvh',
-  backgroundColor: theme.colour.navy,
+  backgroundColor: theme.colour.black,
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
