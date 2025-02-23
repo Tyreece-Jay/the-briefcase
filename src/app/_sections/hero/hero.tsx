@@ -5,32 +5,32 @@ import { content } from '../../content'
 import { faFigma, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Button, IconButton } from '../../_design/button/button'
 import { Heading, Text } from '../../_design/text/text'
-import { heading, section, icons, overlay, occupation } from './hero.css'
+import { heading, section, icons, occupation, blend } from './hero.css'
 import { bottom, container, top } from '../about/about.css'
+import Image from 'next/image'
 
 export default function Hero() {
   return <section className={section}>
-    <div className={overlay}>
-      <div className={heading}>
-        <Heading importance={1} colour='white'>{content.name}</Heading>
-        <div className={occupation}>
-          <Heading importance={2} colour='white'>{content.occupation[0]}</Heading>
-          <Heading importance={2} colour='white'>{content.occupation[1]}</Heading>
-        </div>
-        <Icons />
+    <Image className={blend} src={'/whiteBlend.png'} alt={'Blend'} width={0} height={0} />
+    <div className={heading}>
+      <Heading importance={1} colour='white'>{content.name}</Heading>
+      <div className={occupation}>
+        <Heading importance={2} colour='white'>{content.occupation[0]}</Heading>
+        <Heading importance={2} colour='white'>{content.occupation[1]}</Heading>
       </div>
-     
+      <Icons />
     </div>
+
     <div className={container}>
-        <div className={top}>
-          <Heading importance={3} colour='white'>ABOUT ME</Heading>
-          <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
-        </div>
-        <div className={bottom}>
-          <Text>{content.about[0]}</Text>
-          <Text>{content.about[1]}</Text>
-        </div>
+      <div className={top}>
+        <Heading importance={3} colour='white'>ABOUT ME</Heading>
+        <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
       </div>
+      <div className={bottom}>
+        <Text>{content.about[0]}</Text>
+        <Text>{content.about[1]}</Text>
+      </div>
+    </div>
   </section>
 }
 

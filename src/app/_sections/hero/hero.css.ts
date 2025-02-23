@@ -3,22 +3,23 @@ import { style } from "@vanilla-extract/css"
 
 export const section = style({
   height: '100vh',
-  backgroundColor: theme.colour.blue
-})
-
-export const overlay = style({
+  backgroundColor: theme.colour.blue,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-around',
-  height: '100vh',
-  position: 'absolute',
-  width: '100%',
-  top: 0,
-  left: 0
+  justifyContent: 'center',
+  overflow: 'clip'
+})
+
+export const blend = style({
+  position: 'relative',
+  opacity: '15%',
+  width: '175%',
+  height: 'auto'
 })
 
 export const heading = style({
+  position: 'absolute',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -36,5 +37,5 @@ export const occupation = style ({
 export const icons = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: '5rem',
+  gap: '5rem'
 })
