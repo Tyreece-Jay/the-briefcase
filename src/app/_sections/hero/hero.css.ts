@@ -39,3 +39,33 @@ export const icons = style({
   flexDirection: 'row',
   gap: '5rem'
 })
+
+export const about = style({
+  padding: '6vh 3rem',
+  margin: '0 23rem',
+  display: 'flex',
+  gap: '3rem',
+  flexDirection: 'column',
+  backgroundColor: theme.colour.black,
+  borderRadius: '4px',
+  color: theme.colour.white,
+  position: 'absolute',
+  top: '94vh'
+})
+
+export const top = style({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  '@media': {
+    'screen and (max-width: 1000px)': {
+      gap: '1rem'
+    }
+  }
+})
+
+export const bottom = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem'
+})

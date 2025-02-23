@@ -5,8 +5,7 @@ import { content } from '../../content'
 import { faFigma, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Button, IconButton } from '../../_design/button/button'
 import { Heading, Text } from '../../_design/text/text'
-import { heading, section, icons, occupation, blend } from './hero.css'
-import { bottom, container, top } from '../about/about.css'
+import { heading, section, icons, occupation, blend, about, top, bottom } from './hero.css'
 import Image from 'next/image'
 
 export default function Hero() {
@@ -21,7 +20,7 @@ export default function Hero() {
       <Icons />
     </div>
 
-    <div className={container}>
+    <div className={about}>
       <div className={top}>
         <Heading importance={3} colour='white'>ABOUT ME</Heading>
         <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
