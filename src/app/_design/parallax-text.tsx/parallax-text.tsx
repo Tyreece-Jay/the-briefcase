@@ -6,8 +6,7 @@ import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity
 import { wrap } from "@motionone/utils"
 import { parallax, scroller } from './parallax-text.css'
 
-type ParallaxProps = { direction: 'Forward' | 'backward', children: React.ReactNode }
-export function ParallaxText({ direction, children }: ParallaxProps) {
+export function ParallaxText({ direction, children }: { direction: 'Forward' | 'backward', children: React.ReactNode }) {
   const baseX = useMotionValue(0)
   const { scrollY } = useScroll()
   const scrollVelocity = useVelocity(scrollY)
