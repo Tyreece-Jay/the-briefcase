@@ -80,11 +80,6 @@ export const text = styleVariants({
     fontSize: '1rem',
     fontWeight: 400,
     fontStyle: 'italic'
-  },
-  toast: {
-    fontSize: '1rem',
-    fontWeight: 600,
-    color: theme.colour.white
   }
 })
 

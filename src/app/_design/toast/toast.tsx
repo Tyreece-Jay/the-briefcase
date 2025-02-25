@@ -15,6 +15,6 @@ export default function Toast() {
 
   return <motion.div variants={dropIn} initial='hidden' animate='visible' exit='exit' className={toast}>
     <FontAwesomeIcon icon={faPaperPlane} className={icon} />
-    <Text style='toast'>Your message has been sent!</Text>
+    <Text style='bold'>Your message has been sent!</Text>
   </motion.div>
 }

@@ -3,8 +3,8 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from 'framer-motion'
-import { ReactNode, useEffect, useState } from 'react'
-import { button, buttonIcon, icon, largeButton, submitButton, link, largeLink, largeButtonIcon } from './button.css'
+import { ReactNode, useState } from 'react'
+import { button, buttonIcon, icon, largeButton, submitButton, link, largeLink } from './button.css'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Text } from '@/app/_design/text/text'
 import Link from 'next/link'
@@ -26,10 +26,10 @@ export function Button({ children, href }: { children: ReactNode, href: string }
   </Link>
 }
 
-export function LargeButton({ icon, children, href }: { icon: IconDefinition, children: ReactNode, href: string }) {
+export function LargeButton({ iconDef, children, href }: { iconDef: IconDefinition, children: ReactNode, href: string }) {
   return <Link className={largeLink} target='_blank' href={href}>
     <motion.button className={`${largeButton} ${montserrat.className}`} transition={transition} whileTap={tap}>
-      <FontAwesomeIcon icon={icon} className={largeButtonIcon} />
+      <FontAwesomeIcon icon={iconDef} className={icon} />
       <Text style='bold'>{children}</Text>
     </motion.button>
   </Link>
@@ -44,7 +44,7 @@ export function SubmitButton({ children }: { children: ReactNode }) {
   </motion.button>
 }
 
-export function IconButton({ icon: iconDef, href }: { icon: IconDefinition, href: string }) {
+export function IconButton({ iconDef, href }: { iconDef: IconDefinition, href: string }) {
   return <motion.a whileHover={hover} transition={transition} whileTap={tap} href={href} target={'_blank'}>
     <FontAwesomeIcon icon={iconDef} className={icon} />
   </motion.a>

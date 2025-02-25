@@ -12,6 +12,7 @@ export const toast = style({
   padding: '2rem',
   zIndex: 1,
   boxShadow: `5px 5px 10px`,
+  borderRadius: '4px',
   '@media': {
     'screen and (max-width: 600px)': {
       width: '84vw'
@@ -21,5 +22,6 @@ export const toast = style({
 
 export const icon = style({
   color: theme.colour.blue,
-  height: '2rem'
+  width: '1.25rem',
+  height: '1.25rem'
 })

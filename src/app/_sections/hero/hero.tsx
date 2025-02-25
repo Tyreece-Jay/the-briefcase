@@ -35,8 +35,8 @@ export default function Hero() {
 
 function Icons() {
   return <div className={icons}>
-    <IconButton icon={faLinkedin} href="https://linkedin.com/in/tyreece-simpson" />
-    <IconButton icon={faFigma} href="https://www.figma.com/@tyreece" />
-    <IconButton icon={faGithubSquare} href="https://github.com/Tyreece-Jay" />
+    <IconButton iconDef={faLinkedin} href="https://linkedin.com/in/tyreece-simpson" />
+    <IconButton iconDef={faFigma} href="https://www.figma.com/@tyreece" />
+    <IconButton iconDef={faGithubSquare} href="https://github.com/Tyreece-Jay" />
   </div>
 }

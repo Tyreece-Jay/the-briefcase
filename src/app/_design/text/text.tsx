@@ -23,7 +23,7 @@ export function Heading({ importance, colour = 'black', children }: { importance
     .exhaustive()
 }
 
-type style = 'regular' | 'white' | 'bold' | 'italic' | 'toast'
+type style = 'regular' | 'white' | 'bold' | 'italic'
 export function Text({ style = 'regular', children }: { style?: style, children: ReactNode }) {
   return <p className={text[style]}>{children}</p>
 }

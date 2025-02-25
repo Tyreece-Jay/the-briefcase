@@ -1,9 +1,10 @@
 import { theme } from "@/app/_design/theme.css"
 import { keyframes, style } from "@vanilla-extract/css"
+
 const gradiant = keyframes({
   '0%': { backgroundPosition: '50% 55%' },
   '50%': { backgroundPosition: '55% 50%' },
-  '100%': { backgroundPosition: '50% 55%' },
+  '100%': { backgroundPosition: '50% 55%' }
 })
 
 export const section = style({
@@ -18,7 +19,7 @@ export const blend = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  animation: `${gradiant} 45s ease infinite`,
+  animation: `${gradiant} 45s ease infinite`
 })
 
 export const heading = style({

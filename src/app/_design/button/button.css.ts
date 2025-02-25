@@ -85,8 +85,3 @@ export const buttonIcon = style({
   width: '1.25rem',
   height: '1.25rem'
 })
-
-export const largeButtonIcon = style({
-  width: '2.5rem', 
-  height: '2.5rem'
-})
