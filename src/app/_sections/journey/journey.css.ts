@@ -32,13 +32,18 @@ export const cards = style({
 })
 
 export const card = style({
-  position: 'relative',
   padding: '3rem',
   borderRadius: '4px',
-  gap: '3rem',
   background: theme.colour.white,
   color: theme.colour.black,
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: '3rem',
   '@media': {
+    'screen and (max-width: 1605px)': {
+      flexDirection: 'column'
+    },
     'screen and (max-width: 600px)': {
       padding: '10vw'
     }
@@ -55,19 +60,6 @@ export const heading = style({
       alignItems: 'flex-start',
       flexDirection: 'column',
       gap: '1rem'
-    }
-  }
-})
-
-export const info = style({
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  gap: '3rem',
-  '@media': {
-    'screen and (max-width: 850px)': {
-      flexDirection: 'column',
-      gap: '2rem'
     }
   }
 })

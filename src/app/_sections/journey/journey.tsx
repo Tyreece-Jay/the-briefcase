@@ -24,7 +24,6 @@ export default function Journey() {
 
 function JourneyCard({ journey }: { journey: JourneyType }) {
   return <div className={card}>
-    <div className={info}>
       <div className={image}>
         <Image src={journey.image} alt={journey.title} width={0} height={0} style={{ width: '100%', height: 'auto' }} />
       </div>
@@ -36,6 +35,5 @@ function JourneyCard({ journey }: { journey: JourneyType }) {
         <Text>{journey.headline}</Text>
         <Text>{journey.info}</Text>
       </div>
-    </div>
   </div>
 }

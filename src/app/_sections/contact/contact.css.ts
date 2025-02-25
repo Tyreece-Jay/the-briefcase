@@ -8,7 +8,7 @@ export const section = style({
   flexDirection: 'row',
   gap: '3rem',
   '@media': {
-    'screen and (max-width: 1400px)': {
+    'screen and (max-width: 1605px)': {
       flexDirection: 'column-reverse'
     }
   }

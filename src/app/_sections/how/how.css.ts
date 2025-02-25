@@ -13,7 +13,7 @@ export const blend = style({
   display: 'flex',
   gap: '3rem',
   '@media': {
-    'screen and (max-width: 900px)': {
+    'screen and (max-width: 1605px)': {
       flexDirection: 'column'
     }
   }
