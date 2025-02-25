@@ -1,6 +1,5 @@
 'use client'
 
-import About from "./_sections/about/about"
 import Hero from "./_sections/hero/hero"
 import Skills from "./_sections/skills/skills"
 import Journey from "./_sections/journey/journey"
@@ -12,7 +11,6 @@ import { footer } from "./app.css"
 export default function Home() {
   return <main>
     <Hero />
-    <About />
     <Skills />
     <Journey />
     <Contact />

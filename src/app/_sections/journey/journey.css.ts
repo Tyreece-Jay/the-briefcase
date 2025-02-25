@@ -67,28 +67,6 @@ export const card = style({
     'screen and (max-width: 600px)': {
       padding: '10vw'
     }
-  },
-  ':before': {
-    content: '',
-    position: 'absolute',
-    top: '125px',
-    width: '40px',
-    height: '40px',
-    backgroundColor: theme.colour.black,
-    borderRadius: '4px',
-    transform: 'rotate(-45deg)',
-    left: '-20px'
-  },
-  ':after': {
-    content: '',
-    position: 'absolute',
-    top: '125px',
-    width: '40px',
-    height: '40px',
-    backgroundColor: theme.colour.black,
-    borderRadius: '4px',
-    transform: 'rotate(-45deg)',
-    right: '-20px'
   }
 })
 
