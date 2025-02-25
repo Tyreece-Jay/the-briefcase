@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { card, cards, info, intro, section, text, heading, image } from './journey.css'
+import { card, cards, info, intro, section, text, heading, image, topology } from './journey.css'
 import { Heading, TextLink } from '@/app/_design/text/text'
 import { content, Journey as JourneyType } from '@/app/content'
 import { Text } from "@/app/_design/text/text"
@@ -9,8 +9,7 @@ import Image from 'next/image'
 
 export default function Journey() {
   return <section className={section}>
-    {/* <Image className={blend} src={'/blueBlend.png'} alt={'Blend'} width={0} height={0} /> */}
-    {/* <div className={journey}> */}
+    <div className={topology}>
     <div className={intro}>
       <Heading importance={3} colour='white'>MY JOURNEY</Heading>
       <Text>{content.journey.intro}</Text>
@@ -19,7 +18,7 @@ export default function Journey() {
       <JourneyCard journey={content.journey.experience} />
       <JourneyCard journey={content.journey.education} />
     </div>
-    {/* </div> */}
+    </div>
   </section>
 }
 

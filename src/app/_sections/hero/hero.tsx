@@ -6,28 +6,28 @@ import { faFigma, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-sv
 import { Button, IconButton } from '../../_design/button/button'
 import { Heading, Text } from '../../_design/text/text'
 import { heading, section, icons, occupation, blend, about, top, bottom } from './hero.css'
-import Image from 'next/image'
 
 export default function Hero() {
   return <section className={section}>
-    <Image className={blend} src={'/whiteBlend.png'} alt={'Blend'} width={0} height={0} />
-    <div className={heading}>
-      <Heading importance={1} colour='white'>{content.name}</Heading>
-      <div className={occupation}>
-        <Heading importance={2} colour='white'>{content.occupation[0]}</Heading>
-        <Heading importance={2} colour='white'>{content.occupation[1]}</Heading>
+    <div className={blend}>
+      <div className={heading}>
+        <Heading importance={1} colour='white'>{content.name}</Heading>
+        <div className={occupation}>
+          <Heading importance={2} colour='white'>{content.occupation[0]}</Heading>
+          <Heading importance={2} colour='white'>{content.occupation[1]}</Heading>
+        </div>
+        <Icons />
       </div>
-      <Icons />
-    </div>
 
-    <div className={about}>
-      <div className={top}>
-        <Heading importance={3} colour='white'>ABOUT ME</Heading>
-        <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
-      </div>
-      <div className={bottom}>
-        <Text>{content.about[0]}</Text>
-        <Text>{content.about[1]}</Text>
+      <div className={about}>
+        <div className={top}>
+          <Heading importance={3} colour='white'>ABOUT ME</Heading>
+          <Button href='mailto:tyreece.jay@gmail.com'>Send me an email</Button>
+        </div>
+        <div className={bottom}>
+          <Text>{content.about[0]}</Text>
+          <Text>{content.about[1]}</Text>
+        </div>
       </div>
     </div>
   </section>

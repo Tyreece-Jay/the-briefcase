@@ -1,25 +1,27 @@
 import { theme } from "@/app/_design/theme.css"
-import { style } from "@vanilla-extract/css"
+import { keyframes, style } from "@vanilla-extract/css"
+const gradiant = keyframes({
+  '0%': { backgroundPosition: '50% 55%' },
+  '50%': { backgroundPosition: '55% 50%' },
+  '100%': { backgroundPosition: '50% 55%' },
+})
 
 export const section = style({
-  height: '100vh',
-  backgroundColor: theme.colour.blue,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  overflow: 'clip'
+  backgroundColor: theme.colour.blue
 })
 
 export const blend = style({
-  position: 'relative',
-  opacity: '15%',
-  width: '175%',
-  height: 'auto'
+  backgroundImage: 'url(/whiteBlend.png)',
+  backgroundPosition: 'center',
+  backgroundSize: '200%',
+  height: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  animation: `${gradiant} 45s ease infinite`,
 })
 
 export const heading = style({
-  position: 'absolute',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
