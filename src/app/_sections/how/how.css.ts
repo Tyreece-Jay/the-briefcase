@@ -11,6 +11,13 @@ export const blend = style({
   backgroundSize: '200%',
   padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
+  justifyContent: 'center'
+})
+
+export const buttons = style({
+  display: 'flex',
+  width: '100%',
+  maxWidth: '1200px',
   gap: '3rem',
   '@media': {
     'screen and (max-width: 1605px)': {

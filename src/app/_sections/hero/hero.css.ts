@@ -27,6 +27,7 @@ export const heading = style({
   flexDirection: 'column',
   alignItems: 'center',
   width: '80%',
+  maxWidth: '1200px',
   gap: '2rem'
 })
 
@@ -53,6 +54,7 @@ export const about = style({
   borderRadius: '4px',
   color: theme.colour.white,
   position: 'absolute',
+  maxWidth: '1200px',
   top: '94vh'
 })
 

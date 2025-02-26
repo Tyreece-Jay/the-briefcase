@@ -5,6 +5,13 @@ export const section = style({
   backgroundColor: theme.colour.blue,
   padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
+  justifyContent: 'center'
+})
+
+export const container = style({
+  display: 'flex',
+  width: '100%',
+  maxWidth: '1200px',
   flexDirection: 'row',
   gap: '3rem',
   '@media': {

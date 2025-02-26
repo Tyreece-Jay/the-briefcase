@@ -11,8 +11,14 @@ export const topology = style({
   backgroundSize: '200%',
   padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
+  justifyContent: 'center'
+})
+
+export const info = style({
+  display: 'flex',
   gap: '3rem',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  maxWidth: '1200px'
 })
 
 export const intro = style({
