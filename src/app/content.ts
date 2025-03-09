@@ -2,7 +2,7 @@ export const content: Content = {
   name: 'Tyreece Simpson',
   occupation: ['Full-Stack Software Engineer', 'Front-End Specialist'],
   about: ['I am a constantly curious Senior T-Shaped Software Engineer always looking for an opportunity to learn new skills and challenge my current knowledge. I have been a full-stack developer for over 6 years and have learnt many different facets of development and leadership, whilst being most skilled in front-end development.', 'I have a real passion for front-end development, design and innovation because I love to solve user problems and bring the solution to life in innovative yet practical ways.'],
-  skills: ['TypeScript', 'React', 'C#', 'SQL', 'UX & UI', 'Next.js', 'BDD', 'TDD', 'DevOps', 'Pair Programming', 'DDD', 'Jest', 'XState', 'StyleX', 'Vanilla Extract', 'GitHub Actions', 'Azure Devops', 'TeamCity', 'Octopus Deploy', 'Vercel', 'Storybook'],
+  skills: ['TypeScript', 'React', 'C#', 'SQL', 'UX & UI', 'Next.js', 'BDD', 'TDD', 'DevOps', 'Pair Programming', 'DDD', 'Jest', 'XState', 'StyleX', 'Vanilla-Extract', 'GitHub Actions', 'Azure Devops', 'TeamCity', 'Octopus Deploy', 'Vercel', 'Storybook'],
   journey: {
     intro: 'Below I have detailed the main two chapters within my journey; working at First Databank and studying at the University of Exeter.',
     experience: {
