@@ -72,6 +72,7 @@ export const about = style({
       margin: '0 6rem'
     },
     'screen and (max-width: 575px)': {
+      padding: '6vh 2rem',
       margin: '0 2rem'
     }
   }

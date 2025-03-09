@@ -21,7 +21,7 @@ export const topology = style({
       padding: '6rem'
     },
     'screen and (max-width: 575px)': {
-      padding: '2rem',
+      padding: '4rem 2rem',
       backgroundSize: '600%'
     }
   }
@@ -62,6 +62,9 @@ export const card = style({
   '@media': {
     'screen and (max-width: 1000px)': {
       flexDirection: 'column'
+    },
+    'screen and (max-width: 575px)': {
+      padding: '2rem'
     }
   }
 })

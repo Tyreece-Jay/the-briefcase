@@ -16,6 +16,9 @@ export const section = style({
       margin: '35rem 0 6rem 0'
     },
     'screen and (max-width: 500px)': {
+      margin: '35rem 0 3rem 0'
+    },
+    'screen and (max-width: 400px)': {
       margin: '40rem 0 3rem 0'
     }
   }

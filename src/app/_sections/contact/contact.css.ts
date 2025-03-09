@@ -14,7 +14,7 @@ export const section = style({
       padding: '6rem'
     },
     'screen and (max-width: 575px)': {
-      padding: '2rem'
+      padding: '4rem 2rem'
     }
   }
 })
@@ -28,6 +28,9 @@ export const container = style({
   '@media': {
     'screen and (max-width: 1605px)': {
       flexDirection: 'column-reverse'
+    },
+    'screen and (max-width: 575px)': {
+      gap: '2rem'
     }
   }
 })
@@ -36,7 +39,12 @@ export const content = style({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  gap: '3rem'
+  gap: '3rem',
+  '@media': {
+    'screen and (max-width: 575px)': {
+      gap: '2rem'
+    }
+  }
 })
 
 export const links = style({
