@@ -10,13 +10,13 @@ export const section = style({
   gap: '3rem',
   '@media': {
     'screen and (max-width: 1000px)': {
-      margin: '30rem 0 6rem 0',
+      margin: '30rem 0 6rem 0'
     },
     'screen and (max-width: 900px)': {
-      margin: '35rem 0 6rem 0',
+      margin: '35rem 0 6rem 0'
     },
     'screen and (max-width: 500px)': {
-      margin: '40rem 0 3rem 0',
+      margin: '40rem 0 3rem 0'
     }
   }
 })

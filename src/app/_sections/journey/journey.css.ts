@@ -20,7 +20,7 @@ export const topology = style({
       backgroundSize: '400%',
       padding: '6rem'
     },
-    'screen and (max-width: 400px)': {
+    'screen and (max-width: 575px)': {
       padding: '2rem',
       backgroundSize: '600%'
     }

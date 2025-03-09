@@ -13,7 +13,7 @@ export const section = style({
     'screen and (max-width: 700px)': {
       padding: '6rem'
     },
-    'screen and (max-width: 400px)': {
+    'screen and (max-width: 575px)': {
       padding: '2rem'
     }
   }

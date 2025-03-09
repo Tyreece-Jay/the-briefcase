@@ -20,7 +20,7 @@ export const blend = style({
       backgroundSize: '400%',
       padding: '6rem'
     },
-    'screen and (max-width: 400px)': {
+    'screen and (max-width: 575px)': {
       padding: '2rem',
       backgroundSize: '600%'
     }
@@ -36,7 +36,7 @@ export const buttons = style({
     'screen and (max-width: 1000px)': {
       flexDirection: 'column'
     },
-    'screen and (max-width: 400px)': {
+    'screen and (max-width: 575px)': {
       gap: '1rem'
     }
   }
