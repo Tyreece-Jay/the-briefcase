@@ -19,7 +19,15 @@ export const blend = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  animation: `${gradiant} 45s ease infinite`
+  animation: `${gradiant} 45s ease infinite`,
+  '@media': {
+    'screen and (max-width: 700px)': {
+      backgroundSize: '400%'
+    },
+    'screen and (max-width: 400px)': {
+      backgroundSize: '600%'
+    }
+  }
 })
 
 export const heading = style({
@@ -31,7 +39,7 @@ export const heading = style({
   gap: '2rem'
 })
 
-export const occupation = style ({
+export const occupation = style({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -55,7 +63,18 @@ export const about = style({
   color: theme.colour.white,
   position: 'absolute',
   maxWidth: '1200px',
-  top: '94vh'
+  top: '94vh',
+  '@media': {
+    'screen and (max-width: 1500px)': {
+      margin: '0 10rem'
+    },
+    'screen and (max-width: 700px)': {
+      margin: '0 6rem'
+    },
+    'screen and (max-width: 575px)': {
+      margin: '0 2rem'
+    }
+  }
 })
 
 export const top = style({
@@ -64,7 +83,9 @@ export const top = style({
   alignItems: 'center',
   '@media': {
     'screen and (max-width: 1000px)': {
-      gap: '1rem'
+      flexDirection: 'column',
+      gap: '1rem',
+      alignItems: 'flex-start'
     }
   }
 })

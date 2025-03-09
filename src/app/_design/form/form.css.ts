@@ -5,18 +5,17 @@ export const form = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
-  width: '100%',
-  '@media': {
-    'screen and (max-width: 800px)': {
-      display: 'flex',
-      flexDirection: 'column'
-    }
-  }
+  width: '100%'
 })
 
 export const inputs = style({
   display: 'flex',
-  gap: '0.5rem'
+  gap: '0.5rem',
+  '@media': {
+    'screen and (max-width: 1000px)': {
+      flexDirection: 'column'
+    }
+  }
 })
 
 export const field = style({

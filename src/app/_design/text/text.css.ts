@@ -9,8 +9,13 @@ const baseH1 = style({
   textAlign: 'center',
   lineHeight: '15rem',
   '@media': {
-    'screen and (max-width: 600px)': {
-      fontSize: '3rem'
+    'screen and (max-width: 1000px)': {
+      fontSize: '12.5rem',
+      lineHeight: '12.5rem'
+    },
+    'screen and (max-width: 750px)': {
+      fontSize: '5rem',
+      lineHeight: '5rem'
     }
   }
 })
@@ -21,8 +26,8 @@ const baseH2 = style({
   fontWeight: 500,
   color: theme.colour.black,
   '@media': {
-    'screen and (max-width: 600px)': {
-      fontSize: '2rem'
+    'screen and (max-width: 750px)': {
+      fontSize: '1rem'
     }
   }
 })
@@ -32,7 +37,7 @@ const baseH3 = style({
   fontSize: '2.25rem',
   fontWeight: 900,
   '@media': {
-    'screen and (max-width: 600px)': {
+    'screen and (max-width: 750px)': {
       fontSize: '1.75rem'
     }
   }
@@ -44,8 +49,12 @@ const baseH4 = style({
   fontWeight: 900,
   textTransform: 'uppercase',
   '@media': {
-    'screen and (max-width: 600px)': {
-      fontSize: '1.75rem'
+    'screen and (max-width: 1000px)': {
+      fontSize: '4rem'
+    },
+    'screen and (max-width: 500px)': {
+      fontSize: '2rem',
+      lineHeight: '2rem'
     }
   }
 })
@@ -55,8 +64,8 @@ const baseH5 = style({
   fontSize: '1.2rem',
   fontWeight: 600,
   '@media': {
-    'screen and (max-width: 600px)': {
-      fontSize: '1.5rem'
+    'screen and (max-width: 750px)': {
+      fontSize: '1rem'
     }
   }
 })

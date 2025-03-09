@@ -11,7 +11,20 @@ export const topology = style({
   backgroundSize: '200%',
   padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  '@media': {
+    'screen and (max-width: 1500px)': {
+      padding: '6rem 10rem 6rem 10rem'
+    },
+    'screen and (max-width: 700px)': {
+      backgroundSize: '400%',
+      padding: '6rem'
+    },
+    'screen and (max-width: 400px)': {
+      padding: '2rem',
+      backgroundSize: '600%'
+    }
+  }
 })
 
 export const info = style({
@@ -25,7 +38,7 @@ export const intro = style({
   width: '50%',
   color: theme.colour.white,
   '@media': {
-    'screen and (max-width: 800px)': {
+    'screen and (max-width: 1000px)': {
       width: '100%'
     }
   }
@@ -47,11 +60,8 @@ export const card = style({
   alignItems: 'center',
   gap: '3rem',
   '@media': {
-    'screen and (max-width: 1605px)': {
+    'screen and (max-width: 1000px)': {
       flexDirection: 'column'
-    },
-    'screen and (max-width: 600px)': {
-      padding: '10vw'
     }
   }
 })
@@ -62,7 +72,7 @@ export const heading = style({
   alignItems: 'center',
   justifyContent: 'space-between',
   '@media': {
-    'screen and (max-width: 600px)': {
+    'screen and (max-width: 800px)': {
       alignItems: 'flex-start',
       flexDirection: 'column',
       gap: '1rem'
@@ -73,7 +83,12 @@ export const heading = style({
 export const image = style({
   width: '70vw',
   maxWidth: '280px',
-  minWidth: '210px'
+  minWidth: '210px',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      width: '35vw'
+    }
+  }
 })
 
 export const text = style({

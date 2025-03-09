@@ -5,7 +5,18 @@ export const section = style({
   backgroundColor: theme.colour.blue,
   padding: '6rem 23rem 6rem 23rem',
   display: 'flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  '@media': {
+    'screen and (max-width: 1500px)': {
+      padding: '6rem 10rem 6rem 10rem'
+    },
+    'screen and (max-width: 700px)': {
+      padding: '6rem'
+    },
+    'screen and (max-width: 400px)': {
+      padding: '2rem'
+    }
+  }
 })
 
 export const container = style({

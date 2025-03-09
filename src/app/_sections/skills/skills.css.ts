@@ -9,8 +9,14 @@ export const section = style({
   flexDirection: 'column',
   gap: '3rem',
   '@media': {
-    'screen and (max-width: 600px)': {
-      padding: 0
+    'screen and (max-width: 1000px)': {
+      margin: '30rem 0 6rem 0',
+    },
+    'screen and (max-width: 900px)': {
+      margin: '35rem 0 6rem 0',
+    },
+    'screen and (max-width: 500px)': {
+      margin: '40rem 0 3rem 0',
     }
   }
 })
@@ -20,13 +26,25 @@ export const skills = style({
   flexDirection: 'row',
   gap: '3rem',
   paddingRight: '3rem',
-  alignItems: 'center'
+  alignItems: 'center',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      gap: '1rem',
+      paddingRight: '1rem'
+    }
+  }
 })
 
 export const diamond = style({
-  width: '2.5rem', 
-  height: '2.5rem', 
+  width: '2.5rem',
+  height: '2.5rem',
   backgroundColor: theme.colour.blue,
   transform: 'rotate(45deg)',
-  borderRadius: '2px'
+  borderRadius: '2px',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      width: '1rem',
+      height: '1rem'
+    }
+  }
 })

@@ -40,6 +40,11 @@ export const button = style([baseButton, {
     backgroundColor: theme.colour.white,
     color: theme.colour.black,
     borderColor: theme.colour.white
+  },
+  '@media': {
+    'screen and (max-width: 800px)': {
+      width: '100%'
+    }
   }
 }])
 
