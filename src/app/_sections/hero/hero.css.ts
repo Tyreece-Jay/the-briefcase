@@ -19,7 +19,7 @@ export const blend = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  animation: `${gradiant} 45s ease infinite`,
+  animation: `${gradiant} 30s ease infinite`,
   '@media': {
     'screen and (max-width: 700px)': {
       backgroundSize: '400%'
